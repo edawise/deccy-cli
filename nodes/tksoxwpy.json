@@ -1,0 +1,9 @@
+{
+	"depends_on": ["kpovwvyw", "svusvrou"],
+	"kind": "decision",
+	"content": {
+		"type": "json-schema",
+		"ref": ["schemas/node.json"],
+		"rationale": "A machine-checkable definition keeps humans, agents and the CLI agreeing on what a valid node is; prose drifts, schemas don't."
+	}
+}

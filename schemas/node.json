@@ -1,0 +1,98 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "urn:deccy:schema:node",
+	"title": "Deccy node",
+	"description": "Base structure of a single node in the deccy graph. One node maps to one jj change (mmsmukkk); the node's id is the change id and lives in the filename (nodes/<id>.json), not in the document. Nodes are of two kinds (zkvxornu) and declare their outgoing edges: depends_on lists the nodes this node depends on (its prerequisites) and evaluates lists the nodes this node evaluates (mkyoyqvt).",
+	"type": "object",
+	"required": ["kind", "content"],
+	"additionalProperties": false,
+	"properties": {
+		"kind": {
+			"description": "The node's type. Decisions cover constraints, design choices and implementations; evaluations cover review criteria, tests and other quality checks (zkvxornu).",
+			"enum": ["decision", "evaluation"]
+		},
+		"depends_on": {
+			"description": "Ids of the nodes this node depends on. Decisions always carry depends_on edges; evaluations may additionally carry depends_on (lnqowznu); targets may be decisions or evaluations. Each entry is a jj change id matching a sibling file in nodes/.",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"pattern": "^[0-9a-z]{8,}$"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"evaluates": {
+			"description": "Ids of the nodes this node evaluates. Only an evaluation may carry evaluates edges (lnqowznu); targets may be decisions or evaluations. Each entry is a jj change id matching a sibling file in nodes/.",
+			"type": "array",
+			"items": {
+				"type": "string",
+				"pattern": "^[0-9a-z]{8,}$"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"content": {
+			"description": "The node's content. Kept open so new content types can be added without a schema change; only type, ref and rationale are required. When ref is \"inline\" the content is embedded in the content field; otherwise ref is a repo-relative path to the content.",
+			"type": "object",
+			"required": ["type", "ref", "rationale"],
+			"additionalProperties": true,
+			"properties": {
+				"type": {
+					"description": "Content type, e.g. \"text\" or \"json-schema\".",
+					"type": "string",
+					"minLength": 1
+				},
+				"ref": {
+					"description": "\"inline\" when the content is embedded in the content field, otherwise a non-empty list of repo-relative paths to the content.",
+					"oneOf": [
+						{ "const": "inline" },
+						{
+							"type": "array",
+							"items": { "type": "string", "minLength": 1 },
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					]
+				},
+				"rationale": {
+					"description": "Why this node exists.",
+					"type": "string",
+					"minLength": 1
+				},
+				"content": {
+					"description": "Inline content, present only when ref is \"inline\".",
+					"type": "string"
+				}
+			}
+		}
+	},
+	"allOf": [
+		{
+			"if": {
+				"properties": { "kind": { "const": "decision" } },
+				"required": ["kind"]
+			},
+			"then": {
+				"required": ["depends_on"],
+				"not": { "required": ["evaluates"] }
+			}
+		},
+		{
+			"if": {
+				"properties": { "kind": { "const": "evaluation" } },
+				"required": ["kind"]
+			},
+			"then": {
+				"required": ["evaluates"]
+			}
+		},
+		{
+			"if": {
+				"properties": { "content": { "properties": { "ref": { "const": "inline" } }, "required": ["ref"] } },
+				"required": ["content"]
+			},
+			"then": { "properties": { "content": { "required": ["content"] } } },
+			"else": { "properties": { "content": { "not": { "required": ["content"] } } } }
+		}
+	]
+}
