@@ -1,0 +1,10 @@
+{
+	"depends_on": ["syxllqoq"],
+	"kind": "decision",
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "deccy stores the decision graph in a jj repository: one jj change owns one node, and jj versions all node state. deccy drives jj; it keeps no state store of its own.",
+		"rationale": "jj already gives history, rebase and undo over the tree the graph lives in, so the graph's history is real, inspectable VCS history instead of a bespoke store. jj specifically — rather than any versioned store — is selected because change-based identity and built-in undo are what the node operations need: stable ids come free with change ids, and undo comes free with the op log."
+	}
+}
