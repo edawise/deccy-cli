@@ -1,0 +1,10 @@
+{
+	"depends_on": ["xkolyytz", "xwyryumr", "onlxpplz", "volxoyyy"],
+	"kind": "decision",
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "A node is a JSON document at nodes/<id>.json, named after its id. It carries kind (decision or evaluation), content {type, ref, rationale, content-when-inline}, and its outgoing edges (depends_on, evaluates); it carries no id field.",
+		"rationale": "One readable file per node keeps the graph greppable and diffable; keeping the id out of the document removes any chance of filename and content disagreeing. type names the payload's form, ref locates content the document does not carry, rationale records why the node exists — the three facets a reader needs to use a node without opening its refs."
+	}
+}
