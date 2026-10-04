@@ -1,0 +1,10 @@
+{
+	"depends_on": ["zzzzzzzz"],
+	"kind": "decision",
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "deccy is one CLI, for humans and agents alike, that maintains a decision graph in any repo. It initialises a repository for the graph, creates decision nodes, performs operations on nodes (recording file edits into their owning nodes, removing nodes), and undoes/redoes operations. It never authors node content; content is written by humans and agents.",
+		"rationale": "Graph bookkeeping is mechanical and repeatable, but node content must stay authored by its owners; one CLI keeps humans and agents working through the same guarded operations."
+	}
+}
