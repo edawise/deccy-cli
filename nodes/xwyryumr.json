@@ -1,0 +1,10 @@
+{
+	"depends_on": ["xkolyytz"],
+	"kind": "decision",
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "A node's id is the id of the jj change that owns it. The id appears in the node's filename and in edge targets, never as document content.",
+		"rationale": "Anchoring identity in change ids keeps references stable while jj maintenance rewrites commit ids. Change ids, unlike commit ids, survive rebases, so node references stay valid through squash, rebase and undo."
+	}
+}
