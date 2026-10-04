@@ -1,0 +1,12 @@
+{
+  "depends_on": [
+    "syxllqoq"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy stores the decision graph in a jj repository: one jj change owns one node, and jj versions the tree. deccy also keeps its undo journal \u2014 the before and after content of the paths a recording touched \u2014 as untracked state under `.deccy/`, never as graph state.",
+    "rationale": "jj already gives history, rebase and undo over the tree the graph lives in, so the graph's history is real, inspectable VCS history instead of a bespoke store. The journal is the one thing jj's op log cannot supply for a recording: the before and after content of the owned paths, kept untracked beside the markers so it never enters the graph's own history. jj specifically \u2014 rather than any versioned store \u2014 is selected because change-based identity and built-in undo are what the node operations need: stable ids come free with change ids, and undo comes free with the op log."
+  }
+}
