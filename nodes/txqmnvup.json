@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "prsoxsuo",
+    "xkolyytz"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy implements whole-operation undo and redo with markers over whole deccy operations: a marker names the operation's kind, the change it targeted and opaque entry ids, and the inverse is the one the kind names. A recording's inverse is a journal entry holding the before and after content of the paths it touched: undo applies the before side and returns the recorded diff to the working copy, redo applies the after side and removes it. A creation's or removal's inverse stays change-level. Undo records the inverse it applied; redo inverts that record.",
+    "rationale": "One jj operation is finer than one deccy operation, so bare jj undo cannot undo a deccy operation; recording each operation's own record recovers operation granularity. A recording cannot be inverted from op-log entries alone: reverting the squash operation rewrites the working copy again and jj calls the next revert divergent, so a recording keeps its own before/after journal entry, written before the marker that names it. A creation and a removal are already whole changes, so their inverse stays change-level (abandon the created change, op-revert a removal's entries). The entries alone do not fix the inverse \u2014 D8a makes a creation's undo a removal of the created node and a recording's or removal's a restoration \u2014 so the inverse follows the operation's kind."
+  }
+}
