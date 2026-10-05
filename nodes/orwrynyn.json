@@ -1,0 +1,17 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy navigates by reading nodes and edges alone. Validation runs five checks: node validity against the schema the CLI carries, edge target resolution to node files, sandwich coverage of every decision edge, history topology, and content custody. Validation does not state the topology rule: it is taken from S-topology (zrkzppqo) as given, and the one reading of order validation makes serves that check alone; what validation reads beyond it is nodes and edges. The custody rule is not validation's to state either: it is taken from the content-custody decision (xotxspwp) as given, and what the fifth check reads beyond nodes and edges is what each change recorded. Validation adds no second rule of its own for custody and no paraphrase of the one it takes. Validation reports failures to the caller and records no verdicts in any node.",
+    "rationale": "The first three checks keep the CLI's view of a node answerable to the graph's own structure, but they do not catch a graph whose edges run against history, so D9 names history topology as the fourth check. Its rule is S-topology's (zrkzppqo) and is taken as given: naming the check makes the use answerable to the prerequisite, while restating the rule here would put a second copy of it in the graph, free to drift from the first. Navigation still reads nodes and edges alone — validation's one reading of order belongs to the topology check — and reporting without recording keeps validation re-runnable and verdict-free. Content custody joins for the same reason, one layer lower: the four checks confront node documents and edges, never the change set history recorded, so a change whose diff disagrees with what a node carries passes all four unseen. Its rule is xotxspwp's and is taken as given — what a recorded change may touch, and what becomes of a finding, are not being re-settled here — so the check adds only the reading of the recorded change set that rule is applied to. What it refuses: a second ownership rule, since the check may not decide for itself what it is checking against; a restatement of the rule it cites, which would leave the graph with two copies to keep in step; and any handling of its own for what it finds, since what becomes of a violation is xotxspwp's to settle and a second answer here would give the graph two. Validation's output stays a report to the caller and no verdict is written to any node."
+  },
+  "depends_on": [
+    "onlxpplz",
+    "mqqwzvwz",
+    "tksoxwpy",
+    "kwwsoosw",
+    "zrkzppqo",
+    "xotxspwp"
+  ]
+}
