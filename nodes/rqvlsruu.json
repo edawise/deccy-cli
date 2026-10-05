@@ -1,0 +1,20 @@
+{
+  "content": {
+    "content": "Applied by reading the dependent against each prerequisite in its depends_on.\n1. No contradiction. No element of the dependent contradicts a prerequisite. Fail on any contradicting element — name the element.\n2. No re-decision. No element of the dependent states a rule a prerequisite already states. With the S-topology prerequisite recorded, an element re-decides it if it states any of: the newer-to-older ordering of depends_on/evaluates edges; where a change's position comes from; the exemption of the root; the report-never-repair policy; or any derivation of an edge from the order. Fail on each such element and name it. Naming the topology check, or saying its rule is taken as given, is not a restatement.\n3. Every prerequisite answered. The dependent's validation names five checks: node validity against the schema the CLI carries, edge target resolution to node files, sandwich coverage of every decision edge, history topology, and content custody. Navigation reads nodes and edges alone, and validation reports to the caller while recording no verdicts in any node. Fail if the checks named stop short of the fifth, or if content custody is absent from the set the dependent presents.\n4. Both rules cited, not stated. The topology rule — the order of recorded edges against the order the version control tool reports — is taken from the S-topology prerequisite, and the custody rule is taken from the content-custody prerequisite. Fail if either check is omitted from the set the dependent presents, if either rule is missing from the set of prerequisites the dependent takes as given, or if either rule is restated in the dependent rather than cited. For custody, an element is a restatement if it states the owning set a change has, the exclusivity of ownership, or the report-never-repair handling of a violation; naming the check and saying its rule is taken as given is not a restatement.",
+    "rationale": "Command behavior is where the CLI touches truth; the gate forces every check to answer to its prerequisites and forbids the dependent from re-deciding one. The refine adds the S-topology edge, so a bare licence clause no longer covers the use: the dependent must now name the topology check and take its rule as given, and the criterion must fail a dependent that repeats that rule instead of citing it. The refine also adds the content-custody edge, so the gate must cover that use too: D9's own commitment is the set of checks validation runs, and the fifth check's rule is xotxspwp's own, so the dependent must name content custody in that set and take the custody rule as given — a dependent that states the owning set, the exclusivity of ownership or the report-never-repair handling instead of citing it re-decides that rule and fails. The criterion still demands no wording, no line form and no rule text: which words the dependent uses, how a violation is worded on a line and which status the caller sees stay outside it. Its six edges span two cells — five prose parents (natural→natural) and one artifact parent (code→natural) — so the criterion is the default cell's gate form; the mixed cell is flagged for the matrix (F1 follow-up).",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "onlxpplz",
+    "mqqwzvwz",
+    "tksoxwpy",
+    "kwwsoosw",
+    "zrkzppqo",
+    "xotxspwp"
+  ],
+  "evaluates": [
+    "orwrynyn"
+  ],
+  "kind": "evaluation"
+}
