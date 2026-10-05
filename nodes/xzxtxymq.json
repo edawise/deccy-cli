@@ -1,0 +1,13 @@
+{
+  "content": {
+    "content": "A change owns exactly its node file plus the repo-relative paths listed in content.ref when ref is an array; nothing else. A change with inline ref owns only its node file. A listed path is read as a repo-relative path in normal form, and the owned set is that set of normal forms rather than the set of spellings: a leading `./` and repeated `/` separators do not distinguish paths, so `./x` and `x` name one file and `x//y` and `x/y` name one file, and each `..` component is folded against the ordinary component before it, so `src/../src/x.rs` and `src/x.rs` name one file and `a/b/../c` and `a/c` name one file. A normal form in which a `..` remains after that folding names a place outside the repository and is not ownable: it contributes no owned path.",
+    "rationale": "Ownership is the boundary every guard checks — recording, removal, and undo all attribute file state through it; exact, ref-derived ownership is what makes that attribution decidable. Reading each listed path in normal form keeps that boundary a set of files rather than a set of spellings: without a normal form the owned set is whatever the writer typed, so the same file can be listed twice or counted as two owners under two spellings of one path. `..` is the last component that still says where a name sits rather than what it names — `src/../src/x.rs` is a spelling of `src/x.rs` — so folding it completes the normal form for every spelling that names a file in the repository, and a `..` left after folding is the residue that names no file there: admitting it would put a non-file in the owned set, so it is not ownable and contributes nothing. Absolute paths, symlinks and case are left where they were; this decision fixes only the normal form of repo-relative paths and which of those normal forms are ownable.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "xkolyytz",
+    "kpovwvyw"
+  ],
+  "kind": "decision"
+}
