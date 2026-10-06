@@ -1,0 +1,1 @@
+{"depends_on":["wzmmmmsw","myprwuxt"],"kind":"decision","content":{"type":"text","ref":"inline","content":"deccy remove <id> abandons the node's change only when nothing depends on it; with dependants it refuses and names them. No aliases in v1.","rationale":"Refusal with names makes the guard actionable; one name per verb keeps help, history, and agents' call sites uniform."}}
