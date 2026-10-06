@@ -1,0 +1,15 @@
+{
+  "evaluates": [
+    "kmrmwopx"
+  ],
+  "depends_on": [
+    "wzmmmmsw"
+  ],
+  "kind": "evaluation",
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License. No element of the extended form contradicts the prerequisite: it is still one invocation of one verb, and every flag it adds is an argument of that verb, read after the verb like the rest. Fail on any element that turns such a flag into a verb or an alias, or that makes the invocation-level CLI interpret the flag's value on the verb's behalf; name the element.\n\n2. No second creation. A repeatable flag naming the nodes the new node checks is a surface over the existing creation steps, not a second creation: each occurrence contributes one evaluates edge to the node being born, and nothing else. Fail if a clause gives the flag any effect on the change (opening, placing, bracketing, describing), on the file (which path, how many), on placement, or on the content the node carries; fail if the edges need a second invocation or a separate step to land; fail if a birth whose invocation passed the flag ends up with an evaluates set other than the ids passed — missing ids, extra ids, or ids landed in depends_on; name the clause and the effect it adds.\n\n3. Both target kinds admitted. The evaluates relation admits a decision or an evaluation as its target. Fail if any element narrows the flag to one target kind — refusing or special-casing a birth because a named id names an evaluation rather than a decision, or the reverse; name the element.\n\n4. Its own resolution. The prerequisite makes everything after the verb an argument of that verb, read by that verb for what it names; it grants no flag the power to reuse another flag's reading. So the checks-naming flag's ids are resolved as what it names, not by inheriting the resolution --on's ids go through — a resolution that carries a special case belonging to depends_on, which the new flag has no claim to. Fail if a clause (a) says the flag's ids are resolved the way --on's are, (b) routes them through the same resolver or reuses the --on resolution step for the new flag, or (c) is silent on how the flag's ids are resolved, leaving that reuse open to a reader. Name which of (a)-(c) the text fails and quote it.\n\n5. The existing form is not relaxed. Fail if the extension makes a birth reachable without --on — the evaluates-naming flag standing in for placement — or if it drops, makes optional, or moves --on's requiredness or repeatability, -m, the placement after the named dependencies, the node file identity, or the change's summary; name the clause.",
+    "rationale": "Creation is where CLI action first enters; the gate keeps the verb a surface over creation, not a second creation, so the extended form must stay an argument of the one verb, record exactly the evaluates set it names and nothing else, admit both targets the relation admits, give its ids their own resolution rather than inheriting --on's, and leave the already-fixed parts of the birth in place. Reading the decision against these criteria decides whether the extension kept that shape."
+  }
+}
