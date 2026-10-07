@@ -1,0 +1,1 @@
+{"depends_on":["wtxymztk"],"kind":"decision","content":{"content":"Where recording succeeds, the deccy CLI shall land no edit outside an owning change.","rationale":"Confinement is what keeps recording placement-only; stating it as the Where-clause stops one verb silently becoming another.","ref":"inline","type":"ears"}}
