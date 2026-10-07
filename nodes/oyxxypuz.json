@@ -1,0 +1,1 @@
+{"depends_on":["rrzxzlmy"],"kind":"decision","content":{"content":"Where creation succeeds, the deccy CLI shall write the node file at `nodes/<new-change-id>.json` and nowhere else.","rationale":"File identity is what lets resolution find the birth; isolating the path keeps naming stable while content evolves.","ref":"inline","type":"ears"}}
