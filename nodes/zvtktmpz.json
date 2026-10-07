@@ -1,0 +1,1 @@
+{"depends_on":["wnxsoknq"],"kind":"decision","content":{"content":"When refusing a remove over dependants, the deccy CLI shall name each dependant.","rationale":"Naming makes the refusal actionable without re-deciding dependency tracking.","ref":"inline","type":"ears"}}
