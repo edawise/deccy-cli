@@ -1,0 +1,1 @@
+{"depends_on":["ukmntzqs"],"kind":"decision","content":{"content":"If `deccy new --on` names any id resolving to no node file, then the deccy CLI shall refuse the invocation before creating anything.","rationale":"Partial births would leave dangling depends_on; refusing the whole set before birth keeps unplaced nodes out.","ref":"inline","type":"ears"}}
