@@ -1,0 +1,1 @@
+{"depends_on":["wzmmmmsw"],"kind":"decision","content":{"content":"deccy --version prints the version.","rationale":"Version discovery belongs with invocation shape but apart from help: one version surface keeps humans and agents comparing the same token, and fixing it once keeps verb nodes from re-deciding version.","ref":"inline","type":"text"}}
