@@ -1,0 +1,1 @@
+{"depends_on":["utplmmvz","lxvppqom"],"kind":"decision","content":{"content":"Where undo or redo applies, the deccy CLI shall never restore partial operations.","rationale":"Partial restores would break operation granularity; stating the prohibition apart keeps the legs total without re-deciding what an operation is.","ref":"inline","type":"ears"}}
