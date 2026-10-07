@@ -1,0 +1,1 @@
+{"depends_on":["yvtvtnqk"],"kind":"decision","content":{"content":"When invoked as deccy --version, the deccy CLI shall print the version.","rationale":"The global version promise belongs to discovery; what the string contains is settled elsewhere, so this node stays invocation-only.","ref":"inline","type":"ears"}}
