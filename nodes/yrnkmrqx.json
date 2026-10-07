@@ -1,0 +1,1 @@
+{"depends_on":["utplmmvz"],"kind":"decision","content":{"content":"When invoked as `deccy undo`, the deccy CLI shall undo only the last applied operation, whole.","rationale":"One step per invocation keeps undo total without a selector; isolating the undo leg lets it evolve without touching redo.","ref":"inline","type":"ears"}}
