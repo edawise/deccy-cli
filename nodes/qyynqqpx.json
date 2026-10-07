@@ -1,0 +1,1 @@
+{"depends_on":["tsspuwzo"],"kind":"decision","content":{"content":"When refusing an id that maps to neither a valid node nor the root, the deccy CLI shall create, record, or remove nothing.","rationale":"Refusal alone does not state the excluded effects; stating them apart keeps refused ids from reaching any verb's state.","ref":"inline","type":"ears"}}
