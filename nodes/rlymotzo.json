@@ -1,0 +1,1 @@
+{"depends_on":["wzmmmmsw"],"kind":"decision","content":{"content":"The deccy CLI shall recognise only single lowercase words as verbs.","rationale":"Vocabulary shape is the clause verb nodes actually elaborate; separating it from arity and delegation lets D20 unknown-verb refusal and every future verb depend on wording shape alone.","ref":"inline","type":"ears"}}
