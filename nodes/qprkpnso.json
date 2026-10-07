@@ -1,0 +1,1 @@
+{"depends_on":["xtuswonn"],"kind":"decision","content":{"content":"When invoked as `deccy validate`, the deccy CLI shall exercise the validity, resolution, and coverage checks over the graph.","rationale":"Checks must be invokable without becoming state; stating the exercising alone gives the reporting and restraint leaves something to pin down.","ref":"inline","type":"ears"}}
