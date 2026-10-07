@@ -1,0 +1,1 @@
+{"depends_on":["rrzxzlmy"],"kind":"decision","content":{"content":"When invoked as `deccy new -m <summary>`, the deccy CLI shall describe the new change with the summary.","rationale":"The summary is the human handle log and show read; separating it from linkage keeps wording free of edge semantics.","ref":"inline","type":"ears"}}
