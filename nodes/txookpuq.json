@@ -1,0 +1,1 @@
+{"depends_on":["zqkqvlyo"],"kind":"decision","content":{"content":"When invoked as `deccy log`, the deccy CLI shall read the set of nodes with their edges.","rationale":"Humans and agents need the whole set before addressing parts; stating the read alone gives the restraint and scope leaves something to pin down.","ref":"inline","type":"ears"}}
