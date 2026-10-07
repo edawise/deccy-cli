@@ -1,0 +1,1 @@
+{"depends_on":["wtxymztk"],"kind":"decision","content":{"content":"When invoked as `deccy record`, the deccy CLI shall create no node.","rationale":"Recording stays placement-only so one verb never silently becomes another; stating no-birth apart from refusal keeps the happy path from birthing too.","ref":"inline","type":"ears"}}
