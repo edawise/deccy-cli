@@ -1,0 +1,1 @@
+{"depends_on":["wzmmmmsw"],"kind":"decision","content":{"content":"The deccy CLI shall accept exactly one verb per invocation.","rationale":"D10 bundles count, vocabulary and delegation in one text decision; isolating the count rule lets every verb node depend on a stable invocation contract without inheriting wording about what a verb looks like.","ref":"inline","type":"ears"}}
