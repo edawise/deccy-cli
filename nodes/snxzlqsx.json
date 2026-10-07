@@ -1,0 +1,1 @@
+{"depends_on":["moszzvzr"],"kind":"decision","content":{"content":"When invoked as `deccy show`, the deccy CLI shall change nothing and record nothing.","rationale":"Reads must be invokable without becoming state; stating side-effect-freedom apart keeps lookup re-runnable at every invocation.","ref":"inline","type":"ears"}}
