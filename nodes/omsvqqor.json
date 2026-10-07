@@ -1,0 +1,1 @@
+{"depends_on":["oqnsuzqu"],"kind":"decision","content":{"content":"When invoked as deccy --help with no verb, the deccy CLI shall list all verbs.","rationale":"The bare list is the discovery entry point for humans and agents; separating it from per-verb help lets the verb set grow without touching help rendering.","ref":"inline","type":"ears"}}
