@@ -1,0 +1,1 @@
+{"depends_on":["lxvppqom"],"kind":"decision","content":{"content":"When invoked as `deccy redo` with no newer operation, the deccy CLI shall restore the next undone operation's post-operation boundary.","rationale":"Re-application is what the redo leg promises; stating the happy path gives the gate something to bound.","ref":"inline","type":"ears"}}
