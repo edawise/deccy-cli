@@ -1,0 +1,1 @@
+{"depends_on":["wtxymztk"],"kind":"decision","content":{"content":"When invoked as `deccy record` without `--to`, the deccy CLI shall refuse the invocation and place nothing.","rationale":"Purpose cannot be inferred from paths; isolating refusal from the happy path lets the guard evolve without touching placement.","ref":"inline","type":"ears"}}
