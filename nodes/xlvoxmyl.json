@@ -1,0 +1,1 @@
+{"depends_on":["oqnsuzqu"],"kind":"decision","content":{"content":"The deccy CLI shall provide --help for every verb.","rationale":"Per-verb help is the clause each verb node relies on for discovery; isolating it from the bare list and version keeps verb additions from re-arguing globals.","ref":"inline","type":"ears"}}
