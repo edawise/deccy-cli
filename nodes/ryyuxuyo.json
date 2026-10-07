@@ -1,0 +1,1 @@
+{"depends_on":["mvkuovxs"],"kind":"decision","content":{"content":"When invoked with a first word naming no verb, the deccy CLI shall refuse the invocation.","rationale":"Refusing at shape keeps unknown input from reaching verbs; isolating refusal gives naming and no-effects something to pin down.","ref":"inline","type":"ears"}}
