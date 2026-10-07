@@ -1,0 +1,1 @@
+{"depends_on":["tsspuwzo"],"kind":"decision","content":{"content":"When refusing an id that maps to neither a valid node nor the root, the deccy CLI shall name the id.","rationale":"Naming makes the guard actionable without re-deciding resolution.","ref":"inline","type":"ears"}}
