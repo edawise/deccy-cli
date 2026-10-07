@@ -1,0 +1,1 @@
+{"depends_on":["txookpuq"],"kind":"decision","content":{"content":"When invoked as `deccy log`, the deccy CLI shall change nothing and record nothing.","rationale":"Listing must stay a view, never a selection language with side effects; stating restraint apart keeps log re-runnable at every invocation.","ref":"inline","type":"ears"}}
