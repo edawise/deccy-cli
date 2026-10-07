@@ -1,0 +1,1 @@
+{"depends_on":["txookpuq"],"kind":"decision","content":{"content":"When invoked as `deccy log`, the deccy CLI shall settle no ordering or filtering.","rationale":"A set read with no query semantics keeps listing a view, never a selection language; stating scope apart stops one verb silently becoming a query language.","ref":"inline","type":"ears"}}
