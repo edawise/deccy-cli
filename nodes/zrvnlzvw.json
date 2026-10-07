@@ -1,0 +1,1 @@
+{"depends_on":["stnqmzuw"],"kind":"decision","content":{"content":"When invoked as `deccy remove <id>` naming a dependant-free node, the deccy CLI shall abandon the node's change.","rationale":"Abandonment is the clause callers depend on for cleanup; stating the happy path gives the guard something to bound.","ref":"inline","type":"ears"}}
