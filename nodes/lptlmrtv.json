@@ -1,0 +1,1 @@
+{"depends_on":["rrzxzlmy"],"kind":"decision","content":{"content":"When invoked as `deccy new` without `--on`, the deccy CLI shall refuse the invocation and create nothing.","rationale":"Requiring placement keeps every birth resolvable; isolating refusal from the happy path lets the guard evolve without touching layout.","ref":"inline","type":"ears"}}
