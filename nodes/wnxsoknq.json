@@ -1,0 +1,1 @@
+{"depends_on":["zrvnlzvw"],"kind":"decision","content":{"content":"When invoked as `deccy remove <id>` naming a node with dependants, the deccy CLI shall refuse the invocation.","rationale":"Refusing before abandon keeps dependants resolvable; isolating refusal from the happy path lets the guard evolve without touching cleanup.","ref":"inline","type":"ears"}}
