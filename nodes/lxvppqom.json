@@ -1,0 +1,1 @@
+{"depends_on":["qwqwqtuq"],"kind":"decision","content":{"content":"When invoked as `deccy redo`, the deccy CLI shall restore an operation boundary.","rationale":"Existence alone gives the redo leg, gate, and scope something to pin down; stating it apart from undo lets each verb evolve without touching the other.","ref":"inline","type":"ears"}}
