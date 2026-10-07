@@ -1,0 +1,1 @@
+{"depends_on":["wzmmmmsw"],"kind":"decision","content":{"content":"Each verb purpose is served by exactly one verb; no aliases in v1.","rationale":"One surface per purpose keeps discovery, grep habits, and agent call sites from forking; purpose-specific exceptions elaborate this rather than re-deciding it.","ref":"inline","type":"text"}}
