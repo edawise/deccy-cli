@@ -1,0 +1,1 @@
+{"depends_on":["lummwqtx"],"kind":"decision","content":{"content":"When invoked as `deccy undo`, the deccy CLI shall restore an operation boundary.","rationale":"Boundary restoration is what undo presupposes; stating existence alone gives the leg, gate, and scope something to pin down.","ref":"inline","type":"ears"}}
