@@ -1,0 +1,1 @@
+{"depends_on":["qprkpnso"],"kind":"decision","content":{"content":"When invoked as `deccy validate`, the deccy CLI shall change nothing and record no verdicts.","rationale":"Validation must stay re-runnable; stating verdict-freedom apart keeps the checks invokable without becoming state.","ref":"inline","type":"ears"}}
