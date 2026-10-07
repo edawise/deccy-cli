@@ -1,0 +1,1 @@
+{"depends_on":["mtqypkwo"],"kind":"decision","content":{"content":"When `deccy new` refuses an unknown `--on` id, the deccy CLI shall name each unknown id in the refusal.","rationale":"Naming makes the refusal actionable without re-deciding resolution.","ref":"inline","type":"ears"}}
