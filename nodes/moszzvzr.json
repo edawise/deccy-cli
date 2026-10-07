@@ -1,0 +1,1 @@
+{"depends_on":["kywrtyoq"],"kind":"decision","content":{"content":"When invoked as `deccy show <id>` with valid ids, the deccy CLI shall read each valid node, writing one output per valid node.","rationale":"Reading is what callers depend on for lookup; stating existence alone gives the manner and side-effect leaves something to pin down.","ref":"inline","type":"ears"}}
