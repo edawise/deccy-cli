@@ -1,0 +1,1 @@
+{"depends_on":["qprkpnso"],"kind":"decision","content":{"content":"When `deccy validate` finds failures, the deccy CLI shall report them to the caller.","rationale":"Reporting makes exercising actionable without recording verdicts; isolating the failure path lets it evolve without touching the suite.","ref":"inline","type":"ears"}}
