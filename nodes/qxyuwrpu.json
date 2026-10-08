@@ -1,0 +1,1 @@
+{"depends_on": ["mruplukn", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "An invocation ending without refusal exits 0.", "rationale": "The non-refused path needs a machine-readable verdict distinct from any refusal; fixing 0 once makes status total instead of per-invocation."}}
