@@ -1,0 +1,14 @@
+{
+  "depends_on": [
+    "xmxpvqzs",
+    "lummwqtx",
+    "qwqwqtuq"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "This layer takes the inverse a whole deccy operation's kind names: a recording is applied through its journal entry, a creation is removed and a removal is restored through the change-level inverse. Only whole deccy operations \u2014 no partial, file-level, or snapshot revert exists at this boundary.",
+    "rationale": "The verb layers reach this layer for the operations they undo or redo: a recording by applying the side of its journal entry, a creation by removing the change it made, a removal by reverting its entries. Fixing the inverse as one write half per kind keeps every intermediate state a valid graph by construction. Exact argv stays with the contract level, where fake-binary tests prove it."
+  }
+}
