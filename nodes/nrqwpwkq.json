@@ -1,0 +1,1 @@
+{"depends_on": ["owolyrmp", "wwrrqtox", "mpoyntop"], "kind": "decision", "content": {"type": "quint", "ref": ["specs/markers/undo.qnt"], "rationale": "Undo restores pre of the most recent applied pair and steps U up one; nothing applied refuses. The bound is set to the pair count when U starts from nothing-undone, which is what redo reads its window from."}}
