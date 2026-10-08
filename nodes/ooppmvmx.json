@@ -1,0 +1,1 @@
+{"depends_on": ["ulxtysml", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "A refusing invocation exits 2.", "rationale": "Callers branch on status before reading text; the misuse convention keeps refusal machine-detectable without parsing the message. Reserving 1 stays with the leaf below."}}
