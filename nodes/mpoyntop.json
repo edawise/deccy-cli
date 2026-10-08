@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "utknrqrs",
+    "kttmwrsv"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Revert is the inverse of a named whole deccy operation. A recording's leg is a journal apply: the recorded before or after side is placed in the target and the other side in the working copy. A creation's and a removal's leg is the change-level inverse: remove the created change, or revert the removal's entries. No partial, file-level, or snapshot revert exists under this name.",
+    "rationale": "A creation is undone by removing the change the operation made (D8a), so this inverse inverts only what an operation recorded or removed; a recording is inverted from its journal entry because its op-log entry cannot be reverted without diverging the next undo. Fixing that split in the term keeps the legs from assuming one write half covers every kind. Which operation each leg names lives in the selection entries."
+  }
+}
