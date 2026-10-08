@@ -1,0 +1,1 @@
+{"depends_on": ["szyolrkm", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "A refusing invocation writes nothing to stdout.", "rationale": "The stderr line gives callers something to read; silence keeps a half-rendered result stream from preceding the refusal."}}
