@@ -1,0 +1,1 @@
+{"depends_on": ["xyoslvwo", "pkpvlltu"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "Every invocation routes through one table from verb string to handler.", "rationale": "One verb per invocation makes a single-candidate table sufficient; fixing the route once keeps routing a property of the seam instead of a per-verb concern."}}
