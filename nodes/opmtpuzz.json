@@ -1,0 +1,1 @@
+{"depends_on": ["svxynnwk", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "Normal lines go to stdout.", "rationale": "Line discipline fixes the shape; the channel is the envelope's commitment — one place for results keeps callers from checking per-invocation channels."}}
