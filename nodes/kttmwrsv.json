@@ -1,0 +1,15 @@
+{
+  "depends_on": [
+    "xmxpvqzs",
+    "lummwqtx",
+    "qwqwqtuq",
+    "rlmwytqk"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "This layer takes the inverse a whole deccy operation's kind names, and it fixes where each inverse comes from. A recording's inverse is its journal entry \u2014 the content-side apply D8c (`kmmowvkw`) records \u2014 and that journal apply is the only content-side inverse at this boundary; this layer does not re-open it. A creation's and a removal's inverse is the change-level one, and its source is the operation revert of the entries the marker kept: the inverse is taken by reverting those entries, never by re-deriving a change's content \u2014 not by rebuilding, recomputing or re-committing the affected change, and not from the subject's present content or from its node's text. Only whole deccy operations \u2014 no partial, file-level, or snapshot revert exists at this boundary.",
+    "rationale": "This table is where the verb layers look up the inverse of the kind of operation they undo or redo, so it must say where each inverse comes from, not only which of two names applies. D8a (`prsoxsuo`) fixes what a whole-operation inverse restores, D15 (`lummwqtx`) which operation undo takes, and D15b (`qwqwqtuq`) that the redo side reverts the entries undo recorded; none of them fixes the source. S3-op-revert (`rlmwytqk`) does: a change-level inverse is the operation revert of the entries the marker kept, and a change's content is never re-derived to take one. Naming that source on the creation and removal legs keeps the repository's only change-level removal \u2014 abandoning the change, which makes jj rewrite the change's descendants and re-mint their commits \u2014 out of the inverse path, and keeps the same-second duplicate-commit refusal a recomputed commit invites out of it too. The recording leg keeps D8c's exception as it stands: its inverse is the journal entry's content-side apply, because reverting its squash operation would rewrite the working copy and make the next undo divergent, so the operation-revert rule does not reach it and this layer does not re-open it. The effect the higher layers state \u2014 G-revert (`mpoyntop`) and S5-revert (`qxmzpupt`) name that a creation's undo removes the created change and a removal's restores the removed node \u2014 is untouched; this table fixes how that effect is taken. Exact argv and the entry a refusal names stay with the contract and verb levels."
+  }
+}
