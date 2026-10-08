@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "pmxnnvvq",
+    "txqmnvup"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Markers carry the operation's kind, the change it targeted, opaque entry ids and the reverts recorded against it, and nothing else. A recording's entry id names its journal entry; a change-level operation's ids name op-log entries.",
+    "rationale": "Undo must take each operation's own inverse, and entry ids alone do not name it: entries name records, not the change a verb made. D8a undoes a creation by removing the created node entire, and a recording and a removal by restoring what they changed \u2014 so an ids-only marker would leave a `deccy new` to be undone by reverting its entries, leaving the created change to be inferred from the op log and nothing to abandon. The kind and the targeted change id name that inverse: the kind says creation, recording or removal, and the target names the change the verb acted on. Entries and reverts stay opaque hex ids \u2014 op ids for a change-level operation, the journal entry id for a recording \u2014 and nothing else: every state snapshot already lives in version control or the journal, so markers need no ownership and no snapshot store of their own."
+  }
+}
