@@ -1,0 +1,16 @@
+{
+  "depends_on": [
+    "utknrqrs",
+    "txqmnvup",
+    "okqmlwmp",
+    "xwnylypn",
+    "lmwpuqlx"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A marker is one operation's own record: the kind it was \u2014 a creation, a recording, or a removal \u2014 the change it targeted, the entry ids it kept, and the reverts recorded against it. A recording keeps one journal entry id; a change-level operation keeps op-log entry ids.",
+    "rationale": "One record per operation is what keeps markers ownership-free; the kind is the operation's own kind (G-operation, lmwpuqlx), and that is what lets undo dispatch on a marker. The target stays a change id, so the record is of the operation, not a snapshot store of deccy's own state. The entry ids stay opaque: a recording's one id names its journal entry (D8c, kmmowvkw), and a creation's or removal's op ids name the change-level inverse."
+  }
+}
