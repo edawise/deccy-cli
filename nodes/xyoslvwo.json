@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "uuzuzrol",
+    "xkolyytz"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy's verbs share one substrate with six seams: dispatch of argv to verbs, file-backed node reads, jj driven as a subprocess, one output and refusal envelope, whole-operation markers, and the journal of recording snapshots. Verbs own their behavior and output lines; the substrate owns crossing process, file, and repo boundaries and nothing else.",
+    "rationale": "Every verb crosses the same process, file, and repo boundaries; without a shared substrate each verb would re-decide those crossings and drift. The single binary makes the shared process boundary real and the jj repo makes file and repo crossings shared. Scoping the substrate to boundary-crossing only keeps future verbs from re-litigating boundaries while leaving verb behavior to the verbs. The journal is a seam of its own because a recording's inverse reads and writes content no other seam owns (D8c, kmmowvkw)."
+  }
+}
