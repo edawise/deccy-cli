@@ -1,0 +1,1 @@
+{"depends_on": ["pmxnnvvq", "txqmnvup"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "Markers carry operation ids and nothing else.", "rationale": "Every state snapshot already lives inside version control; keeping markers to bare ids is what lets them need no ownership and no snapshot store of their own."}}
