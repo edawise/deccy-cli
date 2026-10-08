@@ -1,0 +1,1 @@
+{"depends_on": ["lyvkomss", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "A refused invocation stops at the envelope before dispatch.", "rationale": "Stopping before dispatch is what makes refusal an envelope outcome — the no-effects and handler-invisibility in `lyvkomss` both follow from the stop, neither needs re-deciding here."}}
