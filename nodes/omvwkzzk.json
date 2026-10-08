@@ -1,0 +1,1 @@
+{"depends_on": ["wllnuwxu", "wlyztxku"], "kind": "decision", "content": {"type": "text", "ref": "inline", "content": "Each refusal goes to stderr as exactly one line.", "rationale": "The single-line form is the spec's claim; single-renderer ownership keeps the shape identical no matter which cause fired."}}
