@@ -1,0 +1,12 @@
+{
+  "content": {
+    "content": "0.0.0-dev",
+    "rationale": "deccy's version is one token carried in the tree between releases, and that token is the development sentinel `0.0.0-dev` rather than a release number. A release number recorded here would be a second record of a release: stale from the moment the next tag is cut, and true again only by editing the graph at every release, while the release tag is already the only record of a release. So this node records no release number at all. The token is one machine-readable string in `content.content`, the sentinel as the tree carries it; when a release is cut the sentinel is replaced with the tagged version, and how that substitution happens is the release step's business (the release script, wtpwmkqr), not a claim this node makes. What this node does decide is where the token lives: it remains the single source every stamping surface takes the version from — the manifest (I1a, trolstmt), the lockfile (rklnxlmy), the build-stamped output (M-version, oquomwqu) — so a surface that carries the token is a use of this decision, on its own edge, and stamping the version elsewhere adds a use edge rather than a second copy to drift from this one.",
+    "ref": "inline",
+    "type": "version"
+  },
+  "depends_on": [
+    "syxllqoq"
+  ],
+  "kind": "decision"
+}
