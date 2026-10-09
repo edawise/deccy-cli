@@ -1,0 +1,15 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "nslkynln",
+    "kupzywsq",
+    "xwnylypn",
+    "kpptprql"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Bracket-close truncates the marker list to pos, appends the operation's kept entry ids in run order, and advances pos to the new length.",
+    "rationale": "Order-visibility lives in marker order, so truncating the undone tail and appending at the new end in run order makes file order the order operations ran in (kpptprql). The file is the ordered store the persistence claim provides. Closing leaves the state where the run ended: the position advances to the new length, so a later redo has nothing to re-apply and a later undo starts its walk at the new end. A recording appends one journal entry id as its kept entry (D8c, kmmowvkw); the append rule itself is unchanged. The model's bracket effect is claimed here, not only in the model."
+  }
+}
