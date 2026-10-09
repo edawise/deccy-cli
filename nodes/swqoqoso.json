@@ -1,0 +1,1 @@
+{"depends_on":["rkqztuuw"],"kind":"decision","content":{"type":"ears","ref":"inline","content":"When invoked as `deccy new -m <summary> --on <id>...` with valid ids, the deccy CLI shall write the skeleton with a placeholder rationale.","rationale":"The schema forbids an empty rationale; a placeholder keeps the birth valid while leaving all justification to the author."}}
