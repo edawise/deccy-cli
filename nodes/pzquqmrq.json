@@ -1,0 +1,1 @@
+{"depends_on":["rkqztuuw"],"kind":"decision","content":{"type":"ears","ref":"inline","content":"When invoked as `deccy new -m <summary> --on <id>...` with valid ids, the deccy CLI shall write the skeleton with kind decision.","rationale":"Kind is what keeps the birth out of the evaluation path; isolating it lets the kind split evolve without touching shape."}}
