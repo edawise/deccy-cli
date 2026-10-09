@@ -1,0 +1,13 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "pmxnnvvq",
+    "txqmnvup"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Markers persist across invocations in a single marker file. The file holds the markers and the position; a recording's snapshots live in the journal, not here.",
+    "rationale": "Each CLI invocation is a fresh process, so markers kept only in memory die with it. One durable file for the markers keeps them across invocations; the file holds markers and the position alone, no snapshots, and stays untracked (S5-marker-file, IN-ignore). A recording's before/after content lives in the journal (D8c, kmmowvkw), so this file stays a pointer store."
+  }
+}
