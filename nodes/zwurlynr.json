@@ -1,0 +1,17 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "nslkynln",
+    "ypykwmmt",
+    "owolyrmp",
+    "svusvrou",
+    "kpptprql"
+  ],
+  "content": {
+    "type": "json-schema",
+    "ref": [
+      "schemas/markers.json"
+    ],
+    "rationale": "Nothing fixes the file's contents: the markers and the position need shapes before any implementation can read or write them. Field-for-field mirror of the recorded marker state \u2014 markers and pos \u2014 with each marker its kind, the change it targeted, its kept entry ids and the reverts recorded against it. Entries and reverts are opaque hex strings: op-log ids for a change-level operation and the journal entry id for a recording, dispatched by kind (D8c, kmmowvkw); the shape does not change between them. The position is the linear cursor (kpptprql): how many markers are applied, always within 0..=length. Closed objects keep the file markers-and-position alone; the cross-field `0 <= pos <= length` rule stays with the model invariants and the marker guards. The document carries an absolute `$id` (`urn:deccy:schema:markers`), as the node schema does, because the validator compiles a schema only under an absolute identifier (I1-schema). The schema is the one the binary carries (I1-schema-embed). A marker names the change its operation acted on, so `target` is required and non-empty (`^[a-z]+$`). No structural schema change accompanies the journal: only what an entry id means changes."
+  }
+}
