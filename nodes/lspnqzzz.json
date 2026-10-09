@@ -1,0 +1,1 @@
+{"kind": "decision", "depends_on": ["uskysnox"], "content": {"type": "text", "ref": "inline", "content": "A missing marker file reads as empty.", "rationale": "A first run has no brackets yet, which is exactly the empty state the empty-stack refusals already cover. Reading missing as empty starts there without inventing a new failure shape."}}
