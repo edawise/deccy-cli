@@ -1,0 +1,17 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "xmxpvqzs",
+    "vyquqmoo",
+    "lvkukpyw",
+    "uzzxlpsl",
+    "szmuyqrq"
+  ],
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/jj.rs"
+    ],
+    "rationale": "S3 fixes that every external-tool interaction crosses a spawned process \u2014 no library linkage; S3-explicit that the binary and root are supplied by the caller with nothing searching PATH inside the boundary; S3-stateless that this layer holds the binary and root and nothing else; S3-err that failures surface as values carrying their evidence, never as refusals or panics. The runner holds one binary and one root and spawns one process per call, returning the exit status and both streams verbatim; a crossing whose stdout is file content keeps those bytes undecoded so a binary file survives. It names no command \u2014 the per-command nodes do."
+  }
+}
