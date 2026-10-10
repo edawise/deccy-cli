@@ -1,0 +1,10 @@
+{
+	"kind": "decision",
+	"depends_on": ["uuzuzrol", "kpovwvyw"],
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "JSON is read and written through serde: node documents (and the marker file) are encoded and decoded with serde_json, with serde's derive keeping the Rust types and the wire shape in one place, never by hand-rolled parsing.",
+		"rationale": "The Rust stack (I1) needs a concrete JSON implementation and the node document is JSON (D1c, kpovwvyw); serde is the ecosystem-standard (de)serializer whose derive keeps the document shape and the Rust types from drifting apart per surface. It is the dependency the manifest (I1a) lists, so the choice sits between the stack decision and the package decision. The JSON Schema validator layered on top of serde is a separate choice, left to its own node."
+	}
+}
