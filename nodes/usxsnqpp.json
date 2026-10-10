@@ -1,0 +1,1 @@
+{"kind": "evaluation", "evaluates": ["popowxnw"], "depends_on": ["ouzvzypl", "uzzxlpsl", "szmuyqrq", "knqkxzns"], "content": {"type": "test", "ref": ["tests/refusal.rs"], "rationale": "The type is where S3-err's failure shape and S4-own's refusal authority meet; this check pins the type's shape to those claims."}}
