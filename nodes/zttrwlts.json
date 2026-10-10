@@ -1,0 +1,24 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "ruxknztv",
+    "szmuyqrq",
+    "zruxtxrv",
+    "ppwnzwwy",
+    "ryuswoxz",
+    "vxvsvzns",
+    "wpomwoxt",
+    "popowxnw",
+    "lotlstzr",
+    "xymxqnvz",
+    "swuvzpvr",
+    "mrwtusss"
+  ],
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/context.rs"
+    ],
+    "rationale": "S3-explicit fixes that every crossing runs under a caller-supplied binary and root; S3-caller fixes that the seam's caller resolves the jj binary via PATH once and the repo root via `jj workspace root` at the current working directory, handing both across explicitly. M-layout places the module flat at src/context.rs. The caller searches PATH for jj and for git, runs the root query through the runner (M-jj) with root = cwd — no root is known yet — and anchors the runner and `root()` on the reported invocation workspace, so the jj runner never wanders to another working copy. The store, however, is not opened on the invocation root by presumption: M-TWO-ROOTS (lotlstzr) roots it at the trunk, so the invocation root goes to the trunk resolver (M-state-root, xymxqnvz) and the store is opened on the root it answers, resolved once at `resolve`. That makes the two accessors mean two things: `state()` lends the store in any workspace, since state is read wherever the invocation runs, while `store()` is the write-side door and is handed only from the trunk working copy, refusing elsewhere and naming the workspace it ran in — the value M-refusal (popowxnw) renders (mrwtusss, swuvzpvr). The resolver's typed failure travels out of `resolve` as `ContextError::StateRoot` instead of falling back to the invocation root (S3-err): a broken repository entry is an error, never a quieter success. Only a directory with no workspace is root-less (S3-root-optional); a root-less context refuses both store accessors with the absent workspace (S3-root-required). The PATH search still lives here, outside the boundary, and git keeps its own fallible accessor.\n\nThe context resolves two roots, not one. `root()` and the jj runner stay on the invocation workspace root — the root `jj workspace root` reports at the caller's cwd — so every crossing runs where the invocation ran. The store is opened on the trunk state root instead: `resolve` hands the invocation root to the resolver (`state_root::trunk_root`, M-state-root xymxqnvz) and opens the store on the root it returns, which is the root of the working copy the invocation's repository entry belongs to — the same workspace in the trunk working copy, another one in a linked workspace (M-TWO-ROOTS lotlstzr). The accessors split: `state()` lends that store in any workspace, while `store()` lends it only when the invocation workspace root is the store's root, i.e. the invocation runs in the trunk working copy; from anywhere else it refuses, naming the workspace it ran in (mrwtusss). Resolution carries the resolver's failure: a workspace whose repository entry exists but cannot be resolved makes `resolve` return `Err` with the typed cause (M-state-root xymxqnvz) rather than fall back to the invocation root, while a directory with no workspace at all still resolves root-less and both store accessors refuse with the absent workspace (S3-root-optional vxvsvzns).\n\nThe context reaches the trunk resolver through the crate root's `state_root` module (M-state-root xymxqnvz), declared once by M-main (rklnxlmy) beside the rest of the flat module map, and imports it here rather than declaring a copy: `use crate::state_root;` sits with the other `use crate::...` lines and both `state_root::trunk_root` call sites read the one module. One module map belongs to the crate root, so the context carries no second `#[path]` copy of the resolver, and the failure it hands back is that module's type: `ContextError::StateRoot` carries the single crate-root `state_root::StateRootError`, not a same-shaped private one, so a caller matching on the crate root's type sees the failure. Everything else stays as decided — the PATH search, `root()`, `jj()`, `state()`, `store()`, and the carried cause are unchanged."
+  }
+}
