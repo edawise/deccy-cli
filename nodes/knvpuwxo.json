@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["zttrwlts"],
+  "depends_on": ["zruxtxrv", "ppwnzwwy", "popowxnw"],
+  "content": {
+    "type": "test",
+    "ref": "inline",
+    "content": "rustc --edition 2021 --test tests/context.rs -o \"${TMPDIR:-/tmp}/context-use\"",
+    "rationale": "resolve runs the root query through the runner and opens the store on the resolved root, and the root-less accessors build their refusals through M-refusal; compiling the gate's shim (which declares all four modules) typechecks those calls and the refusal construction at once, so the uses are gated without a second owner for the file."
+  }
+}
