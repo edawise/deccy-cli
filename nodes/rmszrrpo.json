@@ -1,0 +1,11 @@
+{
+	"kind": "evaluation",
+	"evaluates": ["orrvsxqq"],
+	"depends_on": ["uuzuzrol", "kpovwvyw"],
+	"content": {
+		"type": "review-criteria",
+		"ref": "inline",
+		"content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+		"rationale": "The serde choice is where the stack's JSON need meets the document's JSON shape; the gate forces the dependency to answer to both without re-deciding either."
+	}
+}
