@@ -1,0 +1,1 @@
+{"kind": "evaluation", "evaluates": ["llorllwk"], "depends_on": ["ynvwvzrm"], "content": {"type": "test", "ref": "inline", "content": "rustc --edition 2021 --test tests/help.rs -o \"${TMPDIR:-/tmp}/help-use\"", "rationale": "help.rs renders from the route table (`Verb`); compiling the gate's shim typechecks the call, so the use is gated without a second owner for the file."}}
