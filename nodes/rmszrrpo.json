@@ -1,0 +1,11 @@
+{
+	"kind": "evaluation",
+	"evaluates": ["orrvsxqq"],
+	"depends_on": ["uuzuzrol", "kpovwvyw"],
+	"content": {
+		"type": "review-criteria",
+		"ref": "inline",
+		"content": "1. Necessity per prerequisite: the serde choice needs the Rust stack for a language and a build to depend from, and the JSON-document decision for a document to encode and decode — without either, the choice is motiveless. Fail if any edge can be dropped without loss. 2. License: no element of the serde commitment contradicts the stack choice or the document shape; it adds a mechanism and re-decides neither — it neither restates what a node is (D1c) nor re-argues Rust (I1). Fail on any contradicting element — name the element.",
+		"rationale": "The serde choice is where the stack's JSON need meets the document's JSON shape; the gate forces the dependency to answer to both without re-deciding either."
+	}
+}
