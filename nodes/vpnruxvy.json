@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["zttrwlts"],
+  "depends_on": ["ruxknztv", "szmuyqrq", "knqkxzns", "ryuswoxz", "vxvsvzns", "wpomwoxt"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/context.rs"],
+    "rationale": "Resolution is where S3-caller's PATH-and-root contract meets M-layout's placement; this check runs against a real jj in a scratch repo and pins that the resolved binary is a real path, the resolved root equals `jj workspace root`, and the store is opened on that same root — the resolver's share of the injected-context architecture (M-context-injection). It also pins the root-optional contract: a directory with no workspace resolves root-less (S3-root-optional, vxvsvzns), and its root and store accessors refuse naming the absence (S3-root-required, wpomwoxt), so a workspace-needing verb meets one failure shape."
+  }
+}
