@@ -1,0 +1,9 @@
+#!/bin/sh
+# Gate for M-envelope. Compile the test with the cargo-provided stamp set (version.rs's
+# env! needs it and plain rustc does not define it), then run it.
+set -eu
+here=$(cd "$(dirname "$0")" && pwd)
+tmp=$(mktemp)
+trap 'rm -f "$tmp"' EXIT
+CARGO_PKG_VERSION=0.1.0 rustc --edition 2021 --test "$here/envelope.rs" -o "$tmp"
+"$tmp"
