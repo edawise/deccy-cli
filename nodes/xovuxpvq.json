@@ -1,0 +1,16 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "owolyrmp",
+    "qtysmzxy",
+    "zovzqmon",
+    "kpptprql",
+    "mnwqksmt"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Redo applies the inverse undo recorded against the marker at the position and clears it, stepping the position one forward; the marker list stands. For a recording the record is the journal entry id and redo applies its after side; for a change-level operation it is the op ids of the reverts and redo reverts them. Redo leaves the working copy at the after side — the recorded diff is gone.",
+    "rationale": "The state redo leaves is fixed only inside specs/markers/redo.qnt's `redo` action, so a claim naming it has nothing smaller than the whole model to depend on. T-state fixes the two variables, G-select-redo which operation redo names, and T-redo the model this is read out of. The position steps (kpptprql) so a further redo re-applies the next operation and a repeat at the end of the tail refuses; the marker list stands, so redo never truncates the record of what ran. D15c (mnwqksmt) fixes the two-sided verification and the working-copy side: redo expects and leaves the after side there, so applying the after side to the target leaves the recorded diff gone."
+  }
+}
