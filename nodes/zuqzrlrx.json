@@ -1,0 +1,16 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "owolyrmp",
+    "wwrrqtox",
+    "nrqwpwkq",
+    "kpptprql",
+    "mnwqksmt"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Undo records the inverse it applied against the operation it undoes, steps the position one further back, and leaves the marker list standing. For a recording the record is the journal entry id; for a change-level operation it is the op ids of the reverts made. Undo puts the after side into the working copy — the recorded diff back.",
+    "rationale": "The state undo leaves is fixed only inside specs/markers/undo.qnt's `undo` action, so a claim naming it has nothing smaller than the whole model to depend on. T-state fixes the two variables, G-select-undo which operation undo names, and T-undo the model this is read out of. The position steps by one (kpptprql) so a further undo walks back one more operation, and the marker list stands, which leaves redo the record to re-apply. D15c (mnwqksmt) fixes that a recording's two sides are verified before the apply and that the working copy holds and keeps the after side; this entry fixes what the marker records about it."
+  }
+}
