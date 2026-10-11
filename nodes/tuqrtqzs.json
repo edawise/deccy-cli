@@ -1,0 +1,30 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "okkvnnvm"
+  ],
+  "depends_on": [
+    "otmxqplr",
+    "vwlrqoxk",
+    "vntvmykw",
+    "mvwnksou",
+    "szmuyqrq",
+    "knqkxzns",
+    "orrvsxqq",
+    "zmmyomyp",
+    "xwnylypn",
+    "urqytyqn",
+    "wotmvzyt",
+    "wxtzltkt",
+    "zutqsqtu"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/markers_capture/Cargo.toml",
+      "tests/markers_capture/Cargo.lock",
+      "tests/markers_capture/src/lib.rs"
+    ],
+    "rationale": "Capture is where S5-bracket's read-run-read protocol, S5-lifecycle's which-invocations-bracket rule, S5-observation's (urqytyqn) settle-and-observe rule, and G-capture and G-footprint's (vntvmykw, xwnylypn) term for what a bracket keeps meet; this check brackets real jj operations in a scratch repo and pins that a bracket keeps the entries its run window holds for the invoking workspace \u2014 read through M-jj-oplog \u2014 that two workspaces sharing the repo leave the bracket holding the invoking workspace's entries and not the other workspace's operation it shares the window with, that the two reads sit on either side of the run while the run's own value passes through untouched, that a working copy dirty before the bracket is settled before the window, so the marker keeps the run's own operation and not the snapshot of edits that predate it, that entries stack in run order, that a missing file brackets from empty, that a failed read aborts before the run and an absent binary is a spawn failure while a refused append is carried with its reason, and that capture records only an operation that names its change and kept work (S5-record-named, wotmvzyt) \u2014 a run that names a target records when its window kept work, even when it fails, a run that kept no entries records nothing: no marker is appended and the file, position included, is left untouched, so a no-op neither buys an un-undoable step nor discards the redo tail, and a run that answers no target appends nothing. A recording also stores one journal entry of the target's owned before and after sides (S5-journal-capture, wxtzltkt) through M-journal (zutqsqtu); the check pins that the entry holds exactly the owned set and that the marker names one entry id. It pulls in serde_json and the validator the append chain needs, so it is a crate of its own; the JSON layer is I1-serde's and the validator I1-schema's."
+  }
+}
