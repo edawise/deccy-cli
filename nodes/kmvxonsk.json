@@ -1,0 +1,40 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "mztqtrsz",
+    "xtuswonn",
+    "orwrynyn",
+    "kwwsoosw",
+    "qprkpnso",
+    "sspsomkw",
+    "pyvmoluu",
+    "rzlyozlp",
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "rwlywqrk",
+    "ryuswoxz",
+    "utrzvyyt",
+    "szmuyqrq",
+    "vkztyrzm",
+    "nykqvuqr",
+    "wynwwtur",
+    "ynvwvzrm",
+    "popowxnw",
+    "zttrwlts",
+    "orrvsxqq",
+    "vollyzvn",
+    "rkoktpwt",
+    "opqlqqvu",
+    "zrkzppqo",
+    "xotxspwp",
+    "kywmkqlm",
+    "lwnnssuo"
+  ],
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/verb_validate.rs"
+    ],
+    "rationale": "The validate verb: it reads the node set through M-node-set — each node's document and edges, or its load failure, read through M-store-read across the runner (M-jj) — checks node validity from those load outcomes, resolves every edge target exactly as the graph resolves it (M-node-resolve), computes sandwich coverage over the loaded edges (D9, kwwsoosw), applies the topology rule (S-topology, `zrkzppqo`) to the same loaded edges, and applies xotxspwp's content-custody rule to what history recorded, reporting each failure as one line under O10's `<check> <id> <reason>` shape — `validity <id> <reason>`, `resolution <id> <reason>`, `coverage <id> <target>`, `topology <id> <target>`, and `custody <id> <path>` — beside one another, changing nothing, recording no verdicts; an argument refuses (C). The topology pass takes the node order and the edges from the one reading M-node-set already made (`list_ordered`), so it adds no jj crossing of its own whatever the graph's size: no per-node, no per-edge and no second order read. The custody check reads the paths through S-read-custody's one crossing (`jj_custody::read`, kywmkqlm) — every change the substrate reports with the paths its recorded diff touched, in one listing whatever the graph's size, with no ownership test and no path filter narrowing it — and derives each change's owning set through S2-own's derivation (`node_own::owned`, lwnnssuo) from the document the node set already loaded: the node file plus the paths its `content.ref` lists, nothing else. That is the rule taken as given, not restated: the pass compares the read's paths with the derived set and holds no ownership rule of its own, so there is one derivation of ownership rather than two that could drift, and because ownership is exclusive a path outside the change's own set is the violation rather than a tie the pass breaks. The change the read names is the node whose id prefixes its full change id — the id every other line prints — so a stray path is one `custody <id> <path>` line naming the change and the path. A custody finding stops at the line: no edit is moved to a more plausible owner, no change is rewritten and no node document is amended so the diff would fit, which is what xotxspwp's refusal of repair means. A change whose node document did not load has no owning set to derive and is silent in this check, since validity already reports that node and inventing a set for it would be a second ownership rule; and a custody read that could not run is itself one check-level line beside the other four checks' findings — `custody - <jj's evidence>`, the check's name, O10's stand-in in the id position because no single node or change is implicated, and the evidence that check produced — rather than a refusal, so one check that never ran never silences the four that did and never leaves the graph called clean by it. The pass accounts for every change that touches the node store: the one set read reports the candidates it dropped for want of a document of their own — `node_set::list_with_drops`, the same single reading `list_ordered` makes, which yields the set and, beside it, exactly the candidates that own no `nodes/<their own id>.json` (S2-set) — so validity names each dropped change with the same `validity <id> <reason>` line a document that failed to load gets, the reason being the document's absence, while custody attributes every candidate the set does hold exactly as it did. The line carries the id the set spells, so every validity and custody line names ids the way the rest of the report does, and a dropped change is named once however many paths under `nodes/` its diff touched. Reporting a drop adds nothing to the set: a dropped candidate is not resolved, not placed in history and given no owning set, so accounting for it never makes it a node the checks place, and nothing the enumeration saw disappears silently — what touches `nodes/` either owns a document and is custody's, or owns none and is validity's, so no change is left unchecked and none is reported by two checks. It returns its lines for the envelope to write (M-output-return) under M-route's handler shape, carrying its own --help text (xlvoxmyl/rwlywqrk), whose line names the five checks — validity, resolution, coverage, topology and content custody — keeping the `<check> <id> <reason>` wording, and the injected context (M-context-injection). I1-serde (`orrvsxqq`) fixes the JSON layer the module is written against — serde and serde_json, the crate's own `Value` and the derive. It takes the runner from the injected context (M-context). The read's refusal site (S2-read-refusal-site, vollyzvn) is this invocation's: an unreadable node is a reported validity line, never a silent skip. Resolution answers from the set already read through M-node-resolve's set-backed entry point (`resolve_in`); the rule is S2-resolve-in-set (`opqlqqvu`), and no target is read again. What is left to its dependants: what a caller makes of a pass that reported findings — its status is not the pass's — and the verbs that attribute repository state through ownership, which this pass reports on but does not decide for."
+  }
+}
