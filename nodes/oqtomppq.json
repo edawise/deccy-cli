@@ -1,0 +1,49 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zzntzlpq"
+  ],
+  "depends_on": [
+    "lummwqtx",
+    "prsoxsuo",
+    "txqmnvup",
+    "utplmmvz",
+    "yrnkmrqx",
+    "qmynqmwy",
+    "puuvpqzl",
+    "tmxutlwm",
+    "zuqzrlrx",
+    "kqqysmxn",
+    "tkqvkzsy",
+    "vwlrqoxk",
+    "kttmwrsv",
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "rwlywqrk",
+    "ryuswoxz",
+    "utrzvyyt",
+    "ynvwvzrm",
+    "szmuyqrq",
+    "orrvsxqq",
+    "knqkxzns",
+    "zmmyomyp",
+    "sprvousp",
+    "qxmzpupt",
+    "urtkpxwv",
+    "ppytsptl",
+    "kpptprql",
+    "qtqnuqxo",
+    "ntlspwxk",
+    "wmwkkqxl",
+    "zutqsqtu"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/verb_undo/Cargo.toml",
+      "tests/verb_undo/Cargo.lock",
+      "tests/verb_undo/src/lib.rs"
+    ],
+    "rationale": "Undo is where the operation selection and the linear history (lummwqtx, kpptprql, D8a's whole-operation undo over D8b's operation record), the form's argument surface (the beyond-the-form refusal), O7-undo's silence (tmxutlwm), the undo effect's state and S5-save-after-revert's ordering (zuqzrlrx, kqqysmxn), S5-refusal-site's refusal for a file that cannot be read (tkqvkzsy), S2-markers-refusal-site's refusal for a file that cannot be read or written (sprvousp), S5-lifecycle's no-bracketing rule (vwlrqoxk), S3-revert's mechanism (kttmwrsv) and S5-revert's selective semantics — the merge entry refused by name, the partway refusal rolled back (qxmzpupt) — and the per-verb --help promise — answered before the store is taken (H1, qtqnuqxo) — meet; this check drives the handler over a scratch jj workspace whose marker file names real operation ids read from the op log, and pins each of those — including that the verb steps back one operation per invocation, that a recording's journal entry is applied — its before side to the target and its after side to the working copy — a removal's entries are reverted newest first, and a creation is removed by abandoning the change it targeted, that the reverts it made are recorded against the marker and the state is written after the reverts, that no marker is appended, and that after an undo a new operation discards the tail, so a following undo has no abandoned operation to walk onto: it takes the new operation and the next undo refuses `no operation exists`; that a merge entry is refused by name, that an entry whose operation is gone is refused naming it, that a revert that refuses partway rolls back — the reverts already made are reverted and the refusing entry is named — that a revert that leaves any change divergent — the working copy or a rewritten ancestor — is itself reverted and refused, naming the entry, with the uncommitted work and the pre-undo state restored (S5-revert-divergent, ppytsptl); that a read failure refuses with the read's own carried reason and not the corruption's, and that the handler is the table's shape — a Verb row for it compiles (M-route). It reaches the marker file through M-markers-persist, so it is a crate of its own. I1-serde (orrvsxqq) fixes the JSON layer the crate is written against — serde and serde_json, the crate's own `Value` and the derive — and I1-schema (zmmyomyp) fixes the validator these documents are checked with. And the save-failure remedy (S5-save-failure, ntlspwxk): a save that cannot land after the write half reverses the crossings already made — a recording's edits and a creation's change are restored, the marker file is left byte-identical, and the invocation refuses naming the save, so a retry is the same undo and not a stuck marker. It also pins the recording leg: two records undo twice with no divergence, an unrelated dirty working copy never blocks, undo leaves the after side in the working copy so its diff appears against the target's before side, a refused retry is one line, and a mismatch names the path (D15c, mnwqksmt; M-journal, zutqsqtu; M-journal-apply, wmwkkqxl)."
+  }
+}
