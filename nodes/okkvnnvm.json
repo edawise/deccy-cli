@@ -1,0 +1,26 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "otmxqplr",
+    "vwlrqoxk",
+    "vntvmykw",
+    "szmuyqrq",
+    "zruxtxrv",
+    "mvwnksou",
+    "wkpyqtyx",
+    "ppwnzwwy",
+    "wzyorrny",
+    "xwnylypn",
+    "urqytyqn",
+    "wotmvzyt",
+    "wxtzltkt",
+    "zutqsqtu"
+  ],
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/markers_capture.rs"
+    ],
+    "rationale": "S5-bracket fixes the protocol \u2014 the op head read before the operation runs and again after, the run itself untouched \u2014 S5-lifecycle which invocations feed it, G-capture and G-footprint (xwnylypn) that the window's entries attributed to the invoking workspace are what a bracket keeps, and S5-observation (urqytyqn) that the bracket settles the working copy once before its window and that the reads leave it alone; M-layout places the module flat at src/markers_capture.rs. A recording additionally snapshots the target's owned paths before and after the run and stores one journal entry (S5-journal-capture, wxtzltkt) through M-journal (zutqsqtu), so the marker's recording entry names that entry. It crosses M-jj's runner and reads the head, the window and the invoking workspace through M-jj-oplog, appends through M-markers-append, and names the store and the carried reasons through M-store and M-markers-persist. One transition: settle the working copy once (`jj util snapshot`) before the pre-read, read the live op head, run the given operation untouched, read the head again, keep the window's entries that are the invoking workspace's own \u2014 so another workspace's entries that share the window are not the operation's, and a snapshot of edits that predate the invocation is outside the window rather than in it. A failed settle or read aborts before the run, so nothing is bracketed that never opened; the run's own outcome passes through unexamined, so which invocation brackets stays the caller's call and every failure is carried, never rendered. The run answers the target it named (S5-record-named, wotmvzyt); one that answers none closes its bracket and records nothing \u2014 no entries are kept and no marker is appended \u2014 and one whose window kept no entries records nothing too, so a no-op buys no un-undoable step and the marker file is left as it stood; a run that names a target and kept work records even when it fails, because that work landed before the refusal."
+  }
+}
