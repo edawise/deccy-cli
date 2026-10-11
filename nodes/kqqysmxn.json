@@ -1,0 +1,16 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "mpoyntop",
+    "ysqqrqsp",
+    "nslkynln",
+    "ppwnzwwy",
+    "prsoxsuo"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Undo and redo write the marker state they leave after the write half \u2014 the inverse the kind names: a journal apply for a recording, the change-level inverse for a creation or removal. The marker state is written after it.",
+    "rationale": "The write half is the inverse the kind names (mpoyntop): a recording's journal apply (D8c, kmmowvkw), a creation's removal of the created change (D8a), or a removal's reverted entries. It runs over the tracked repo while the marker file is untracked, so deccy writes the new state after it rather than relying on it to carry the state."
+  }
+}
