@@ -1,0 +1,20 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "okkvnnvm"
+  ],
+  "depends_on": [
+    "mvwnksou",
+    "wkpyqtyx",
+    "zruxtxrv",
+    "ppwnzwwy",
+    "wzyorrny",
+    "zutqsqtu"
+  ],
+  "content": {
+    "type": "test",
+    "ref": "inline",
+    "content": "CARGO_TARGET_DIR=\"${TMPDIR:-/tmp}/deccy-markers-capture-target\" cargo test --manifest-path tests/markers_capture/Cargo.toml --no-run",
+    "rationale": "capture crosses M-jj's runner \u2014 settling the working copy before the window and bracketing the run \u2014 reads the head and the window through M-jj-oplog, hands the entries to M-markers-append, and names M-store's store, includes M-journal's module when capture snapshots a recording, and and M-markers-persist's carried reason; building the gate's own crate typechecks all of it at once."
+  }
+}
