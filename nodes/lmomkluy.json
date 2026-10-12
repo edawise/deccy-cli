@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["oqrmlyzt", "xxwtnpzz"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall run the bootstrap in order: create the git repository, record the state directory in `.git/info/exclude`, then create the jj workspace colocated with it.",
+    "rationale": "The order is load-bearing: `.git` must exist before its `info/exclude` can be written, and the workspace must adopt that repository rather than make its own. Naming the sequence here keeps the bootstrap one decision the verb's mechanism answers to, without re-deciding the workspace (IN-jj) or the untracked state directory (IN-ignore)."
+  }
+}
