@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["svusvrou"],
+  "depends_on": ["kpovwvyw"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Embedding is where the CLI's packaging meets the node-document decision; the gate keeps the carried-schema claim answerable to it without re-deciding the document."
+  }
+}
