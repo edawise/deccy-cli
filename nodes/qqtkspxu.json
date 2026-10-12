@@ -1,0 +1,26 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zzntzlpq",
+    "lmwqvpll"
+  ],
+  "depends_on": [
+    "nrqwpwkq",
+    "zovzqmon",
+    "szmuyqrq",
+    "knqkxzns",
+    "orrvsxqq",
+    "zmmyomyp",
+    "kpptprql",
+    "wmwkkqxl"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/revert_conformance/Cargo.toml",
+      "tests/revert_conformance/Cargo.lock",
+      "tests/revert_conformance/src/lib.rs"
+    ],
+    "rationale": "The revert half of undo and redo is where each model's transition meets the write half: specs/markers/undo.qnt (nrqwpwkq) fixes that undo takes the marker before the position by the inverse its kind records and records the reverts it made, and specs/markers/redo.qnt (zovzqmon) that redo reverts those recorded reverts from the position and clears them, and the invocation reverts them through the revert module. It includes the two-leg dispatch: a recording applies its journal entry and records that entry id, while a creation and a removal use the change-level inverse and record op ids; both legs leave the working copy on the other side (D15c, M-journal-apply, wmwkkqxl). The linear history (kpptprql) is the cursor both models move. This check drives the two handlers over a scratch jj workspace whose marker file names real operation ids read from the op log, and pins that each invocation lands the repo on the operation its model names and writes that model's state, the markers standing; the walk follows the position, and undo then redo returns the repo. It reaches the marker file through M-markers-persist, so it is a crate of its own. I1-serde (orrvsxqq) fixes the JSON layer the crate is written against \u2014 serde and serde_json, the crate's own `Value` and the derive \u2014 and I1-schema (zmmyomyp) fixes the validator these documents are checked with. Its edges span two cells \u2014 the models' structured-to-code conformance cell and the handlers' natural-to-code fidelity cell \u2014 so the criterion stays its test ref; the mixed cell is flagged for the matrix (F1 follow-up)."
+  }
+}
