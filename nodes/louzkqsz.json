@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["lmomkluy", "vnsyvzpp", "xmxpvqzs", "vyquqmoo", "lvkukpyw", "uzzxlpsl", "zruxtxrv", "nrvtvmln", "yuslrlov", "ppwnzwwy", "szmuyqrq"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/jj_init.rs"],
+    "rationale": "IN-mechanism (lmomkluy) fixes the ordered bootstrap — create the git repository, append the state directory to `.git/info/exclude`, then create the jj workspace colocated with it — and this is that sequence as one module. The state directory is recorded once, so git's own template is recorded without being clobbered and a re-run adds nothing. Both crossings run through the one runner (M-jj) under caller-supplied binaries; the git binary is resolved by the caller the way it resolves jj, and `.git/info/exclude` is read and appended through the exclude module (M-exclude, nrvtvmln) on the target, never std::fs. M-layout places the module flat at src/jj_init.rs. It returns failures as values and renders nothing. The record step is idempotent (IN-record-idempotent, vnsyvzpp): the module reads the file and appends the entry only when it is not already a line, so a re-run adds nothing. An exclude failure is refused at this step (S2-exclude-refusal-site, yuslrlov) — the invocation that touches the file produces the refusal, the envelope renders it."
+  }
+}
