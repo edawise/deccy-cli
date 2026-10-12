@@ -1,0 +1,48 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "lmwqvpll"
+  ],
+  "depends_on": [
+    "qwqwqtuq",
+    "prsoxsuo",
+    "txqmnvup",
+    "lxvppqom",
+    "oozpzlzn",
+    "qmynqmwy",
+    "puuvpqzl",
+    "lnulwqwt",
+    "xovuxpvq",
+    "kqqysmxn",
+    "tkqvkzsy",
+    "vwlrqoxk",
+    "kttmwrsv",
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "rwlywqrk",
+    "ryuswoxz",
+    "utrzvyyt",
+    "ynvwvzrm",
+    "szmuyqrq",
+    "orrvsxqq",
+    "knqkxzns",
+    "zmmyomyp",
+    "sprvousp",
+    "qxmzpupt",
+    "ppytsptl",
+    "kpptprql",
+    "qtqnuqxo",
+    "ntlspwxk",
+    "wmwkkqxl",
+    "zutqsqtu"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/verb_redo/Cargo.toml",
+      "tests/verb_redo/Cargo.lock",
+      "tests/verb_redo/src/lib.rs"
+    ],
+    "rationale": "Redo is where the next-undone selection and the linear history (qwqwqtuq, lxvppqom, oozpzlzn, kpptprql), D8a's whole-operation redo (prsoxsuo) over D8b's operation entries (txqmnvup), the form's argument surface (the beyond-the-form refusal), O7-redo's silence (lnulwqwt), the redo effect's state and S5-save-after-revert's ordering (xovuxpvq, kqqysmxn), S5-refusal-site's refusal for a file that cannot be read (tkqvkzsy), S2-markers-refusal-site's refusal for a file that cannot be read or written (sprvousp), S5-lifecycle's no-bracketing rule (vwlrqoxk), S3-revert's mechanism (kttmwrsv) and S5-revert's selective semantics — the merge entry refused by name, the partway refusal rolled back (qxmzpupt) — and the per-verb --help promise — answered before the store is taken (H1, qtqnuqxo) — meet; this check drives the handler over a scratch jj workspace whose marker file names real operation ids read from the op log, and pins each of those — including that the verb steps forward one operation per invocation, that a recording's journal entry is applied and a change-level operation's reverts are the reverts recorded against the marker at the position, that the reverts it made are cleared and the state is written after the reverts, that no marker is appended, that a repeat at the end of the tail refuses, and that an append after an undo discards the tail and leaves nothing to redo, which refuses as `nothing is undone` rather than as a newer operation; that an entry whose operation is gone is refused naming it, that a revert that refuses partway rolls back — the re-reverts already made are reverted and the refusing entry is named — that a revert that leaves any change divergent — the working copy or a rewritten ancestor — is itself reverted and refused, naming the entry, with the uncommitted work and the pre-redo state restored (S5-revert-divergent, ppytsptl); that a read failure refuses with the read's own carried reason and not the corruption's, and that the handler is the table's shape — a Verb row for it compiles (M-route). It reaches the marker file through M-markers-persist, so it is a crate of its own. I1-serde (orrvsxqq) fixes the JSON layer the crate is written against — serde and serde_json, the crate's own `Value` and the derive — and I1-schema (zmmyomyp) fixes the validator these documents are checked with. And the save-failure remedy (S5-save-failure, ntlspwxk): a save that cannot land after the write half reverses the re-reverts already made — the undone state is restored, the marker file is left byte-identical, and the invocation refuses naming the save, so a retry is the same redo and not a stuck marker. It also pins the recording leg: redo applies the after side and leaves the working copy at the after side, so the recorded diff is gone, a conflict refuses naming the path, and an edited owned path refuses (D15c, mnwqksmt; M-journal, zutqsqtu; M-journal-apply, wmwkkqxl)."
+  }
+}
