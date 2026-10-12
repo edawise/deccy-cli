@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["lmomkluy"],
+  "depends_on": ["oqrmlyzt", "xxwtnpzz"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The bootstrap is where the invocation's workspace and untracked-state clauses meet; the gate keeps the sequence answerable to both without re-deciding either. Each prerequisite here is a requirement sentence, so the cell is the matrix default — the gate plus a flag to extend the matrix."
+  }
+}
