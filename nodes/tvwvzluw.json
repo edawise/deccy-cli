@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu", "vxvsvzns"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "init requires no resolved workspace: it is the verb that creates one, so it runs on a root-less context.",
+    "rationale": "The verb's first effect is to create the workspace (IN-verb), so requiring one to already resolve would block the verb that makes it. Running on a root-less context is what makes the invocation total."
+  }
+}
