@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["vsyytyrt"],
+  "depends_on": ["tvppvyqu"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The guard is where the invocation meets its own promise to prepare a repository; the gate keeps it answerable to both without re-deciding either."
+  }
+}
