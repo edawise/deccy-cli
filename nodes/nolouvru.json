@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu", "oqrmlyzt", "xxwtnpzz", "rvuunmlm", "vsyytyrt", "tvwvzluw", "lmomkluy", "louzkqsz", "nrvtvmln", "zruxtxrv", "popowxnw", "ynvwvzrm", "szmuyqrq", "zttrwlts", "ryuswoxz", "utrzvyyt", "oywywrvu", "oqnsuzqu", "vxvsvzns"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/verb_init.rs"],
+    "rationale": "The init verb: it takes an optional `[path]` (the working directory when none is given, IN-verb) and, unless `--help` is asked, refuses when the target is already initialised — a jj workspace or a git repository (IN-guard) — before anything is written; otherwise it runs the bootstrap through M-jj-init (IN-mechanism), creates the `nodes/` and `.deccy/` directories (IN-dirs), and returns its lines for the envelope to write (M-output-return). It runs on a root-less context (IN-entry, S3-root-optional) and needs no store of its own. It builds its refusals through M-refusal, takes the injected context (M-context-injection), carries its own --help text (per oqnsuzqu), and follows M-route's handler shape; adding it is one row in the table (D23)."
+  }
+}
