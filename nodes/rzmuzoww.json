@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rvuunmlm"],
+  "depends_on": ["tvppvyqu", "ysqqrqsp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Creating the directories is where the invocation meets the state directory and the node layout; the gate keeps it answerable to both without re-deciding either. Its two edges span two cells — one prose parent (natural→structured) and one requirement-sentence parent (structured→structured) — so the criterion is the default cell's gate form; the mixed cell is flagged for the matrix (F1 follow-up)."
+  }
+}
