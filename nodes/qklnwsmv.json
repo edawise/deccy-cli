@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["xxwtnpzz"],
+  "depends_on": ["tvppvyqu", "ysqqrqsp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Keeping the state directory untracked is where the invocation meets the marker file's home; the gate keeps it answerable to both without re-deciding either."
+  }
+}
