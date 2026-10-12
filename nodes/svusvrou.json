@@ -1,0 +1,10 @@
+{
+  "depends_on": ["kpovwvyw"],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The node and marker schemas are compiled into the binary: the CLI carries its schemas, and nothing reads a schema from the repository at runtime.",
+    "rationale": "The CLI works in any repository (D0) as one artifact (I1): a schema read from the repository at runtime would make every repository carry a `schemas/` that neither the CLI's gates nor its users asked for. Carrying them compiled in keeps node validity defined by the CLI's own copy (D1d) and the marker file checked against the same carried schema (S5-marker-schema)."
+  }
+}
