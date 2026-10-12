@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["mnvsuyqu"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall prepare a repository for dec-graph use, at `path` when given and in the working directory otherwise.",
+    "rationale": "The invocation clause is the surface every caller and agent names; stating trigger and end gives the workspace, directory, ignore, marker and refusal clauses one parent to elaborate without fixing their mechanism here."
+  }
+}
