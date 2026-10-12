@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["tvppvyqu"],
+  "depends_on": ["mnvsuyqu"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts the parent. Fail on any contradicting element — name the element.",
+    "rationale": "The invocation clause is where the operation meets the `deccy <verb>` form; the gate keeps the clause honest to the operation without demanding behaviour."
+  }
+}
