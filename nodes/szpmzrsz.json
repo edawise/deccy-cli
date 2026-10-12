@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["nolouvru"],
+  "depends_on": ["louzkqsz", "zruxtxrv", "popowxnw", "ynvwvzrm", "zttrwlts"],
+  "content": {
+    "type": "test",
+    "ref": "inline",
+    "content": "CARGO_TARGET_DIR=\"${TMPDIR:-/tmp}/deccy-verb-init-target\" cargo test --manifest-path tests/verb_init/Cargo.toml --no-run",
+    "rationale": "The verb runs the bootstrap through M-jj-init, its crossings through M-jj, takes the injected context (M-context), builds its refusals through M-refusal, and follows M-route's handler shape; building the gate's own crate typechecks all of those calls at once, so the fan-out is gated without a second owner for the crate."
+  }
+}
