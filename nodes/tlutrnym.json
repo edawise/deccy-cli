@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["vxvsvzns"],
+  "depends_on": ["ruxknztv"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Total resolution is where the root query meets the seam's caller; the gate keeps it answerable to the caller's contract."
+  }
+}
