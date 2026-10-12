@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["mnvsuyqu"],
+  "depends_on": ["syxllqoq", "wzmmmmsw"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The bootstrap operation is where the product's operation set meets the invocation shape; the gate keeps it answerable to both without re-deciding either."
+  }
+}
