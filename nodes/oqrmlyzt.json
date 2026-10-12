@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu", "xkolyytz"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall create the jj workspace at `path`.",
+    "rationale": "The invocation prepares a repository for dec-graph use (IN-verb), and the graph lives in a jj workspace (xkolyytz) — so creating that workspace is the invocation's first effect. Stating it as an end keeps the workspace the CLI's to make, not the caller's."
+  }
+}
