@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu", "ysqqrqsp"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall create the `nodes/` and `.deccy/` directories.",
+    "rationale": "Preparing a repository means laying down the two directories the store is made of: `nodes/` for the node documents and `.deccy/` for the untracked state (S5-marker-file). Naming both as the invocation's effect keeps their creation with the verb that prepares the repository."
+  }
+}
