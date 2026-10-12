@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["ruxknztv"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The root resolves only when a workspace exists: a directory with no workspace yields a root-less context, not a failure.",
+    "rationale": "S3-caller (ruxknztv) resolves the root; a directory with no workspace has none to resolve, and requiring one would block the very verb that creates it. Making the root optional keeps resolution total and lets init run under the one entry path."
+  }
+}
