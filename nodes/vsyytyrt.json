@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]` in a target that is already initialised — a jj workspace or a git repository — the deccy CLI shall refuse the invocation and change nothing.",
+    "rationale": "A repository that is already prepared gives the verb nothing to do, and the target's existing jj or git state is not the CLI's to overwrite. Refusing before anything is written keeps the verb's promise (IN-verb) from clobbering a workspace the caller already has."
+  }
+}
