@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["vxvsvzns"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A verb that needs a resolved workspace refuses when the context is root-less, naming the absence; init is the one verb that does not.",
+    "rationale": "Root-optional makes a root-less context a state (S3-root-optional), so a verb that reaches for the store needs an answer for its absence. Refusing — the same value the envelope renders (S4) — keeps a missing workspace one failure with one shape, and leaves init's exemption (IN-entry) the only special case."
+  }
+}
