@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["louzkqsz"],
+  "depends_on": ["zruxtxrv", "nrvtvmln", "ppwnzwwy"],
+  "content": {
+    "type": "test",
+    "ref": "inline",
+    "content": "rustc --edition 2021 --test tests/jj_init.rs -o \"${TMPDIR:-/tmp}/jj-init-use\"",
+    "rationale": "The bootstrap runs both crossings through M-jj's runner and reads and appends `.git/info/exclude` through M-exclude; compiling the gate's shim (which declares the module, its code parents and the exclude module) typechecks all of those calls at once, so the uses are gated without a second owner for the file."
+  }
+}
