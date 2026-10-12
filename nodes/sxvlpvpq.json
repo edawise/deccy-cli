@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["wpomwoxt"],
+  "depends_on": ["vxvsvzns"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The refusal clause is where a workspace-needing verb meets the optional root; the gate keeps the refusal answerable to the root-less state without re-deciding either."
+  }
+}
