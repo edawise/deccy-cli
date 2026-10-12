@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rklnxlmy"],
+  "depends_on": ["szmuyqrq", "ryuswoxz", "knqkxzns", "tpkrztrq", "oqpxpkoo", "krxxmnzz", "vxvsvzns", "utykmuns", "tmwyqnyz", "osplmlvq"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/cli.rs"],
+    "rationale": "The crate root is where the map, the table, and the entry meet; the check drives the built binary — the surface anyone runs — through the channels, the status, dispatch, the globals, and the resolution path, and reads the map back to confirm it names exactly the modules under `src/` — now the whole module set, M-store-read and M-jj-read included. It pins the root-optional contract as the binary behaves: the globals answer without a workspace (S3-root-optional, vxvsvzns) while a workspace-needing verb refuses on the root-less context, `init` prepares a repository and refuses an already-initialised target, and the bare list carries `init` first. The refusal checks pin the shape the envelope's clauses fix — one stderr line, nothing on stdout, status 2 — with the naming the route decides (D20, S1-refuse) and no wording of the invocation's own: the gate answers to the decisions, not to the rendered text. The suite's black-box form is the acceptance-suite choice's."
+  }
+}
