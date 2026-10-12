@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["syxllqoq", "wzmmmmsw"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy init [path] prepares a repository for dec-graph use at the given path — the working directory when none is given — so the graph verbs have somewhere to run.",
+    "rationale": "Every other verb presupposes an initialised repository — one jj change per node, node files under nodes/ — so init is the operation that makes the rest reachable; stating the operation and not its steps gives the workspace, directory, ignore and marker clauses something to elaborate. It depends on the root because the root's operation set now names it, and on the invocation shape because it is a verb."
+  }
+}
