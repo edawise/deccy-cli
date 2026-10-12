@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["tvppvyqu", "ysqqrqsp"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall keep the `.deccy/` state directory untracked.",
+    "rationale": "The state directory is deccy's alone — the marker file lives inside it (S5-marker-file) — and keeping `.deccy/` untracked is what keeps node listing and attribution from ever seeing it. Fixing the boundary here keeps a later verb from re-deciding it."
+  }
+}
