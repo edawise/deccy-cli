@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["nrvtvmln"],
+  "depends_on": ["zuvsnyxy", "xpxukylv", "zvmsnkln", "llkvmtou", "xlowmllo", "zwurwxwq", "rmmlokop", "ppwnzwwy", "szmuyqrq"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/exclude.rs"],
+    "rationale": "The exclude module is where the interface's read and append, the atomic rule, and the root holder meet; this check drives `exclude::read` and `exclude::append` over scratch roots and pins that the read yields the file's contents as they stand and that a root with no exclude file reads as empty, that an append makes the entry a line (an existing template keeping its lines, a missing final newline added), and that a failure to read or write is carried as a value with the file left as it was."
+  }
+}
