@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xquwmsts"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A write lands by atomic replacement: a temporary file in the target's own directory, written and flushed, then renamed over the target, so no reader ever observes a partially written file. One rule for every interface that writes — the node document, the marker file, the exclude file.",
+    "rationale": "S2-ifs gives each interface its own reach; this fixes how any write lands, once. The marker file is the durable record that makes undo and redo work and is rewritten on every bracketed operation, so a crash mid-write must not be able to destroy it; replacing whole files atomically makes that failure unobservable rather than merely unlikely, which is why a write is a replacement and not a truncate-and-write. The node document written at birth is its second caller."
+  }
+}
