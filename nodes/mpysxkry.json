@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["xquwmsts"],
+  "depends_on": ["xyoslvwo", "xkolyytz"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The decomposition is where the substrate boundary and the jj repository meet; the gate forces the four-interface claim to answer to S0's one substrate and D1a's jj backend without demanding behavior."
+  }
+}
