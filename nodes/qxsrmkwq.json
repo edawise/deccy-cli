@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["zuvsnyxy"],
+  "depends_on": ["xquwmsts", "lmomkluy"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The exclude interface is where the four-interface split meets the init bootstrap that writes the exclude file; the gate forces the exclude-file claim to answer to both without re-deciding the sequence."
+  }
+}
