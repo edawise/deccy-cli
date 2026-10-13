@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rmmlokop"],
+  "depends_on": ["xquwmsts"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The atomic-write rule is where the four-interface split meets how any write lands; the gate forces the single replacement rule to answer to S2-ifs's per-interface reach without re-deciding it."
+  }
+}
