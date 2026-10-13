@@ -1,0 +1,10 @@
+{
+	"kind": "decision",
+	"depends_on": ["syxllqoq", "wzmmmmsw"],
+	"content": {
+		"type": "text",
+		"ref": "inline",
+		"content": "The crate is packaged and published as `deccy-cli`; the command users run stays `deccy`, carried by an explicit binary target named `deccy`.",
+		"rationale": "The package name is the listing identity a registry picks and a reader finds, and this project's home is deccy-cli; the name a package is published under need not be the name of the command inside it. The command stays `deccy` (D10, wzmmmmsw) because the invocation is what users and their scripts already type, and a short command is what a human or an agent reaches for. Decoupling the two is the manifest's explicit binary target, so renaming the package leaves the command — and everything that renders it — intact."
+	}
+}
