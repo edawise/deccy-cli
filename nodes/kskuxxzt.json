@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ppwnzwwy"],
+  "depends_on": ["xquwmsts", "szmuyqrq"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/store.rs"],
+    "rationale": "The root holder is where the four-interface split and the flat-module layout meet; this check pins the type's shape — one root, held once, opened by every interface — to those claims."
+  }
+}
