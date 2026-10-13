@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["vnsyvzpp"],
+  "depends_on": ["lmomkluy"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The record-once clause is where the bootstrap's ordered record step meets the append form and the caller's decision whether to write; the gate forces the clause to answer to the sequence without re-deciding the append or the order. Both nodes are requirement sentences, so the cell is the matrix default — the gate plus a flag to extend the matrix."
+  }
+}
