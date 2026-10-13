@@ -1,0 +1,1 @@
+{"kind":"decision","depends_on":["syxllqoq"],"content":{"type":"text","ref":"inline","content":"deccy's source lives at github.com/edawise/deccy-cli.","rationale":"The package needs one public home for its `repository` link; the source repo is that home — the thing a reader follows to read the history or file an issue."}}
