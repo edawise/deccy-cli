@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ryuswoxz"],
+  "depends_on": ["xyoslvwo", "zynwuzxv", "xquwmsts", "ruxknztv", "vxvsvzns"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The injected context is where the shared substrate, the dispatch table, the four interfaces, the seam's caller and the optional root meet; the gate forces threading one context of root and handles to answer to each without re-deciding any."
+  }
+}
