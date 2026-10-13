@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ppmvwrlu"],
+  "depends_on": ["xquwmsts", "ysqqrqsp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The markers interface is where the four-interface split meets where the marker file lives; the gate forces the marker-file claim to answer to both without re-deciding the location."
+  }
+}
