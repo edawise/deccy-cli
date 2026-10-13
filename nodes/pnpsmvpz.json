@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xquwmsts", "kpovwvyw"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The store write interface writes node documents to the working copy: a node document under the root.",
+    "rationale": "Reads come from jj (S2-read), but authored node content is a working-copy file that jj versions; the write is how a node's document reaches the tree jj snapshots. D1c (kpovwvyw) fixes the document and its layout, so the interface's target is the node file. S2-ifs gives the write its own reach and keeps it filesystem-only, so it neither gains jj access nor borrows the read interface's revision rule."
+  }
+}
