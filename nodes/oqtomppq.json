@@ -1,0 +1,53 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zzntzlpq"
+  ],
+  "depends_on": [
+    "lummwqtx",
+    "prsoxsuo",
+    "txqmnvup",
+    "utplmmvz",
+    "yrnkmrqx",
+    "qmynqmwy",
+    "puuvpqzl",
+    "tmxutlwm",
+    "zuqzrlrx",
+    "kqqysmxn",
+    "tkqvkzsy",
+    "vwlrqoxk",
+    "kttmwrsv",
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "rwlywqrk",
+    "ryuswoxz",
+    "utrzvyyt",
+    "ynvwvzrm",
+    "szmuyqrq",
+    "orrvsxqq",
+    "knqkxzns",
+    "zmmyomyp",
+    "sprvousp",
+    "qxmzpupt",
+    "urtkpxwv",
+    "ppytsptl",
+    "kpptprql",
+    "qtqnuqxo",
+    "ntlspwxk",
+    "wmwkkqxl",
+    "zutqsqtu",
+    "xwoxtupt",
+    "ytvvzlsp",
+    "olmoqxzo",
+    "xkolyytz"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/verb_undo/Cargo.toml",
+      "tests/verb_undo/Cargo.lock",
+      "tests/verb_undo/src/lib.rs"
+    ],
+    "rationale": "This evaluation answers for the one decision it evaluates: the undo verb's form, its markers and its reverts as above. It is answerable, too, for the edge from that decision to the landing decision — `zzntzlpq -> xwoxtupt`, the undo verb's implementation resting on the landing a creation's undo records — by reading the recorded undo decision's node document, `nodes/zzntzlpq.json`, and finding the landing named in its `depends_on`; the assertion names the node, the missing id and what the edge is for, and touches none of either decision's wording. The landing itself is walked here at the grain the birth cycle reaches (the sibling's own document standing at the sibling beside the birth) and pinned again over a beside-change that is not empty (tests/record_undo.rs, zwpzsoqu). The landing's own edges — its six prerequisites — are not this evaluation's; they are covered by suxnppvq."
+  }
+}

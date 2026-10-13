@@ -1,0 +1,19 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "tzlumxvt"
+  ],
+  "depends_on": [
+    "twpvqstu",
+    "vkkwusty",
+    "owyntkvw",
+    "stnqmzuw",
+    "myprwuxt"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "Applies to the five recorded edges, one prerequisite at a time: read the dependent against each prerequisite in depends_on and apply both criteria to that edge. The evaluation is satisfied only when all five edges pass.\n\n1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.\n\n2. Edge use: in the dependent, find the element whose soundness this prerequisite carries. Fail naming the prerequisite when the dependent contains no such element; an unused recorded edge is a finding, not a licence.\n\nNothing is pre-named: which element is at issue is what the check discovers at check time, never what the criterion fixes in advance.",
+    "rationale": "All five recorded prerequisites are inline prose and the dependent is inline prose, so every edge lands in the natural→natural cell and takes that cell's licence check, applied once per prerequisite edge. A natural-layer child is a commitment in words, so nothing is run and no behaviour is probed: the check is the reviewer reading the dependent against each prerequisite in turn.\n\nWhat each edge carries into the check. The registry parent fixes where a draft's record lives and that the records are found by reading that directory, retained at landing — a duty over drafts cannot rest on an index beside the documents, and a scan that classified the drafts must still see a landed record at its handle. The lifecycle parent fixes the two states and the one-way transition with the landed record kept, which is what makes the not-yet-landed state the only one a duty can be attached to while the landed records remain reachable to the very same scan. The record parent fixes that a record's identity is its own handle and that the node it names is a reference, so records can be picked out by target node and the drafts they are can be named by the handle a caller is handed. The remove parent fixes the verb's existing refusal, its dependants named, with no aliases — the refusal surface a further precondition joins rather than replaces. The removal parent fixes that a node is removed only while nothing depends on it, a necessary condition an added precondition does not contradict, and that refusal is the answer while something does depend.\n\nCriterion 2 exists so no recorded edge passes vacuously: the evaluation covers the dependent's use of each prerequisite, not merely the absence of a clash with a prerequisite the dependent never invokes. Which element fails, and against which prerequisite, is the check's output, not part of the criterion; rewriting the dependent without changing what it decides leaves the criterion intact."
+  }
+}

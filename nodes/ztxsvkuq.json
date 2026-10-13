@@ -1,0 +1,17 @@
+{
+  "content": {
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "Placement is where a draft's writing home meets the state registry, the record's identity and the draft model at once; the gate keeps that one answer from contradicting any of the three without re-deciding any of them. The dependent is prose and all three prerequisites are prose, so every one of the three edges falls in the natural→natural cell and takes the licence gate as its criterion, applied to each recorded prerequisite in turn at check time. Written placement is not a behaviour this cell can probe — a behaviour probe belongs to a cell whose child is code — so there is no runnable command here: the check is read against the recorded documents, and which element is at issue is what the check discovers, never what the criterion pre-names.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "ulqqklzk",
+    "owyntkvw",
+    "znskspqs"
+  ],
+  "evaluates": [
+    "xqzstoyo"
+  ],
+  "kind": "evaluation"
+}

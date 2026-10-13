@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["nolouvru"],
+  "depends_on": ["tvppvyqu", "oqrmlyzt", "xxwtnpzz", "rvuunmlm", "vsyytyrt", "tvwvzluw", "lmomkluy", "nrvtvmln", "szmuyqrq", "ryuswoxz", "utrzvyyt", "oywywrvu", "oqnsuzqu", "vxvsvzns", "knqkxzns"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/verb_init/Cargo.toml", "tests/verb_init/Cargo.lock", "tests/verb_init/src/lib.rs"],
+    "rationale": "The init verb is where the invocation clause (tvppvyqu) and its workspace (oqrmlyzt), untracked-state (xxwtnpzz), directory (rvuunmlm), guard (vsyytyrt) and root-less-entry (tvwvzluw) clauses meet the ordered bootstrap (lmomkluy); this check drives `verb_init::run` over a scratch directory and pins `--help`, the optional `[path]` with the working directory as default, the guard refusing an already-initialised target before anything is written, the creation of `nodes/` and `.deccy/`, that no marker file is laid down, the returned lines, and a `Verb` row compiling for `init` (oywywrvu, M-route). It is self-contained per M-tests (knqkxzns), a crate of its own that takes the injected context (M-context-injection, ryuswoxz) and returns its lines for the envelope to write (utrzvyyt) under the verb's own help (oqnsuzqu)."
+  }
+}

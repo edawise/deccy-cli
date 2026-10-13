@@ -1,0 +1,1 @@
+{"kind":"evaluation","evaluates":["lwnnssuo"],"depends_on":["vkztyrzm"],"content":{"type":"test","ref":"inline","content":"CARGO_TARGET_DIR=\"${TMPDIR:-/tmp}/deccy-store-own-target\" cargo test --manifest-path tests/node_own/Cargo.toml --no-run","rationale":"owned names the node file through store_path; building the gate's own crate typechecks the call."}}
