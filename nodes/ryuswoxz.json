@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xyoslvwo", "zynwuzxv", "xquwmsts", "ruxknztv", "vxvsvzns"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Every verb handler receives the root and the interface handles as one ambient context threaded by the dispatch chain; nothing below assembly resolves the root or reaches for it.",
+    "rationale": "One injected context keeps resolution in one place and the root singular — the interfaces share it — so no verb re-decides where graph state or the repo lives. S0 (xyoslvwo) makes the substrate the one boundary owner and S1 (zynwuzxv) routes dispatch through one table from verb string to handler; injection rather than a process-global or per-verb resolution keeps that dispatcher generic and a handler a plain fn taking its context. S2-ifs (xquwmsts) gives the interfaces their own reaches, the seam's caller (ruxknztv) resolves binary and root once, and S3-root-optional (vxvsvzns) keeps the root present only when a workspace exists."
+  }
+}
