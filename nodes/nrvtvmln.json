@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["zuvsnyxy", "xpxukylv", "zvmsnkln", "llkvmtou", "xlowmllo", "zwurwxwq", "rmmlokop", "ppwnzwwy", "szmuyqrq"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/exclude.rs"],
+    "rationale": "The exclude module. S2-exclude (`zuvsnyxy`) gives the exclude file its own interface and this is the module that realizes it: it reaches the file itself — its own read and its own write, opened on the shared root (`ppwnzwwy`) and naming the file as a path under that root. It reads the file whole (S2-exclude-read, `xpxukylv`) — a missing file reading as empty (`zvmsnkln`), an unreadable one carried as a value (`llkvmtou`) — and appends the recorded entry as a line (S2-exclude-append, `xlowmllo`), landing the whole file back through the shared atomic rule (`rmmlokop`), a replacement never a truncate, a failed append carried and the file left as it was (`zwurwxwq`). Every failure is carried as a value, never rendered here. M-layout (`szmuyqrq`) places the module flat at `src/exclude.rs`."
+  }
+}
