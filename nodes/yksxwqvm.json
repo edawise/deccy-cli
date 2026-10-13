@@ -1,0 +1,11 @@
+{
+	"kind": "evaluation",
+	"evaluates": ["utykmuns"],
+	"depends_on": ["syxllqoq", "wzmmmmsw"],
+	"content": {
+		"type": "review-criteria",
+		"ref": "inline",
+		"content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+		"rationale": "The name is a commitment in words; a read-through against the product statement and the invocation form is the whole applicable check — the name a package is published under and the command a user types must each answer to what the CLI is."
+	}
+}
