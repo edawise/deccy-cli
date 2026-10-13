@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xquwmsts", "lmomkluy"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The exclude interface reads and writes the exclude file, `.git/info/exclude`, under the root.",
+    "rationale": "IN-mechanism (lmomkluy) has the bootstrap append the state directory to `.git/info/exclude`; S2-ifs gives the exclude file its own handle. The interface reaches the file itself — its own read and its own write under the root. The file is git's own exclude template, appended rather than clobbered."
+  }
+}
