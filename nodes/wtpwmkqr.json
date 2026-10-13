@@ -1,0 +1,14 @@
+{
+  "content": {
+    "rationale": "Cutting a release is one local step: `scripts/release.py`. It takes the named version from its caller (an argument, `--version <v>`, `--tag v<v>`, a bare `v<v>`, `VERSION` in the environment, or stdin), reads the token the version decision records (nlomlqum: `0.0.0-dev`), and puts the named version in the manifest's `[package] version` in its place. The token comes from the record and nowhere else, so the substitution follows the graph rather than a literal: a different token in nlomlqum is the token that gets replaced. The substitution is a substitution and not an overwrite: it applies only when the manifest carries the recorded token, or as a no-op when it already carries the requested version, and a manifest carrying any other version is refused \u2014 non-zero exit, a named reason, nothing written, no publish \u2014 because a tree at a version the record does not carry has already been released or was never in the token state, and the release step is not the place to decide which; the releaser reruns with the version the manifest already carries or restores the token. If nlomlqum is absent the release is refused for the same reason: there is no recorded token to substitute, and the script does not fall back to a literal.\n\nThe substitution is followed by exactly one step, `cargo publish`, and the release stops on the first step that fails. The order is part of the decision rather than an implementation detail: the publish reads the version out of the manifest, so substituting first is what makes the published crate carry the version the caller named instead of the token the tree carried; a failing publish fails the release, and nothing runs after a step that failed. So a release is the version substitution followed by a publish, and nothing else is driven: no prebuilt binaries, no installers, no hosted artifacts, and no configuration file describing them for the script to read, so the release plan cannot drift from the release machinery \u2014 the script is the plan. The manifest it edits is I1a's (trolstmt) and the token it replaces is the version decision's (nlomlqum); this node decides only how a release is driven.\n\nThe consequence is accepted and stated plainly: there is no CI around this script \u2014 no pull-request checks, no tag-triggered release, no build matrix, no hosting step \u2014 and nothing invokes it but a person. A release is a human running the script from a local checkout, and it is reproducible only as far as that person's toolchain and credentials are: what the publish uploads is the crate built from that checkout at the version the caller named, from the machine that ran it. That is the whole release: the version goes in, the crate goes out, and the tag the releaser pushes afterwards records the release.",
+    "ref": [
+      "scripts/release.py"
+    ],
+    "type": "text"
+  },
+  "depends_on": [
+    "trolstmt",
+    "nlomlqum"
+  ],
+  "kind": "decision"
+}
