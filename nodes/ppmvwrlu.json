@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xquwmsts", "ysqqrqsp"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The markers interface reads and writes the marker file, `.deccy/markers.json`, under the root.",
+    "rationale": "S5-marker-file (ysqqrqsp) fixes where the file lives; S2-ifs gives the marker file its own handle, so a change to node reach cannot re-scope the marker file, nor the reverse. Its read and write are M-markers-file's, the module that realizes this interface. The state directory stays untracked and the file's contents stay S5-marker-schema's."
+  }
+}
