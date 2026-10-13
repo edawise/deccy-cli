@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["xquwmsts", "szmuyqrq"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/store.rs"],
+    "rationale": "S2-ifs (xquwmsts) splits graph-file access into four interfaces, each opened on the one repo root; this fixes the root they share. Holding the root once and opening every interface on it keeps the root singular — no interface re-decides where the repo lives — and holding no read or write reach of its own keeps the split real: the root holder resolves and lends the root, and each interface brings its own reach. M-layout (szmuyqrq) places the module flat at src/store.rs."
+  }
+}
