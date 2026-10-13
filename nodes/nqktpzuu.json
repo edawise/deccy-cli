@@ -1,0 +1,14 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "xquwmsts",
+    "xwyryumr",
+    "mqqwzvwz"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The single-document read reads a node document from jj, from the change that owns it. The set read is `S2-read-set`'s; this read is its fallback and the single-node verbs' read. Reads cross the jj seam under the caller-supplied binary and root.",
+    "rationale": "The working copy materialises only the nodes present at its own revision; a node recorded later in the stack is invisible to a filesystem read, so a single-node verb would silently see nothing whenever the working copy sits earlier in history. D1b (xwyryumr) makes the node id the owning change id, so reading a node at its own change is well-defined from anywhere in history. D4 (mqqwzvwz) keeps navigation parentage-independent; reading by change id follows the id, not parentage, so this stays within it. The set read is S2-read-set's; this read is its fallback and the single-node verbs' read, and it makes no claim over that set read. S2-ifs keeps the read reach its own, so the move to jj cannot pull the write, markers or exclude interfaces along."
+  }
+}
