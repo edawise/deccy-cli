@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["pnpsmvpz"],
+  "depends_on": ["xquwmsts", "kpovwvyw"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The write interface is where the four-interface split meets the node document's layout; the gate forces the write claim to answer to both without re-deciding the boundary or the document."
+  }
+}
