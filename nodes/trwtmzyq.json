@@ -1,0 +1,44 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": [
+      "src/verb_discard.rs"
+    ],
+    "rationale": "`deccy discard <handle>...` ends one open draft per handle named, and it ends the drafts without landing them. The verb is the one spelling of that purpose: a positional list of handles in the verb position, with `--help` answering first from any context, root-less included. A call naming no handle, or carrying an argument the form does not name, refuses at the argument surface before the store is taken or any workspace is reached; the handles themselves are not judged there, because whether one addresses an open record is a store question answered afterwards. A node id, an edit or a workspace name is not a handle: the handle is the record's identity and the only key that addresses a draft, while the node, the edit and the workspace are references the record carries. A handle repeated in one call names the same draft and is discarded once.\n\nAfter the argument surface the call takes the trunk-only store. A discard is admitted only in the trunk working copy, the working copy whose root holds the store root; an invocation from any other working copy refuses before discarding any draft, naming the workspace it ran in, and discards nothing. The check is on the working copy the invocation runs in, not on the workspace of a draft it names.\n\nWith the store in hand the call scans the registry at `.deccy/work/` and treats each named handle as a subject only when it names an `open` record. A handle that names no record, or one whose record has landed, gives the call no open draft: the whole invocation is refused with the offending handles as evidence and nothing is discarded — not that handle's draft and not the drafts named beside it. Drift is not a refusal: an open record whose workspace jj no longer has is still an open draft and still a subject, because the subject question asks the record's state and not the workspace's existence.\n\nFor each named open draft the call performs three acts before any record is removed. It abandons only the working-copy change the draft's workspace holds, read at `<workspace-name>@` through the jj seam and abandoned with `jj abandon`; the node's owning change is the parent of that change and is never touched. Gone means jj no longer lists the workspace: then there is no change to reach, so the act is skipped and jj's state is left alone. A workspace jj still lists is not gone, so a failed read of its change — like a refused abandon or a refused forget — is a failure before the commit: the invocation refuses and every record stays at its handle. It then forgets the draft's jj workspace through the workspace seam, tolerating the seam's `Unknown` — an absent workspace is the same discard carried through, not a failure. It then removes the directory the handle derives under the per-user draft-workspace root and the repository's namespace — that directory and no wider path — tolerating an absent directory as the same discard and refusing any other io failure.\n\nThe registry removal is the commit point. Every named draft's change act, workspace act and directory act complete before any record is removed; then each named record is removed through the registry's removal, which deletes exactly the document at `.deccy/work/<handle>.json` and leaves every other record byte-identical. A failure before the commit refuses the invocation and leaves every named record at its handle; the acts already completed stand, with no rollback. A second invocation of the same discard goes on through what is already clear — an already-abandoned change, an already-forgotten workspace, an already-removed directory — and reaches the commit instead of refusing because the first attempt had completed those acts. A failure after a record has left the store is not the pre-commit case.\n\nA successful discard writes nothing: the handler returns an empty line list for the envelope to write, so no line reaches stdout or stderr and no envelope-level output is duplicated. The call writes no node and no change, opens no bracket, writes no marker, and gives undo and redo no unit; it is not one of the three operations. The store's registry removal is the only registry change, and it is made through the store's removal rather than by hand.\n\nThe module is the settled surface and the three acts as code: the argument surface answers first, the trunk-only store is taken before anything is read, the registry scan decides the whole call's subject set, the three acts run in the order the workspace half fixes, and the registry removal is last as the commit. Splitting the commit from the acts is what makes a failure before it leave every record at its handle while a re-run can finish through what already completed.\n\nThe surface refuses a missing handle and an unnamed argument before the store because a call with no key has nothing to look up, while a handle is never judged at the surface because only the store can say whether it names an open record. Reading the subject set from a single scan and refusing the whole call on any non-open handle follows the rule that one invocation answers once; the landed end is terminal and is not a subject. Drift is tolerated because the record's state, not the workspace's existence, is the subject question, and the workspace half already carries an absence through.\n\nThe change act reads `<workspace-name>@` rather than the node id because the workspace's working copy is one change above the node's owning change; abandoning it leaves the node's commit untouched. Gone is not any failed read: the act asks the workspace seam's enumeration first, and only a name jj does not list skips the abandonment, so a listed workspace whose change read fails refuses before the commit, as does a refused abandon, and a real failure cannot masquerade as an absent workspace and pass on to the forget and the removals. The workspace act uses the seam's forget, whose `Unknown` distinguishes a workspace jj held and dropped from one it never had; the directory act derives the path from the handle under the per-user root and the repository's namespace rather than trusting the record's stored path, so a drifted record still yields the one directory its handle names. The order — change, forget, directory — removes the tree only after jj no longer claims the workspace, and the removal tolerates `NotFound` but refuses every other io failure so a real obstacle is a failure before the commit.\n\nThe registry removal is the commit because ending an open draft is a registry change and the acts outside the registry are not; taking the removals only after every named draft's acts makes the call one answer rather than a partial discard. No marker, node or change is written and no bracket is opened, because a discard is not one of the three operations; the handler returns its lines and never writes a stream, so a success is silent. Nothing here restates the record's fields, the workspace derivation, the seam's invocation, the refusal rendering or the route table; those belong to the nodes the edges name."
+  },
+  "depends_on": [
+    "kxyznwxu",
+    "tvxspkyy",
+    "vxltqruo",
+    "vzposmvm",
+    "nwswzlnw",
+    "qznqvpyr",
+    "yumlvwzq",
+    "wvltornz",
+    "slwvtspu",
+    "lnpnkvkv",
+    "ovmqxwuk",
+    "yomurusp",
+    "ywsulkzu",
+    "rroqqrzq",
+    "xqzstoyo",
+    "pvnszwum",
+    "vkkwusty",
+    "owyntkvw",
+    "vuopwuyo",
+    "tyoypkmp",
+    "urtkpxwv",
+    "xllzxxvo",
+    "zttrwlts",
+    "lotlstzr",
+    "popowxnw",
+    "utrzvyyt",
+    "ynvwvzrm",
+    "xlvoxmyl",
+    "rwlywqrk",
+    "qtqnuqxo",
+    "szmuyqrq",
+    "knqkxzns"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "The deccy CLI shall make a draft reviewable through jj in the workspace where it is written, and shall never render a draft through `show`.",
+    "rationale": "This requirement is the two-sided statement of one arrangement — a draft is reviewed in jj where it is written, and the node space is not a review surface — and each side lands on an answer a prerequisite already settled. The first clause, that the CLI make a draft reviewable through jj in the workspace where it is written, is discharged by writing the draft there rather than by adding a review surface: votqoovw fixes the review as jj's state in the draft's own workspace, a reading that writes nothing and needs no verb of its own, so `reviewable through jj` is the draft's presence in a jj working copy and not a command this requirement invents. `The workspace where it is written` is fixed by xqzstoyo, which places that working copy under one per-user root outside the repository at the path the record's handle derives, and by znskspqs, which writes each draft in its own workspace; together they make the phrase name exactly one directory per draft, the one the handle already fixes. The second clause, that the CLI never render a draft through `show`, is kywrtyoq's contract read as a prohibition: show reads the named nodes, writes one output per valid node, and changes and records nothing, and a draft is not a graph node (znskspqs), so a draft handle names nothing show resolves and no draft can appear in its output; votqoovw draws the same conclusion from the same facts, that show's verbatim stored node document cannot carry draft content, which is why the negative is not a new rule but the positive clause's other side — the draft's place is jj's workspace and not the node space. No clause reaches past those answers: which jj commands a reviewer runs, how a workspace is created or removed and what a missing one means stay with xqzstoyo; when a draft is open or how landing records it stays with znskspqs; and whether show reports an id it cannot resolve stays with kywrtyoq, which speaks only for valid ids. The sentence adds no commitment none of the four fixes — it states the positive and the negative of one place, the workspace where the draft is written, through jj, never through show."
+  },
+  "depends_on": [
+    "votqoovw",
+    "xqzstoyo",
+    "kywrtyoq",
+    "znskspqs"
+  ]
+}

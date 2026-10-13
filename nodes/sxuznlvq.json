@@ -1,0 +1,21 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zzntzlpq"
+  ],
+  "depends_on": [
+    "zttrwlts",
+    "popowxnw",
+    "lqtqzznn",
+    "wzyorrny",
+    "znmsuqlm",
+    "mvwnksou",
+    "xoroywoy"
+  ],
+  "content": {
+    "type": "test",
+    "ref": "inline",
+    "content": "CARGO_TARGET_DIR=\"${TMPDIR:-/tmp}/deccy-verb-undo-target\" cargo test --manifest-path tests/verb_undo/Cargo.toml --no-run",
+    "rationale": "The verb takes its context, loads and saves the marker state through markers_persist, answers with markers_guards' transition, reverts through the revert module, reads the op head through the op log, reads the working copy.s divergence through M-jj-divergence (xoroywoy), and builds its refusals through refusal; building the gate's own crate typechecks all seven calls at once, so the fan-out is gated without a second owner for the crate. Its edges span two cells — the verb's natural-to-code fidelity cell and the code-to-code calls — so the criterion stays its inline cargo command; the mixed cell is flagged for the matrix (F1 follow-up)."
+  }
+}

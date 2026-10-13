@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["lmomkluy"],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy init [path]`, the deccy CLI shall record the state directory once: an entry already present in `.git/info/exclude` is left as it is, so re-running the bootstrap adds nothing.",
+    "rationale": "The sequence (IN-mechanism, lmomkluy) records the state directory by appending, and recording it once is a separate commitment. The file is git's own template, and an entry already present is the state the record step wants — appending it again would duplicate a line git already ignores. The bootstrap reads the file and appends the entry only when it is not already a line; the append itself stays a plain append (S2-exclude-append, xlowmllo) that writes what it is given."
+  }
+}
