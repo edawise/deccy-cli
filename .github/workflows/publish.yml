@@ -1,0 +1,25 @@
+# Publish the crate to crates.io on a version tag.
+#
+# cargo-dist builds the binaries and the GitHub release; publishing the crate
+# itself is a separate step. A tag like `v0.1.0` runs `cargo publish`, which
+# needs a CARGO_REGISTRY_TOKEN secret (a crates.io API token with publish scope).
+name: Publish
+
+permissions:
+  contents: read
+
+on:
+  push:
+    tags:
+      - '**[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Publish to crates.io
+        run: cargo publish
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
