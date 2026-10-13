@@ -1,0 +1,13 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "xyoslvwo",
+    "xkolyytz"
+  ],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "deccy's graph-file access is five separate interfaces: store read, store write, markers, exclude, and journal. Each is opened on the one repo root, each owns the reach it may use, and none exposes a generic read or write over arbitrary paths.",
+    "rationale": "S0 (xyoslvwo) makes the substrate the one owner of process, file and repo crossings, and D1a (xkolyytz) puts the graph in a jj repository, so the crossings are shared and real \u2014 but which crossing a file kind needs is not. One store with a generic read/write forces every file kind \u2014 node documents, the marker file, the exclude file, the journal \u2014 through the same reach, so a change to one kind's reach re-scopes the others silently. Five interfaces give each file kind its own handle and its own reach, so no kind gains or loses access through another's decision. The one repo root and the substrate boundary are kept; what splits is the handle, not the boundary. The journal (D8c, kmmowvkw) is the fifth kind: entry documents plus content blobs, opened on the same root."
+  }
+}
