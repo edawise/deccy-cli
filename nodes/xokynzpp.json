@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xlqyyprp", "rmmlokop"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A failed write refuses the invocation, naming the cause, and leaves the file as it was.",
+    "rationale": "The write saves by atomic replacement (S2-atomic, `rmmlokop`), so a write that fails leaves the target untouched — no partial file, no truncation. The failure is named and refused rather than swallowed, so the invocation stops instead of reporting a success it did not achieve."
+  }
+}
