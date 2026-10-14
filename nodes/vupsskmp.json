@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["ppmvwrlu"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The markers interface reads the file whole: the read yields `.deccy/markers.json`'s contents as they stand — the whole file, never a part of it.",
+    "rationale": "S2-markers (`ppmvwrlu`) fixes the file and that it is both read and written; the whole-file read is the separate commitment about the read's form. The file is one document, rewritten whole on every bracketed operation and every revert, so a read that yielded only part of it would hand the caller a torn document to make sense of. Reading whole makes the read the file's contents."
+  }
+}
