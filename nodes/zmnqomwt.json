@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["nqktpzuu", "qrwtzxpn", "xmxpvqzs", "vyquqmoo", "lvkukpyw"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The read crosses the jj seam: it runs as one spawned `jj` crossing under the caller-supplied binary and root, holding nothing of its own, and the crossing names the document it reads.",
+    "rationale": "S3 (xmxpvqzs) fixes that every jj interaction crosses a spawned process, and the read is one; S3-explicit (vyquqmoo) fixes that binary and root are supplied by the caller with nothing searching PATH inside the boundary, and S3-stateless (lvkukpyw) that the runner holds only what it was given. S3-read (qrwtzxpn) fixes the command the crossing names — reading a file at a revision; this node fixes that the read crosses through it. S2-ifs keeps the read reach its own, so the crossing is the read's, not borrowed from the log, op-log or status crossings."
+  }
+}
