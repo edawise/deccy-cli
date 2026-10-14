@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["nkyymtvp", "tqvyvkwv"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A document that is there but cannot be read refuses the invocation, naming the cause.",
+    "rationale": "Absence reads as absent (S2-read-absent); a document that exists at the owning change but cannot be read is a different state, and reading it as absent would let a caller conclude a node does not exist when it does — the silent partial graph the move to jj exists to end. Refusing names the cause. Where the refusal is produced is S2-read-refusal-site's, not this node's."
+  }
+}
