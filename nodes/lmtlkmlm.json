@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["qvkrwptt"],
+  "depends_on": ["ppmvwrlu", "vupsskmp", "rlumurvk", "kyrnspkl", "xlqyyprp", "xokynzpp", "rmmlokop", "ppwnzwwy", "szmuyqrq"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/markers_file.rs"],
+    "rationale": "The marker file module is where the interface's read and write, the atomic rule, and the root holder meet; this check drives `markers_file::read` and `markers_file::write` over scratch roots and pins that the read yields the file's contents as they stand, that a root with no marker file yields nothing while a file that is there yields its contents even when they are empty, that a write lands the given contents whole (a replacement leaving no stale tail and no stray temporary), and that a failure to read or write is carried as a value with the file left as it was — the write's failure forced where a replacement cannot land its temporary, so the check answers to the rule and not to the temporary's name."
+  }
+}
