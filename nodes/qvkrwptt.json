@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["ppmvwrlu", "vupsskmp", "rlumurvk", "kyrnspkl", "xlqyyprp", "xokynzpp", "rmmlokop", "ppwnzwwy", "szmuyqrq"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/markers_file.rs"],
+    "rationale": "The marker file module. S2-markers (`ppmvwrlu`) gives the marker file its own interface and this is the module that realizes it: it reaches the file itself — its own read and its own write, opened on the shared root (`ppwnzwwy`) and naming the file as a path under that root. It reads the file whole (S2-markers-read, `vupsskmp`) — a missing file yielding nothing (`rlumurvk`), a file that is there yielding its contents even when they are empty, an unreadable one carried as a value (`kyrnspkl`) — and writes the contents whole (S2-markers-write, `xlqyyprp`), landing them through the shared atomic rule (`rmmlokop`), a replacement never a truncate, a failed write carried and the file left as it was (`xokynzpp`). It is what M-markers-persist (`wzyorrny`) reaches the file through, and every failure is carried as a value, never rendered here. M-layout (`szmuyqrq`) places the module flat at `src/markers_file.rs`."
+  }
+}
