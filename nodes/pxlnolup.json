@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["nqktpzuu", "pumpuqkv"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The read names the node's document at the change that owns the node: `nodes/<id>.json` at the change whose id is the node's id (D1b), never at the working copy's revision.",
+    "rationale": "The working copy materialises only the nodes present at its own revision: when a change is inserted mid-stack, a node recorded later in the stack is invisible to a working-copy read, so log, validate and resolution would silently see a partial graph. D1b (xwyryumr) makes the node id the owning change id, so reading a node at its own change is well-defined from anywhere in history. D4 (mqqwzvwz) keeps navigation parentage-independent; reading by change id follows the id, not parentage. S2-path (pumpuqkv) fixes the path the read names there; this node fixes only the revision it names it at."
+  }
+}
