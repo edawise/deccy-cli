@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rlumurvk"],
+  "depends_on": ["vupsskmp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Absence meets the whole-file read here; the gate forces missing-is-empty to answer to the read without re-deciding what the read loads."
+  }
+}
