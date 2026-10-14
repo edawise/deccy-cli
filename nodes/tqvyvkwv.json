@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["nkyymtvp"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A missing document reads as absent: when no `nodes/<id>.json` exists at the change that owns the node, the read yields absence — not empty contents, not a failure.",
+    "rationale": "A node's document is named by the change that owns it (S2-read-at-change, pxlnolup), so 'no such document' is a normal state — the id names no node (D21, tnqpoqxl: show refuses an id that names nothing). Absence is distinct from the empty state the file interfaces use (S2-markers-read-absent, rlumurvk; S2-exclude-read-absent, zvmsnkln): those files exist independently and a missing one reads as empty so a later write can create it, but a node document's absence means the node does not exist, and reading it as an empty document would hand the caller a torn document to parse. The read stays total: the document, absence, or a failure (S2-read-fail)."
+  }
+}
