@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["tqvyvkwv"],
+  "depends_on": ["nkyymtvp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Absence meets the whole-document read here; the gate forces missing-reads-as-absent to answer to the read's form without re-deciding what the read yields or when a document is absent."
+  }
+}
