@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["vupsskmp"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A missing marker file reads as empty: when `.deccy/markers.json` does not exist the read yields no contents, not a failure.",
+    "rationale": "A first run has no marker file yet. Absence is empty: the read stays total and a later write creates the file that is not yet there, rather than reporting a failure the caller must unwind."
+  }
+}
