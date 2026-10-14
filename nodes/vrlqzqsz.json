@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["qrwtzxpn"],
+  "depends_on": ["xmxpvqzs", "nqktpzuu"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The file read is where the boundary meets the store's read; the gate forces reading a file at a revision to answer to the seam and the store's read without re-deciding either."
+  }
+}
