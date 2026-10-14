@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["zmnqomwt"],
+  "depends_on": ["nqktpzuu", "qrwtzxpn", "xmxpvqzs", "vyquqmoo", "lvkukpyw"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The read's crossing is where the read meets the process boundary, the explicitness of every crossing's handles, and the runner's statelessness; the gate forces it to answer to all three without re-deciding the runner or naming a command."
+  }
+}
