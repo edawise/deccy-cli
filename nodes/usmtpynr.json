@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["vollyzvn"],
+  "depends_on": ["ouzvzypl", "uzzxlpsl", "wvrnvwzt"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element. 2. The site follows the two: S3-err leaves the failure a value below the envelope and S4-own leaves refusing to the envelope, so production sits with the invocation that reads the node and rendering with the envelope; S2-read-fail fixes that the document refuses. Fail if the claim moves either — name it.",
+    "rationale": "The refusal's production site is where the node-read failure meets the failure shape and the refusal authority; the gate forces the site to answer to both without re-deciding either."
+  }
+}
