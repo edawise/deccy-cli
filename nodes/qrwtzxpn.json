@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xmxpvqzs", "nqktpzuu"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "This layer reads a file's contents at a named revision via `jj file show`, for the store's node read.",
+    "rationale": "The store's read names a node's document at the change that owns it (S2-read, nqktpzuu), so it needs the file's bytes as of that revision, and `jj file show` is the command that yields them; fixing the command here keeps the store's read one crossing like every other (S3, xmxpvqzs) and keeps the revision rule out of the file store. Which revision and which path the read names is S2-read's, not this layer's."
+  }
+}
