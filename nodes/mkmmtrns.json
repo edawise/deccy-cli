@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["sprvousp"],
+  "depends_on": ["ouzvzypl", "uzzxlpsl", "kyrnspkl", "xokynzpp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The refusal's production site is where the marker-file failures meet the failure shape and the refusal authority; the gate forces the site to answer to both without re-deciding any."
+  }
+}
