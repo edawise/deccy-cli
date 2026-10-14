@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["ouzvzypl", "uzzxlpsl", "kyrnspkl", "xokynzpp"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A marker-file refusal is produced by the invocation that touches the file — the read or the write — and the layer that carried the reason renders nothing.",
+    "rationale": "Only the envelope refuses and failures below it stay values carrying their evidence (S4-own, `ouzvzypl`; S3-err, `uzzxlpsl`), so where a marker-file failure becomes the invocation's refusal is its own commitment: the unreadable-read and failed-write decisions (`kyrnspkl`, `xokynzpp`) say such a file refuses but not where the refusal is produced. The invocation that touched the file produces it; the layer that carried the reason renders nothing."
+  }
+}
