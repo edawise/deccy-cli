@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["xlqyyprp"],
+  "depends_on": ["ppmvwrlu", "vupsskmp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The write is where the whole-file save meets the read it consumes and the interface that owns it; the gate forces the write form to contradict neither — the file lands whole, and the interface that owns it stays the writer — without re-deciding either."
+  }
+}
