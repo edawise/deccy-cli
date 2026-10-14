@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["kyrnspkl"],
+  "depends_on": ["vupsskmp", "rlumurvk"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Refuse-on-unreadable meets the read and absence here; the gate forces the refusal to answer to both without re-deciding either."
+  }
+}
