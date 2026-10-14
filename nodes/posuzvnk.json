@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["pxlnolup"],
+  "depends_on": ["nqktpzuu", "pumpuqkv"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The revision rule is where the read meets the owning-change identity and the one layout; the gate forces reading-at-the-owning-change to answer to both without re-deciding either."
+  }
+}
