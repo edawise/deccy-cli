@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["vupsskmp", "rlumurvk"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A marker file that exists but cannot be read refuses the invocation, naming the cause.",
+    "rationale": "Absence reads as empty (S2-markers-read-absent, `rlumurvk`); a file that is there but unreadable is a different state, and reading it as empty would let the write overwrite contents it never saw — the clobber the interface exists to prevent. Refusing names the cause, and deleting the file recovers through missing-is-empty."
+  }
+}
