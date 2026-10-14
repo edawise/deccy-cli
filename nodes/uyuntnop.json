@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["vupsskmp"],
+  "depends_on": ["ppmvwrlu"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The whole-file read is where the interface meets the file handle the parent fixes; the gate forces the read to answer to that one reach without re-deciding the write."
+  }
+}
