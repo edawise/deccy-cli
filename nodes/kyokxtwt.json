@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["nkyymtvp"],
+  "depends_on": ["nqktpzuu"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The whole-document read is where the interface meets the one document; the gate forces the read's form to answer to it without re-deciding the revision or the crossing."
+  }
+}
