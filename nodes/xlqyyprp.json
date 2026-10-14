@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["ppmvwrlu", "vupsskmp"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The markers interface writes the file whole: the contents are written back by atomic replacement (S2-atomic, `rmmlokop`), a replacement never a truncate.",
+    "rationale": "The whole-file read (S2-markers-read, `vupsskmp`) is what the write operates on; the whole-file save is the separate commitment about the write's form. The file is rewritten whole on every bracketed operation and every revert, so a write that left it half-written could destroy the record that makes undo and redo work. The marker file is written whole, never patched in place."
+  }
+}
