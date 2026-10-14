@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["sprvousp"],
+  "depends_on": ["ouzvzypl", "uzzxlpsl", "kyrnspkl", "xokynzpp"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element. 2. The site follows the two: S3-err leaves the failure a value below the envelope and S4-own leaves refusing to the envelope, so production sits with the invocation that touched the file and rendering with the envelope; S2-markers-read-fail and S2-markers-write-fail fix that the file refuses. Fail if the claim moves either — name it.",
+    "rationale": "The refusal's production site is where the marker-file failures meet the failure shape and the refusal authority; the gate forces the site to answer to both without re-deciding any."
+  }
+}
