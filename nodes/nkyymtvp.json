@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["nqktpzuu"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The read yields the document whole: the node document's bytes as they stand at the owning change — the whole document, never a part of it.",
+    "rationale": "A node document is one JSON document (D1c, kpovwvyw), so a read that yielded only part of it would hand the caller a torn document to parse; reading whole makes the read the document's bytes, which is what checking (S2-validate, ooyrrwlq) and rendering (D16a) take as their input. What a missing or unreadable document reads as is the next layer's, not this node's."
+  }
+}
