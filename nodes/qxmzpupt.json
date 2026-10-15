@@ -1,0 +1,15 @@
+{
+  "depends_on": [
+    "qkqkuzxw",
+    "kttmwrsv",
+    "prsoxsuo",
+    "omwrpwpq"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Undo and redo are whole-operation, with the inverse the kind names. A recording is applied through its journal entry: the before or after side is placed in the target and the other side in the working copy. A removal's entries are reverted selectively, newest first; a creation is undone by removing the created change. A refusal partway leaves the state as it began, naming the entry; an entry that merges parents is refused by name. Whole operations only.",
+    "rationale": "The inverse a kind names is D8a's (prsoxsuo): a creation's undo removes the change, a removal's undo reverts entries, and a recording's undo applies its journal entry (D8c, kmmowvkw) rather than reverting the squash operation, which would rewrite the working copy and make the next undo divergent. Naming the entry that refuses keeps a refusal total: the caller learns what stood in the way and the graph is never left half-reverted."
+  }
+}
