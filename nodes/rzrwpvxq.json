@@ -1,0 +1,18 @@
+{
+  "depends_on": [
+    "qkqkuzxw",
+    "kttmwrsv",
+    "prsoxsuo",
+    "omwrpwpq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "qxmzpupt"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "The revert is where the write half meets undo and redo; the gate forces the selective revert to answer to both legs without re-deciding granularity. It covers the recording leg's journal apply (S3-journal-apply, omwrpwpq): a recording is inverted by applying its entry, while a creation and a removal use the change-level inverse."
+  }
+}
