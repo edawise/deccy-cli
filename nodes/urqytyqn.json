@@ -1,0 +1,13 @@
+{
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A bracket settles the working copy once before it opens its window. A bracket built for a creation or for a removal settles it again after the run has returned and before the closing read, so the work the run wrote to a tracked path is snapshotted inside the operation's own window, as the operation's own work, instead of being left for the next invocation to snapshot as an entry of its own. The closing settle is the working copy's snapshot taken after the run returns, not a step inside it: the run is unchanged, and both head reads still observe the op log without snapshotting or updating the working copy. The recording bracket keeps the single settle it has and none is imposed on it, because a recording's inverse is the one journal entry it writes inside that bracket, taken from the two sides it reads itself rather than from a window entry a later call would snapshot.",
+    "rationale": "Settling once before the window opens keeps edits that predate the invocation out of the window, but it cannot also cover work the run has yet to do: `deccy new` opens the change and then writes `nodes/<id>.json` with a plain file write, and a removal's delete is the same kind of write, neither of which any snapshot has seen when the window opens. Left there, that write is snapshotted by the next jj command — in practice `deccy undo`'s own `jj op revert` — as an operation after the operation that recorded the creation has closed, so jj leaves the earlier sibling with two commits, the divergence read sees it, and S5-revert rolls the revert back and refuses. The window holds the operation's own entries, and the settle taken after the run returns makes that write one of them: the settle sits on the bracket's own leg, after the run and before the closing read, so the run stays untouched and the reads stay observational and add no entry of their own. A recording is owed no such settle — its inverse is the journal entry it takes inside the existing bracket, not a window entry a later snapshot would produce — so the rule names the creation and removal bracket rather than every bracket and wxtzltkt's single settle stands. Nothing here re-decides the read (ukrxptzm) or the bracketing (otmxqplr)."
+  },
+  "depends_on": [
+    "otmxqplr",
+    "ukrxptzm"
+  ],
+  "kind": "decision"
+}
