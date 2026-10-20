@@ -1,0 +1,15 @@
+{
+  "content": {
+    "content": "A recording's inverse is a journal entry: the before and after content of the recorded change's owned paths, keyed by a journal id. Undo applies the before side to the target and puts the recorded diff back in the working copy; redo applies the after side and takes it out of the working copy. Dispatch is by the marker's kind. The journal entry is written before the marker state that names it. A creation's or removal's inverse stays the change-level one.",
+    "rationale": "Reverting a recording's squash operation through jj's op log rewrites the working copy, so a second consecutive undo is refused as divergent and any dirty path blocks it; the op log names operations, not the content a recording moved. A journal entry stores exactly that content \u2014 the owned paths' before and after side \u2014 so undo and redo apply a side without touching the op log's own state and never depend on what the working copy happens to hold. It is written before the marker that names it, so a marker never points at a missing entry. Creates and removals are whole changes and need no snapshot beyond the change-level inverse.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "txqmnvup",
+    "kttmwrsv",
+    "prsoxsuo",
+    "xzxtxymq"
+  ],
+  "kind": "decision"
+}
