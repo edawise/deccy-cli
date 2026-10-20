@@ -1,0 +1,19 @@
+{
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/journal_apply/Cargo.toml",
+      "tests/journal_apply/Cargo.lock",
+      "tests/journal_apply/src/lib.rs"
+    ],
+    "rationale": "The apply is checked over a real jj workspace whose working copy holds the after side, the shape a recording leaves: a side lands in a non-working-copy target while an unrelated dirty working-copy path is untouched, the working copy keeps the after side in both directions, an absent path is created or removed correctly, binary bytes survive, and a target or working-copy mismatch refuses naming the path with nothing moved."
+  },
+  "depends_on": [
+    "zruxtxrv",
+    "mnwqksmt"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wmwkkqxl"
+  ]
+}
