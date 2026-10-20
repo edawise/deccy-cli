@@ -1,0 +1,18 @@
+{
+  "content": {
+    "content": "Applies to the recorded edges, one prerequisite at a time: read the dependent against each prerequisite in `depends_on` and apply all three criteria to that edge. The evaluation is satisfied only when every recorded edge passes all three.\n\n1. Licence: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from. Which element is at issue is what the check discovers at check time; nothing is pre-named by this criterion.\n\n2. Legs covered: every leg of the dependent's reversion is governed by the guard the dependent states; fail on any element that exempts a leg from it — name the leg and the element. Which legs the reversion has is fixed by the recorded prerequisites, not by this criterion: an exemption of a leg that a prerequisite puts through the mechanism the guard watches also fails criterion 1 against that prerequisite.\n\n3. Premise retained: the guard's remedy and its verdict are the ones the recorded prerequisites state — a failure leaves the state as it began and refuses, naming the entry; the verdict is a read of the graph taken after the reversion, not guessed before it. Fail on any element that replaces, weakens or drops either — name the element.",
+    "rationale": "The evaluation and all of its prerequisites are inline prose, so every edge falls in the natural-to-natural cell and takes that cell's licence check as a criterion, applied once per recorded prerequisite at check time. A prose child is a commitment in words, not behaviour, and a behaviour probe belongs to a cell whose child is code: there is nothing to run here, the unit claims no repository path, and the check is decided by reading the recorded documents against one another.\n\nThe earlier criterion was that licence check alone. It gated the guard's scope only as non-contradiction against the prerequisites then recorded, so an element could exempt a leg from the guard and still stand provided no recorded prerequisite's wording was joined on that leg. The refine adds rlmwytqk, which fixes where a change-level operation's inverse comes from — the operation revert of the entries the marker kept, a creation's as much as a removal's — so a creation's kept entries are entered through the same revert seam the guard watches, and kttmwrsv already takes a creation's inverse through that source rather than through abandoning the change. Exempting that leg is then both a departure from the prerequisite's source and a leg left ungated, and the licence criterion alone never requires the check to read the legs at all. Criterion 2 does, per recorded prerequisite; it names no leg and no element in advance, so rewording or re-scoping the dependent leaves it intact.\n\nCriterion 3 keeps the guard from being re-decided while it is re-scoped: the remedy (a failure leaves the state as it began, naming the entry) and the verdict (a read of the graph taken after the reversion rather than guessed before it) belong to the recorded prerequisites, so an element that swaps in another remedy or another read is a finding against this criterion. Two edges — the reversion's partway remedy and the divergence read — carry those premises, and the check holds the dependent to them without asking it to restate either.\n\nThe check enforces only what the recorded prerequisites state. It names no element, no leg and no prerequisite in advance, so rewriting the dependent without changing what it decides leaves all three criteria intact.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "qxmzpupt",
+    "kttmwrsv",
+    "zplpmpvo",
+    "rlmwytqk"
+  ],
+  "evaluates": [
+    "ppytsptl"
+  ],
+  "kind": "evaluation"
+}
