@@ -1,0 +1,16 @@
+{
+  "content": {
+    "type": "fidelity",
+    "ref": "inline",
+    "content": "Two directions: every operation the store prose names \u2014 put, get, blob write, entry write, lookup by id, GC against markers \u2014 exists in the module, and the module adds no operation, file kind or reach the prose does not name. The entry shape it writes is exactly the schema the store prose describes, and the module is the single flat file M-layout places at src/journal.rs.",
+    "rationale": "A natural-to-code fidelity gate states the rule before the module exists and then checks the module against it. The store prose and M-layout are the only sources; the module may not invent a second store or a nested layout."
+  },
+  "depends_on": [
+    "qokrosvu",
+    "szmuyqrq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "zutqsqtu"
+  ]
+}
