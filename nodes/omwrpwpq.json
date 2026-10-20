@@ -1,0 +1,17 @@
+{
+  "content": {
+    "content": "Applying a journal side to a non-working-copy target goes through a disposable buffer at the target: check the target's expected side and that the working copy holds the after side, materialise the side in the buffer, squash the buffer into the target, abandon the buffer, restore the user's working copy, and leave the after side in it. A mismatch refuses before anything moves. No merge and no direct write to a non-working-copy change.",
+    "rationale": "A target is not the working copy, so its file state cannot be written directly; a buffer on top of the target is the one place jj lets a write become a squash into that change. The buffer is abandoned so no change is left behind, and the user's working copy is restored before the after side is left in it, so an unrelated dirty path survives. Checking both sides first makes the apply total: either it applies or it refuses, with nothing half-changed.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "kmmowvkw",
+    "zylowqkr",
+    "qokrosvu",
+    "xzxtxymq",
+    "zruxtxrv",
+    "mnwqksmt"
+  ],
+  "kind": "decision"
+}
