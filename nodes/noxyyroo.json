@@ -1,0 +1,16 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "Both effects now record a journal entry id for a recording and op ids for change-level work, and both leave the other side in the working copy. The criterion checks that neither effect contradicts D15c's two-sided verification."
+  },
+  "depends_on": [
+    "mnwqksmt"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "zuqzrlrx",
+    "xovuxpvq"
+  ]
+}
