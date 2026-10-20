@@ -1,0 +1,16 @@
+{
+  "content": {
+    "content": "When the marker state cannot be written after the write half, the invocation reverses the inverse it applied and refuses, naming the cause: undo and redo alike. A recording's recovery applies the before side again; a change-level recovery reverses its crossings. The graph returns to its pre-invocation state and the marker file is left as it was.",
+    "rationale": "S5-save-after-revert (kqqysmxn) orders the write half before the save so a revert cannot take the record of the operation with it, but leaves open what the invocation leaves when the save itself fails. S2-markers-write-fail (xokynzpp) fixes that the failed write refuses, naming the cause, and leaves the file as it was; S2-markers-refusal-site (sprvousp) that the invocation touching the file produces the refusal. Neither says what becomes of the write half already made, and a graph left inverted under a marker state that still says applied cannot be walked back. S5-revert (qxmzpupt) already fixes the remedy \u2014 the inverse already made is reversed, the graph returns to its pre-invocation state, and the invocation refuses \u2014 so this decision reuses that remedy rather than inventing a second recovery. A recording's recovery re-applies its before side; a creation's or removal's reverses its crossings.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "kqqysmxn",
+    "xokynzpp",
+    "sprvousp",
+    "qxmzpupt",
+    "omwrpwpq"
+  ],
+  "kind": "decision"
+}
