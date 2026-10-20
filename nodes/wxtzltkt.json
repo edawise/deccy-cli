@@ -1,0 +1,15 @@
+{
+  "content": {
+    "content": "Inside the existing bracket, a recording journals every path it can touch. For the path form, that set is the target's owned set; for a landing it is the landable set — the target's owned set plus the ref paths the draft's node document adds. The before and after sides span those paths, so a path absent before the recording is carried with a null before side and a present after side, and a path the recording itself makes owned is covered by the one entry undo reverts. The recording stores exactly one journal entry, written before the marker state that names it, and the marker's recording entry is the journal id.",
+    "rationale": "The bracket (pmxnnvvq) settles the working copy once before its window opens, and urqytyqn keeps the two head reads from adding an entry to that window, so both sides of a recording can be taken inside the operation without the read becoming work to undo. A recording needs the content the squash moved, and the paths it can move are not only the target's current owned set: a landing also places the ref paths the draft's node document lists, and ownership is ref-derived (xzxtxymq) — the node document the recording writes is itself an owned path, and the ref paths that document lists are owned by that same recording, so the landable set is the target's owned set plus those added ref paths. Taking that set before and after gives a newly listed path a null before side and a present after side (qokrosvu), which is what makes the path recoverable: the one entry undo reverts carries the addition, so undo removes a path the landing placed. Reading only the target's prior owned set would leave such a path outside the journal, and undo would leave it behind. One entry id keeps the marker a pointer rather than a snapshot, and writing the entry before the marker means a marker never names an entry that is not there.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "qokrosvu",
+    "pmxnnvvq",
+    "urqytyqn",
+    "xzxtxymq"
+  ],
+  "kind": "decision"
+}
