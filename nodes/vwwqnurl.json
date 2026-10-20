@@ -1,0 +1,17 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "The journal interface joins the four-interface split, the atomic write rule and J's journal inverse. The criterion checks that it opens on the one root and gains no generic reach."
+  },
+  "depends_on": [
+    "xquwmsts",
+    "rmmlokop",
+    "kmmowvkw"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "ozmxpzxy"
+  ]
+}
