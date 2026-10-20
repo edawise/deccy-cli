@@ -1,0 +1,15 @@
+{
+  "content": {
+    "content": "Inside the existing bracket, a recording snapshots the target's owned paths before and after the recording and stores exactly one journal entry: the before and after sides of that owned set. The entry is written before the marker state that names it, and the marker's recording entry is the journal id.",
+    "rationale": "The bracket already settles the working copy and keeps the operation's op-log window; a recording additionally needs the content the squash moved, and the owned set is exactly the paths a recording can touch (D2). Taking both sides inside the bracket binds them to the operation, and storing one entry id keeps the marker a pointer rather than a snapshot. Writing the entry before the marker means a marker never names an entry that is not there.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "qokrosvu",
+    "pmxnnvvq",
+    "urqytyqn",
+    "xzxtxymq"
+  ],
+  "kind": "decision"
+}
