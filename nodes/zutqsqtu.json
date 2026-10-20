@@ -1,0 +1,17 @@
+{
+  "content": {
+    "rationale": "The store prose fixes the entry's meaning; this module is the one implementation of it. It owns the `.deccy/journal/` and `.deccy/objects/` reach, hashes and writes blobs before the entry so a visible entry is complete, verifies the id and the blobs on read so a corrupt entry refuses instead of decoding, and collects garbage against the marker file's references rather than a reachability protocol.",
+    "ref": [
+      "src/journal.rs"
+    ],
+    "type": "rust"
+  },
+  "depends_on": [
+    "qokrosvu",
+    "wrkmwqqo",
+    "szmuyqrq",
+    "orrvsxqq",
+    "zmmyomyp"
+  ],
+  "kind": "decision"
+}
