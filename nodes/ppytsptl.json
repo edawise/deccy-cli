@@ -1,0 +1,15 @@
+{
+  "depends_on": [
+    "qxmzpupt",
+    "kttmwrsv",
+    "zplpmpvo",
+    "rlmwytqk"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Every entry revert taken through the revert seam is governed, whichever change-level kind it serves: a creation's kept entries are reverted through that same seam as a removal's, the created change's removal being the effect those reverts take, and no kind is exempt. Each entry revert is checked for divergence; one that leaves any change divergent is itself reverted, the reverts already made are reverted, and the invocation refuses, naming the entry. The divergence read is taken after each revert, over any divergent change rather than just the working copy's. Undo and redo never leave a divergent graph.",
+    "rationale": "The guard is scoped by the mechanism, not by the kind. What can split a change is an entry revert taken through the revert seam \u2014 jj rewrites a commit amended since that operation, and the rewritten commit can sit below the working copy as readily as at it \u2014 so the seam is where the check belongs, and every revert that crosses it is checked whether it serves a creation or a removal. The exemption this decision used to carry for creations was stale in both directions. A creation's inverse is not an abandonment of the change: it is the operation revert of the entries the marker kept (kttmwrsv, rlmwytqk), the created change's removal being the effect those reverts take, and that is exactly the leg the creation window exposes \u2014 a marker whose window is truncated hands the revert fewer entries, and the revert splits the change it meant to unwind. Exempting creations would leave the leg where the defect bites outside the guard, and would contradict both the table that routes a creation's kept entries through the same seam as a removal's and the rule that fixes where that inverse comes from. The remedy and the verdict remain the prerequisites' (qxmzpupt, zplpmpvo): the state is left as it began, the reverts already made are reverted, and the invocation refuses naming the entry; the verdict is a read of the graph taken after each revert, over any divergent change rather than just the working copy's, and the read leaves the state alone. A blanket refusal of a dirty working copy would also refuse the cases that are sound, so the verdict is taken after each revert rather than guessed before it. The scope is the seam rather than a list of kinds, which is what lets the rule be total where a revert can bite without buying an exemption for any kind."
+  }
+}
