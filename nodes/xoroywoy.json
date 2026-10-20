@@ -1,0 +1,16 @@
+{
+  "depends_on": [
+    "zplpmpvo",
+    "szmuyqrq",
+    "zruxtxrv",
+    "urqytyqn"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/divergence.rs"
+    ],
+    "rationale": "S3-divergence fixes the verdict and its source — the commits the revset `divergent()` yields, over a spawned jj process; M-layout places the module flat at src/divergence.rs. It crosses `jj log --ignore-working-copy --no-graph -r divergent() -T commit_id` and answers whether the set is non-empty, carrying failures as values with their evidence (S3-err); the read is observational (S5-observation, urqytyqn), so it never snapshots the state it is judging. A revert can rewrite a commit below the working copy as readily as the working copy itself, so the verdict is not scoped to `@`. Nothing here reverts or refuses: taking the verdict and rolling back belongs to the undo and redo verbs (S5-revert-divergent, ppytsptl)."
+  }
+}
