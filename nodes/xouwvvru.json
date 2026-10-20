@@ -1,0 +1,15 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "Save-failure recovery now has two legs: a recording re-applies the before side, a change-level operation reverses its crossings. The criterion checks that recovery answers to the journal apply."
+  },
+  "depends_on": [
+    "omwrpwpq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "ntlspwxk"
+  ]
+}
