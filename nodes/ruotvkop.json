@@ -1,0 +1,19 @@
+{
+  "depends_on": [
+    "zplpmpvo",
+    "szmuyqrq",
+    "urqytyqn",
+    "knqkxzns"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "xoroywoy"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/divergence.rs"
+    ],
+    "rationale": "The divergence read is where S3-divergence's source meets M-layout's placement and S5-observation's observational rule; this check runs a real jj in a scratch repo and pins that a clean repository reads as not divergent and that a divergence — a squash reverted after its change was amended, at the working copy or below it — reads as divergent, and that a failed crossing carries its evidence while an absent binary is a spawn failure. The read's only job is jj's verdict, taken observationally, so the gate drives a real divergence rather than a fixture: the revset is proven, not assumed."
+  }
+}
