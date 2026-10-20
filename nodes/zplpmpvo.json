@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "xmxpvqzs",
+    "prsoxsuo"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Read whether any change is divergent: the commits the revset `divergent()` yields, over a spawned jj process, non-empty meaning some change carries more than one commit. The state is left alone.",
+    "rationale": "The revert guard needs jj verdict on the graph, not a guess from the files it carries: a revert that rewrites a commit amended since that operation leaves the change with two versions, wherever that commit sits, and every read that names the change then fails (D8a, prsoxsuo and its valid intermediate state). `divergent()` is that verdict, and a revert can rewrite a commit below the working copy as readily as the working copy itself, so the read is not scoped to `@`. It is observational — it carries `--ignore-working-copy` (S5-observation, urqytyqn) — because undo never brackets and a snapshot inside it would be work the invocation did not perform."
+  }
+}
