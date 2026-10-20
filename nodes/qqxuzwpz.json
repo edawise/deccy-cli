@@ -1,0 +1,15 @@
+{
+  "content": {
+    "type": "fidelity",
+    "ref": "inline",
+    "content": "Two directions: every field and constraint the store prose requires appears in the schema (neither looser nor stricter), and every field the schema permits is one the store prose defines. A value the prose calls absent is null; a value it calls content is a 64-hex hash. Closed objects are exactly the fields the prose names.",
+    "rationale": "A fidelity gate on natural-to-code states the rule before the artifact exists and then checks the artifact against it. The store prose is the only source of the entry shape, so the schema may not invent a field or admit one the prose does not."
+  },
+  "depends_on": [
+    "qokrosvu"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wrkmwqqo"
+  ]
+}
