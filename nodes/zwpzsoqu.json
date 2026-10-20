@@ -1,0 +1,19 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "wmwkkqxl"
+  ],
+  "depends_on": [
+    "mnwqksmt",
+    "wxtzltkt",
+    "okkvnnvm",
+    "zruxtxrv"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/record_undo.rs"
+    ],
+    "rationale": "The loop runs where the recording is made: `deccy init`, a root decision, a child decision, a real `deccy record` that leaves the after side in the working copy, then `deccy undo` and `deccy redo` through the markers and the journal. The check pins that undo succeeds and puts the before side back in the target while the working copy keeps the after side and its diff shows against the target, and that redo succeeds, puts the after side back in the target and leaves the working copy clean for it. The fixture is the real post-record shape (D15c, mnwqksmt), not a hand-built before side."
+  }
+}
