@@ -1,0 +1,18 @@
+{
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/journal/src/store_tests.rs"
+    ],
+    "rationale": "The store is checked over real files: a put/get round-trip, identical content deduping to one blob, an entry visible whole, a corrupt entry refused by name, GC removing unreferenced entries and blobs, and absent paths stored as null. Binary content survives the round-trip. The store tests live in their own file, so this gate owns only the store's test file and shares no artifact with the schema gate."
+  },
+  "depends_on": [
+    "wrkmwqqo",
+    "orrvsxqq",
+    "zmmyomyp"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "zutqsqtu"
+  ]
+}
