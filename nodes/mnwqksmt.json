@@ -1,0 +1,15 @@
+{
+  "content": {
+    "content": "Undo and redo of a recording verify both sides before applying: the target must hold the expected side, and the working copy's recorded paths must hold the **after** side — the side the recording left there — and both directions leave them there. Unrelated dirty paths never block. A mismatch refuses naming the paths; no merge is attempted.",
+    "rationale": "A journal apply rewrites the target's change and the working copy, so applying a side over content that is not the one the recording left would silently discard someone else's edit. The working copy's recorded paths are checked at the after side in both directions, because that is the side a recording leaves there: undo puts the diff back against the target's before side and redo takes it away, and neither moves the working copy off the after side. Checking both sides makes the operation total: either both sides are where the recording left them and it applies, or the invocation refuses naming every path that differs. Unrelated dirty paths are outside the recorded owned set and never block, which is the difference from reverting the op log.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "prsoxsuo",
+    "lummwqtx",
+    "kpptprql",
+    "kmmowvkw"
+  ],
+  "kind": "decision"
+}
