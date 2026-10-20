@@ -1,0 +1,18 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "A journal inverse is where the recording leg meets D8b's whole-operation markers, S3-revert's write half, D8a's per-kind inverse and D2's ownership. The criterion checks that the journal entry is the recording's inverse without contradicting any of them."
+  },
+  "depends_on": [
+    "txqmnvup",
+    "kttmwrsv",
+    "prsoxsuo",
+    "xzxtxymq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "kmmowvkw"
+  ]
+}
