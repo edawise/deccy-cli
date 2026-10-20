@@ -1,0 +1,14 @@
+{
+  "content": {
+    "content": "A journal entry is `{id, version, kind, target, before, after}`: `before` and `after` map an owned path to a 64-hex content hash or null for absent. The id is the SHA-256 of the canonical entry; blob paths are SHA-256 content-addressed, so identical content dedupes. Blobs are written before the entry, and the entry lands temp-then-rename. A corrupt entry refuses naming it; unreferenced entries and blobs are removable.",
+    "rationale": "An id derived from the entry makes the entry self-checking: a reader recomputes it and refuses a document that does not match its name. Content addressing dedupes unchanged files across recordings and makes a blob immutable. Writing blobs first and the entry last means a visible entry always has every blob it names, and atomic replacement keeps a crash from leaving half an entry. Garbage collection is a scan of the marker file, not a reachability protocol.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "kmmowvkw",
+    "ozmxpzxy",
+    "nslkynln"
+  ],
+  "kind": "decision"
+}
