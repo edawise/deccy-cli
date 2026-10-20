@@ -1,0 +1,16 @@
+{
+  "content": {
+    "type": "fidelity",
+    "ref": "inline",
+    "content": "Two directions: a recording's journal entry contains exactly the target's owned set \u2014 its node file plus its array-ref paths \u2014 with no path outside it, and every one of those paths is present with the before and after side the recording left. An inline-ref target's entry contains the node file alone. The marker stores exactly one journal entry id for the recording.",
+    "rationale": "A natural-to-code fidelity gate states the rule before the capture change and then checks the code against it. The owned set is D2's, so the capture may neither add a path nor omit one, and a recording names one entry rather than a bag of ids."
+  },
+  "depends_on": [
+    "wxtzltkt",
+    "zutqsqtu"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "okkvnnvm"
+  ]
+}
