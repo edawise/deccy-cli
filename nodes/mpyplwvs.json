@@ -1,0 +1,17 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "The entry shape is the store J's inverse reads and the marker file points into. The criterion checks that it does not contradict the journal interface or persistence."
+  },
+  "depends_on": [
+    "kmmowvkw",
+    "ozmxpzxy",
+    "nslkynln"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "qokrosvu"
+  ]
+}
