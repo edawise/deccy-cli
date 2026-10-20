@@ -1,0 +1,15 @@
+{
+  "content": {
+    "rationale": "The store and the schema are separate commitments: the store fixes what an entry means and how it is written, the schema fixes the document shape every reader checks before decoding. A closed object and a hex-or-null value keep a corrupt entry from decoding into a plausible one. The absolute `$id` is required because the validator compiles a schema only under an absolute identifier, and embedding it keeps checked-in shapes checked by the binary that reads them.",
+    "ref": [
+      "schemas/journal.json"
+    ],
+    "type": "json-schema"
+  },
+  "depends_on": [
+    "qokrosvu",
+    "ypykwmmt",
+    "zmmyomyp"
+  ],
+  "kind": "decision"
+}
