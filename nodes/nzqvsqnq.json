@@ -1,0 +1,17 @@
+{
+  "content": {
+    "type": "fidelity",
+    "ref": "inline",
+    "content": "Two directions: every step the apply prose names \u2014 check the target's expected side, check the working copy's after side, materialise, squash into the target, abandon the buffer, restore the working copy, leave the after side, refuse on mismatch \u2014 exists in the module, and the module adds no direct write to a non-working-copy change and no merge. The module captures the working copy's change and its parent before the buffer, and restores by editing the old change when it still resolves, otherwise by opening an empty change on the old parent \u2014 the choice is made by resolution after the dance, never by predicting emptiness; the recreated empty change carries no content, and its description, if any, is not preserved. Every failure after the squash lands \u2014 the conflict verdict, the buffer abandon, the restore, the final working-copy write \u2014 reverses the target to its expected side before refusing, carrying the original cause, and carrying both causes when the reversal also fails. The module is the single flat file M-layout places at src/journal_apply.rs.",
+    "rationale": "A natural-to-code fidelity gate states the rule before the module exists and then checks the module against it. The apply prose and M-layout are the only sources; a shortcut that writes a non-working-copy target directly, or merges instead of refusing, is a contradiction."
+  },
+  "depends_on": [
+    "omwrpwpq",
+    "qokrosvu",
+    "szmuyqrq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wmwkkqxl"
+  ]
+}
