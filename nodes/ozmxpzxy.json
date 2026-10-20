@@ -1,0 +1,14 @@
+{
+  "content": {
+    "content": "The journal is a fifth file interface: journal entry files under `.deccy/journal/` and content-addressed blobs under `.deccy/objects/`, opened on the one repo root, landed by atomic replacement, untracked, with no generic read or write over arbitrary paths.",
+    "rationale": "S2-ifs gives each file kind its own handle; the journal is a new kind \u2014 entry documents plus byte blobs \u2014 and giving it its own interface keeps the store, the marker file and the exclude file from gaining reach through it. It lands by S2-atomic's replacement rule and stays untracked with the rest of `.deccy/`, so it never enters the graph's history.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "xquwmsts",
+    "rmmlokop",
+    "kmmowvkw"
+  ],
+  "kind": "decision"
+}
