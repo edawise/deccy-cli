@@ -1,0 +1,18 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts a prerequisite. Fail on any contradicting element \u2014 name the element.\n2. Coverage: the entry's before and after sides span the paths the recording can touch \u2014 the union of the target's owned set before and after the recording, including a path its own placement first makes owned \u2014 so a path absent before is carried with a null before side and a present after side. Fail on a placeable path the entry does not carry \u2014 name the path.",
+    "rationale": "The recording snapshot is where the journal store meets the bracket, its observation rule and the ownership rule. Ownership is ref-derived (xzxtxymq): the node document is an owned path, so a recorded document that lists a new ref path makes that path owned by the same recording. qokrosvu gives the entry a null before side for a path absent before, which is how such a path is carried, and the bracket and observation rule (pmxnnvvq, urqytyqn) put both readings inside the operation, so the union is decidable. A licence-only reading checks contradiction; the refined use is coverage \u2014 whether a path the recording itself makes owned is in the journal's set \u2014 which no single prerequisite states as a prohibition. The coverage clause is what makes the entry answer to the ownership it places."
+  },
+  "depends_on": [
+    "qokrosvu",
+    "pmxnnvvq",
+    "urqytyqn",
+    "xzxtxymq"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wxtzltkt"
+  ]
+}
