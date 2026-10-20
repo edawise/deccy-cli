@@ -1,0 +1,19 @@
+{
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/journal/Cargo.toml",
+      "tests/journal/Cargo.lock",
+      "tests/journal/src/lib.rs"
+    ],
+    "rationale": "The schema is checked both ways: a valid sample validates, and an unknown field, a malformed hash, and a missing before or after side are each rejected. The crate embeds the schema the binary carries, so the checked shape is the shipped shape."
+  },
+  "depends_on": [
+    "ypykwmmt",
+    "zmmyomyp"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wrkmwqqo"
+  ]
+}
