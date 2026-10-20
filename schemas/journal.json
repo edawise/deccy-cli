@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:deccy:schema:journal",
+  "title": "Deccy journal entry",
+  "description": "One recording's inverse: the before and after content of the recorded change's owned paths. A side maps every owned path to the SHA-256 of its content or to null when the path is absent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "version", "kind", "target", "before", "after"],
+  "properties": {
+    "id": {
+      "description": "The SHA-256 of the canonical entry (this document without the id field).",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "version": {
+      "description": "The entry document's version.",
+      "const": 1
+    },
+    "kind": {
+      "description": "The operation kind this entry inverts. Only a recording keeps a journal entry.",
+      "enum": ["record"]
+    },
+    "target": {
+      "description": "The change the recording targeted.",
+      "type": "string",
+      "minLength": 1
+    },
+    "before": {
+      "description": "The owned paths' content before the recording, keyed by repo-relative path.",
+      "type": "object",
+      "propertyNames": { "type": "string", "minLength": 1 },
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "null" },
+          { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        ]
+      }
+    },
+    "after": {
+      "description": "The owned paths' content after the recording, keyed by repo-relative path.",
+      "type": "object",
+      "propertyNames": { "type": "string", "minLength": 1 },
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "null" },
+          { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        ]
+      }
+    }
+  }
+}
