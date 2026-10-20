@@ -1,0 +1,17 @@
+{
+  "content": {
+    "rationale": "S3-journal-apply fixes the shape \u2014 check the target's expected side and the working copy's after side, materialise the target side in a buffer at the target, squash into the target, abandon the buffer, restore the user's working copy, then leave the after side in it \u2014 and S5-journal-store the content the sides name; D15c (mnwqksmt) fixes the two-sided check and the working-copy side. This module is that shape over M-jj: it reads the target's files at its change, reads and writes the working copy, captures the working copy's `@` and `@-` before the buffer, opens the buffer with `jj new <target>`, squashes with `jj squash --into`, abandons the buffer, and restores the user's working copy by editing the captured `@` when jj still resolves it and otherwise opening a fresh empty change on the captured `@-` parent \u2014 decided by resolution after the dance, never by predicting emptiness; the recreated empty change carries no content and its description, if any, is not preserved. Every failure after the squash lands \u2014 the conflict verdict, the buffer abandon, the restore, the final working-copy write \u2014 puts the target back to its expected side through the same buffer before refusing, carrying the original cause, or both causes when that reversal also fails. It carries every crossing's reason. Undo and redo differ only in which side is expected and written to the target: both expect the working copy at the after side the recording left and both leave it there, so undo's diff shows against the target's before side and redo's is gone. It reads no journal entry itself beyond the store's content accessor.",
+    "ref": [
+      "src/journal_apply.rs"
+    ],
+    "type": "rust"
+  },
+  "depends_on": [
+    "omwrpwpq",
+    "qokrosvu",
+    "szmuyqrq",
+    "zruxtxrv",
+    "mnwqksmt"
+  ],
+  "kind": "decision"
+}
