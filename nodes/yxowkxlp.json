@@ -1,0 +1,11 @@
+{
+  "depends_on": ["prsoxsuo", "txqmnvup"],
+  "evaluates": ["kpptprql"],
+  "kind": "evaluation",
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "Linearity does not touch whole-operation scope (`prsoxsuo`) or the op-log entry record (`txqmnvup`): the position moves over whole markers and the discarded tail is bookkeeping only, its reverts remaining in the jj op log. The gate checks that the linear model uses those prerequisites without re-deciding either."
+  }
+}
