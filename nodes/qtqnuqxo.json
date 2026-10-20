@@ -1,0 +1,15 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "vxvsvzns",
+    "wpomwoxt"
+  ],
+  "content": {
+    "content": "Every verb answers its argument surface before it reaches for the workspace. `--help` is answered from any context, root-less included, with the verb's own line; an argument the form does not name — and a missing required flag — is refused, naming it, at the same point. Neither waits on a workspace, while the operation the verb performs still refuses on a root-less context (S3-root-required).",
+    "rationale": "D11 (oqnsuzqu) and xlvoxmyl fix what --help answers; S3-root-optional (vxvsvzns) makes a root-less directory a state, not a resolution failure; S3-root-required (wpomwoxt) scopes the refusal to the operation. A discovery surface and a typo refusal are what a caller uses before deciding to init, so the store is an operation concern and the surface answers before it is taken.",
+    "ref": "inline",
+    "type": "text"
+  }
+}
