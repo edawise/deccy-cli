@@ -1,0 +1,18 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "qtqnuqxo"
+  ],
+  "depends_on": [
+    "oqnsuzqu",
+    "xlvoxmyl",
+    "vxvsvzns",
+    "wpomwoxt"
+  ],
+  "content": {
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "H1 is prose against prose: the base natural-to-natural gate is license — does the dependent's use of its prerequisites contradict them? The behavioural checks live per verb (the five verb gates), so this node keeps H1's use sound without defining the rule or probing behaviour.",
+    "ref": "inline",
+    "type": "review-criteria"
+  }
+}
