@@ -1,0 +1,14 @@
+{
+  "depends_on": [
+    "qxmzpupt",
+    "kttmwrsv",
+    "zplpmpvo"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "An entry revert that leaves any change divergent is itself reverted, the reverts already made are reverted, and the invocation refuses, naming the entry. Undo and redo never leave a divergent graph.",
+    "rationale": "A revert that succeeds but splits a change breaks the same promise as a revert that refuses partway — the graph is left in a state no read can name, because the change id is now ambiguous — so the same remedy applies: revert what was done, refuse, and name the entry. Splitting is what jj does when the reverted operation rewrote a commit amended since; the rewritten commit can sit below the working copy as readily as at it, so the verdict is any divergent change rather than `@`. A blanket refusal of a dirty working copy would also refuse the cases that are sound (a creation undo, a revert whose target was untouched), so the verdict is taken after each revert rather than guessed before it. The rule is scoped to entries reverted through the revert seam; a creation undo abandons the change instead and is untouched."
+  }
+}
