@@ -1,0 +1,18 @@
+{
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element \u2014 name the element.",
+    "rationale": "The two-sided check sits on D8a's whole-operation inverse, undo's last-applied selection, the linear history and the journal entry. The criterion checks that verification narrows the apply without contradicting any of them."
+  },
+  "depends_on": [
+    "prsoxsuo",
+    "lummwqtx",
+    "kpptprql",
+    "kmmowvkw"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "mnwqksmt"
+  ]
+}
