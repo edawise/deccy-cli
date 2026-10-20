@@ -1,0 +1,10 @@
+{
+  "depends_on": ["prsoxsuo", "txqmnvup"],
+  "kind": "decision",
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The undo history is a single linear sequence: a position names how many operations are applied, the markers after it are the redo tail, and a new operation discards that tail. Undo and redo move the position one step; there is no branch for redo to be valid against.",
+    "rationale": "The marker state is a stack with a cursor, not a window. Closing a bracket discards the redo tail instead of leaving it for a gate to refuse: the undone work stays undone, its reverts are already in the jj op log, so discarding the markers is bookkeeping only and re-applies nothing. This replaces D15b's no-newer-operation window (`qwqwqtuq`) and is realized by T-state's `pos`, S5-marker-append's truncation, the guards' cursor transitions and the marker schema. Whole-operation scope (`prsoxsuo`) and the op-log entry record (`txqmnvup`) are untouched: the tail's reverts remain in the op log after its markers are discarded."
+  }
+}
