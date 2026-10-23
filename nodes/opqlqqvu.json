@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["rkoktpwt", "vnknuvvk", "tpypotxm"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "Resolution can be answered from the set of node documents already read. A target is the root, a loaded sibling, absent, or failed; the outcome is the same as the file-backed resolution, and no per-target read is made.",
+    "rationale": "The file-backed resolution reads the target at its change for every edge; the set read already holds the same documents, so resolving from the set yields the same outcome without the crossing. This elaborates `D-read-bulk`'s crossing invariant and keeps S2-resolve's one-path rule: the set-backed entry point is the same rule, not a second one."
+  }
+}
