@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ltttzmvz"],
+  "depends_on": ["rkoktpwt", "mypprxpk", "xwyryumr", "nqktpzuu", "pumpuqkv"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts the parent. Fail on any contradicting element — name the element.",
+    "rationale": "The model elaborates the crossing rule and the set-read rule; the licence check reads the five parents in turn — the crossing invariant, the set read's source and fallbacks, the change-id identity, the single-document read, and the path — and names any model element that contradicts one. Review form: the criterion is applied to the model's text; nothing runs."
+  }
+}
