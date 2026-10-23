@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["rkoktpwt", "nqktpzuu", "xwyryumr", "pumpuqkv", "xmxpvqzs"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The node set is read from the Git objects of the commits its ids name. One `jj` crossing maps each change id to its commit id; one `git cat-file --batch` crossing requests `nodes/<id>.json` at that commit. An object the batch cannot serve falls back to the single-document read for that id; when the mapping or git is unavailable, the whole set falls back to the single-document read. A divergent id is not served from the batch.",
+    "rationale": "The set read needs the whole set without a per-node crossing. The owning commit's tree holds the same bytes the single-document read returns, and Git's batch protocol serves them in one crossing. This is the source decision `M-store-bulk` implements; it depends on S2-read for the fallback and single-document read, D1b for the change-id-to-commit mapping, S2-path for the path, and S3 for the process boundary. An index was rejected for the same reasons as `D-read-bulk`: invalidation, concurrent-write and second-source costs."
+  }
+}
