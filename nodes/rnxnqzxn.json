@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["rkoktpwt", "ooyrrwlq", "tksoxwpy"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "The node schema is compiled once per process and reused. The checking point accepts a document's text and validates it without reading, so the set read can check what it read without a per-node read.",
+    "rationale": "The schema is embedded and immutable, so compiling it per load is wasted work; and the set read supplies document text, so the check must be callable on text rather than only after a store read. This elaborates the checking point S2-validate and the schema D1d, and keeps the read and the check separate."
+  }
+}
