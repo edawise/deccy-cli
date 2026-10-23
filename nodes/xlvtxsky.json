@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["rkoktpwt", "mypprxpk", "ltttzmvz", "xwyryumr", "zruxtxrv", "tmwyqnyz", "vkztyrzm", "sxonuzmr", "szmuyqrq", "orrvsxqq"],
+  "content": {
+    "type": "rust",
+    "ref": ["src/store_bulk.rs"],
+    "rationale": "This module implements S2-read-set's source decision and T-bulk-read's result contract. The rule owns the source; the spec owns the result invariants; the module owns only the Rust mechanism that satisfies both. It receives the node ids from M-node-set and does not enumerate `files(\"nodes/\")` itself; one `jj log` over those change ids maps each to its commit id; one `git cat-file --batch` crossing, fed through the runner's stdin capability, requests `<commit>:nodes/<id>.json` with the path from M-store-path; a per-object miss or non-blob falls back to the single-document read for that id; a mapping failure or a git spawn/non-zero falls back for the whole set; a change id mapping to more than one commit falls back per id; and it returns `BTreeMap<String, Result<Value, LoadError>>` — documents, not `node_set::NodeRead` — so M-node-set maps the outcomes and no dependency on `node_set` exists."
+  }
+}
