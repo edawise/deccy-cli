@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xmxpvqzs", "vyquqmoo", "lvkukpyw", "uzzxlpsl"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "A crossing may carry an input stream. The caller supplies the bytes; they are written to the child's stdin before the crossing completes. The crossing still returns the exit status, the raw stdout bytes and stderr, and the runner still holds only the binary and root.",
+    "rationale": "`git cat-file --batch` reads requests on stdin and writes a binary stream to stdout; feeding it is a crossing capability, not a module detail. This is a new clause under S3; the runner implements it, and the set read consumes it."
+  }
+}
