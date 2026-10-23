@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["opqlqqvu"],
+  "depends_on": ["rkoktpwt", "vnknuvvk", "tpypotxm"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The set-backed resolution rule names the same four outcomes as the file-backed rule and forbids a per-target read; the license check reads the crossing invariant, S2-resolve's one-path rule, and S2-resolve-load's loaded-document outcome, and names any element the rule contradicts. Review form: the criterion is applied to the rule's text; nothing runs."
+  }
+}
