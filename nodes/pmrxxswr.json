@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["mypprxpk"],
+  "depends_on": ["rkoktpwt", "nqktpzuu", "xwyryumr", "pumpuqkv", "xmxpvqzs"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The set-read rule maps change ids to commit ids, batches the owning commits' documents, and names two fallbacks; the license check reads the crossing invariant, the single-document read and its fallback role, the change-id identity, the path derivation, and the process boundary, and names any element the rule contradicts. Review form: the criterion is applied to the rule's text; nothing runs."
+  }
+}
