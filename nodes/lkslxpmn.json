@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rnxnqzxn"],
+  "depends_on": ["rkoktpwt", "ooyrrwlq", "tksoxwpy"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The one-compile rule fixes a single schema compilation per process and a check that accepts text; the license check reads the crossing invariant, S2-validate's checking point, and D1d's carried schema, and names any element the rule contradicts. Review form: the criterion is applied to the rule's text; nothing runs."
+  }
+}
