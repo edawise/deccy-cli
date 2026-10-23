@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["xlvtxsky"],
+  "depends_on": ["rkoktpwt", "mypprxpk", "xwyryumr", "ltttzmvz", "zruxtxrv", "tmwyqnyz", "vkztyrzm", "sxonuzmr", "szmuyqrq", "orrvsxqq"],
+  "content": {
+    "type": "test",
+    "ref": ["tests/store_bulk/Cargo.toml", "tests/store_bulk/Cargo.lock", "tests/store_bulk/src/lib.rs"],
+    "rationale": "One test crate covers the set read's ten edges. It checks the artifact's shape and the result contract: one mapping `jj log` and one `git cat-file --batch` for the healthy set, with no per-node `file show` (fidelity to D-read-bulk and S2-read-set); the batch reads `nodes/<id>.json` from the commit the change id names, not the working copy (fidelity to S2-read-set and xwyryumr); the requests name the mapped commits (fidelity to xwyryumr); every result matches the single-document read (conformance to T-bulk-read); absence is preserved; one missing/non-blob object falls back for that id and still matches; a mapping failure or a git spawn/non-zero falls back for the whole set with no node lost; a non-colocated or absent git runner falls back; a divergent change falls back per id; and the batch receives `<commit>:nodes/<id>.json` for the mapped commits."
+  }
+}

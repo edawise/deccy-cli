@@ -1,0 +1,11 @@
+[package]
+name = "store-bulk-gate"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+serde_json = "1"
+jsonschema = "0.18"
