@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ltttzmvz"],
+  "depends_on": ["rkoktpwt", "mypprxpk", "xwyryumr", "nqktpzuu", "pumpuqkv"],
+  "content": {
+    "type": "model-check",
+    "ref": ["specs/store_bulk/check.qnt"],
+    "rationale": "Verification is where the assembled file meets its checker: run `quint typecheck specs/store_bulk/check.qnt && quint verify specs/store_bulk/check.qnt --main=store_bulk --invariant=ResultsMatchReference,DivergenceFallsBack,FallbackTotal,Totality,SingleBatch --max-steps=10` — grammar plus types first, then bounded-exhaustive invariants over all traces to the bound. The invariants pin the result equality against the single-document read, the divergent-id fallback, the whole-set fallback under an unavailable mapping or git, totality at Done, and at most one batch. Runs green at placement and whenever the model changes (verify needs a JDK for its Apalache backend; typecheck does not)."
+  }
+}
