@@ -1,0 +1,10 @@
+{
+  "kind": "decision",
+  "depends_on": ["xmxpvqzs", "nqktpzuu", "ryzlzrkk", "zqkqvlyo", "xtuswonn"],
+  "content": {
+    "type": "text",
+    "ref": "inline",
+    "content": "In a repository whose substrate is available, the number of substrate crossings `deccy log` and `deccy validate` make does not grow with the node or edge count. Per-object fallback for an object the set read cannot serve, and whole-set fallback when git or the mapping is unavailable, are permitted; neither is the healthy path.",
+    "rationale": "The cost is process spawning, not graph size — 686 nodes and 2,892 edge references become thousands of `jj` processes. A read whose crossing count grows with the graph makes `validate` too expensive to run every round, so it gets skipped. An index was rejected: it adds invalidation, concurrent-write and second-source-of-truth costs that the set read obviates. The mechanisms are the lower decisions' to choose."
+  }
+}
