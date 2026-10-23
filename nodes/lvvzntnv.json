@@ -1,0 +1,10 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["xlvtxsky", "kmvxonsk"],
+  "depends_on": ["rkoktpwt", "mypprxpk", "opqlqqvu", "rnxnqzxn", "nykqvuqr", "wynwwtur", "tmwyqnyz", "zruxtxrv", "sxonuzmr"],
+  "content": {
+    "type": "measurement",
+    "ref": ["tests/budget/run.sh"],
+    "rationale": "The gate builds the binary from this checkout, creates a temp fixture with `jj git init --colocate` and N1=20 and N2=100 nodes (four edges per node, each node a real change with its own document), puts counting shims for `jj` and `git` first on PATH, runs `deccy log` and `deccy validate` inside the fixture, and asserts the `jj` and `git` invocation counts are equal at N1 and N2. It reports wall time but sets no latency threshold: the decision states crossings, not latency. The measured graph is the fixture; this checkout supplies only the binary. Baseline before the change: one `file show` per node and per edge, so N2 makes strictly more crossings than N1. Green: equal counts at N1 and N2 and both verbs complete."
+  }
+}
