@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["zukqvtns"],
+  "depends_on": ["xmxpvqzs", "vyquqmoo", "lvkukpyw", "uzzxlpsl"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The stdin clause adds an input stream to a crossing while keeping the status, raw stdout and stderr result, and the runner's two-field state; the license check reads the process boundary, explicitness, statelessness, and the evidence-carrying failure shape, and names any element the rule contradicts. Review form: the criterion is applied to the rule's text; nothing runs."
+  }
+}
