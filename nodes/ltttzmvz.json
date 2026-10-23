@@ -1,0 +1,9 @@
+{
+  "kind": "decision",
+  "depends_on": ["rkoktpwt", "mypprxpk", "xwyryumr", "nqktpzuu", "pumpuqkv"],
+  "content": {
+    "type": "quint",
+    "ref": ["specs/store_bulk/read.qnt"],
+    "rationale": "The model starts from ids supplied by the node set, maps each change id to the commit or commits it names, batches the owning commits' documents, and falls back per unservable id or for the whole set when the mapping or git is unavailable. It elaborates S2-read-set's mapping, batch and fallback phases and fixes the result invariants that the Rust mechanism must satisfy; it does not model the wire format, the path spelling or the code."
+  }
+}
