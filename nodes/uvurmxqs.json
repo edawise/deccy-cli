@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["rkoktpwt"],
+  "depends_on": ["xmxpvqzs", "nqktpzuu", "ryzlzrkk", "zqkqvlyo", "xtuswonn"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The rule states a crossing invariant and two permitted fallbacks over the process boundary, the single-document read, the node-set identity, the log read, and the validate read; the license check reads each of those five in turn and names any element the rule contradicts. Review form: the criterion is applied to the rule's text; nothing runs."
+  }
+}
