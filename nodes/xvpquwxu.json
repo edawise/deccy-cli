@@ -1,0 +1,20 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "ulqqklzk"
+  ],
+  "depends_on": [
+    "znskspqs",
+    "rvyrosmp",
+    "xxwtnpzz",
+    "rvuunmlm",
+    "lmwpuqlx",
+    "vwlrqoxk"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any contradicting element — name the element.",
+    "rationale": "The C-STATE contract is a licence question: the draft model, the recording verb, the untracked state directory, init's directories, and the operation/lifecycle table fix what a draft's durable state may be. This gate checks only that no clause of C-STATE contradicts one of those prerequisites, naming the clause and the prerequisite it departs from; it states no further requirement of its own."
+  }
+}
