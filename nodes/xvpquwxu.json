@@ -1,0 +1,20 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "ulqqklzk"
+  ],
+  "depends_on": [
+    "znskspqs",
+    "rvyrosmp",
+    "xxwtnpzz",
+    "rvuunmlm",
+    "lmwpuqlx",
+    "vwlrqoxk"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. Single commitment. The dependent records one commitment. Read the dependent's clauses and fail on any clause that could be decided, changed, or dropped independently of the others without the remaining clauses changing — name the clause and the separate commitment it settles. A clause that rests on a prerequisite the dependent does not name in `depends_on` also fails this criterion: name the clause and the unnamed prerequisite.\n\n2. Licence and named prerequisites. No element of the dependent contradicts a prerequisite the dependent names in `depends_on`; fail on every contradicting element, naming the element and the prerequisite it departs from. For each clause, identify the prerequisite whose decision the clause actually uses, and fail if that prerequisite is not named in `depends_on` — name the clause and the missing prerequisite.\n\nBoth criteria are applied against the prerequisites the dependent names in `depends_on`. This evaluation may carry more prerequisites than the dependent names; an edge the dependent does not name confers no licence on a clause and imposes no requirement on it.",
+    "rationale": "The earlier criterion asked only whether an element of the dependent contradicted a prerequisite: enough to catch an untrue clause, not a badly scoped one. A decision trimmed to a single commitment can keep clauses that each remain uncontradicted while the document commits to more than its edges support — a bundled clause that could be decided on its own, and a clause whose licence sits in a prerequisite the dependent no longer names. A licence-only check passes both, so it cannot prove a trim. Criterion 1 reads the document for clauses that stand or fall independently; criterion 2 checks each clause against the prerequisites the dependent actually names, including whether the clause's prerequisite is named at all. Neither criterion restates the dependent or fixes which clauses it has: which clause fails is a finding of the check, not part of the gate."
+  }
+}
