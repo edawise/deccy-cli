@@ -1,0 +1,14 @@
+{
+  "content": {
+    "content": "A draft's durable state lives in one work-state registry under `.deccy/work/`, inside the `.deccy/` state directory that `init` creates. A draft outlives the command that opened it — it can be prepared ahead of its landing, and an earlier draft may still be open when a later one is written — so draft state has to live somewhere that persists. `.deccy/` is the directory deccy reserves for its own state, and `.deccy/work/` is where draft state goes inside it.\n\nThe registry is untracked with the rest of `.deccy/`. That tracking boundary is what makes it state and not repository content: because `init` keeps `.deccy/` untracked, everything written inside it — the registry included — is deccy's own state rather than repository content, so draft state is written to a place the repository does not track.\n\nPlace and tracking are one commitment, not two. `.deccy/work/` is the state side and untracked is the tracking side of the same answer — draft state is deccy's state, not repository content — and neither holds without the other: a tracked registry would be repository content wherever it sat, and a registry outside the state directory would not be state at all. Nothing here could be decided, changed or dropped on its own.",
+    "rationale": "The registry exists because a draft is something an operator returns to: the draft model (znskspqs) lets a draft be prepared ahead of its landing and lets a redraft be written while an earlier draft of the same work is still open, so a draft's state cannot live only inside the command that opened one of them. That state needs a written home. The home is the state directory because `init` keeps `.deccy/` untracked (xxwtnpzz): anything written there is deccy's own state and never repository content, which is exactly what draft state has to be. The registry sits inside `.deccy/` rather than in a directory of its own because `init` already creates the state directory (rvuunmlm): the invocation lays it down, so the registry can use it without inventing a directory the invocation does not create. Place and tracking therefore cannot be separated: the path is the state side and untracked is the tracking side of one answer, and a tracked registry would be repository content wherever it sat. The rest is deliberately out of scope — how a registry entry is keyed and what it carries, how long an entry lives, how a draft is opened and landed, whether a registry write is itself an operation, and whether a draft's state is a node document or is listed or attributed by the graph are separate commitments decided elsewhere, and settling them here would couple this location to decisions that must be able to change on their own evidence.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "znskspqs",
+    "xxwtnpzz",
+    "rvuunmlm"
+  ],
+  "kind": "decision"
+}
