@@ -1,0 +1,17 @@
+{
+  "content": {
+    "content": "The crate's package is a closed set: it ships exactly `Cargo.toml`; `Cargo.lock`, cargo-generated and carried with the build; every file under `src/`; every file under `schemas/`; `README.md`; `LICENSE-MIT`; and `LICENSE-APACHE`. That list is exhaustive, not illustrative: a path ships only if it is named in it, and no other path ships.\n\nEach inclusion is a build, legal or listing input of the one binary. `Cargo.toml`, `Cargo.lock` and `src/` are the inputs of the cargo build that produces the single binary, which is why the lockfile travels with the build (uuzuzrol). `schemas/` ships because the schemas are embedded in the binary at build time, so no schema is read from a repository at runtime (svusvrou). `LICENSE-MIT` and `LICENSE-APACHE` both ship, neither dropped, because the crate is MIT OR Apache-2.0 (zypposnt). `README.md` ships because the crates.io listing renders it, while the keywords and categories the crate is found under are declared in the manifest (opqpptnr).\n\nFive groups are excluded because they serve the source repository rather than the artifact. `nodes/` does not ship: it is the graph's own repository state, not the product, and a CLI usable in any repository ships the binary's build inputs rather than a repository's bookkeeping (syxllqoq). `specs/` does not ship: it holds the models, which are development-time descriptions, neither an input to the cargo build nor read at runtime, since the schemas are already carried in the binary (uuzuzrol, svusvrou). `.github/` does not ship: it is workflow and CI machinery that runs in the source repository, not part of the binary's build (syxllqoq). `dist-workspace.toml` does not ship: it is release machinery used to publish from the source repository, not a build input of the single cargo binary (uuzuzrol). `tests/` does not ship: the acceptance suites are development-only black-box suites that drive the built binary as a subprocess, so they are neither runtime nor build input (tpkrztrq); a nested crate under `tests/` is a sub-package, not a test file of this package.\n\nMembership is closed and unconditional: a path ships only if it is named above, and no other path ships.",
+    "rationale": "The tarball is the crate's build, legal and listing surface, not the source repository's bookkeeping: deccy is one CLI that runs in any repository (syxllqoq), so the package carries what the cargo build needs (uuzuzrol), the schemas the binary embeds (svusvrou), the two licence texts the crate is offered under (zypposnt), and the README the listing renders (opqpptnr), while the graph state, the models, CI, release configuration and the black-box acceptance suites stay behind in the repository (tpkrztrq). An allowlist is the right shape because it fails closed: as the repository grows, with new specs, workflows and test sub-crates, no default addition can widen the tarball, so the shipped set stays exactly what the six prerequisites make necessary. xuxzqqts reviews this text against the package listing, element by element.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "syxllqoq",
+    "uuzuzrol",
+    "svusvrou",
+    "zypposnt",
+    "opqpptnr",
+    "tpkrztrq"
+  ],
+  "kind": "decision"
+}
