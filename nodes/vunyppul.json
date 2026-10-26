@@ -1,0 +1,20 @@
+{
+  "content": {
+    "content": "1. Single commitment. The dependent records one commitment: drift is a read-only difference between jj's workspace existence and the registry's meaning for an open record, and reconcile reports it without repairing it. Read the dependent's clauses and fail on any clause that could be decided, changed, or dropped independently of the others without the remaining clauses changing — name the clause and the separate commitment it settles. A clause that rests on a prerequisite the dependent does not name in depends_on also fails this criterion: name the clause and the unnamed prerequisite. In particular, a verb name, a command surface, or a repair policy stated as part of drift fails this criterion. A statement that reconcile is not an operation — that it creates, records, and removes nothing, changes no node, no change, and no marker, and is never bracketed or undone — is the read-only consequence of the same drift commitment and does not fail it. A separate definition of operation units, a bracketing rule, or an undo/redo rule stated as its own commitment does fail it: name the clause and the operation-rule commitment it settles.\n\n2. Licence and named prerequisites. No element of the dependent contradicts a prerequisite the dependent names in depends_on; fail on every contradicting element, naming the element and the prerequisite it departs from. For each clause, identify the prerequisite whose decision the clause actually uses, and fail if that prerequisite is not named in depends_on — name the clause and the missing prerequisite. The prerequisites recorded here decide, among them: a draft's record and the workspace it references (owyntkvw); the open and landed states and a landed record's retention (vkkwusty); jj is the backend that holds the tree and the workspaces (xkolyytz); each draft is written in its own workspace (znskspqs); an operation is one whole creation, recording, or removal (lmwpuqlx); only those bracket, and non-mutating invocations are not operations and never bracket (vwlrqoxk). A clause that legitimately uses a prerequisite outside the set above is a finding for this criterion, not something to add to the gate's edges.",
+    "rationale": "A licence-only check asks whether the dependent contradicts the prerequisites it happened to name. That is too weak for this use: drift can avoid every contradiction with the six recorded prerequisites and still split into clauses that are decided, changed, or dropped separately — jj's ownership of workspace existence settled apart from the registry's meaning, the report settled apart from non-repair, or the check coupled to a verb name, a command surface, or a repair policy — or rest a clause on a prerequisite the dependent never drew an edge to, which a licence check never reaches. The distinction that carries this criterion is whether the operation statement belongs to drift's own commitment. Drift's subject is that reconcile reports a difference and repairs nothing; the statement that reconcile is not an operation, that it creates, records, and removes nothing, changes no node, no change, and no marker, and is never bracketed or undone — is the read-only consequence of that same commitment, not a second one, so a reviewer reads it as part of drift. A separate operation-rule commitment — defining what an operation unit is, settling when bracketing happens, or stating how undo and redo behave — is decided, changed, or dropped independently of drift's report, so a clause that states one fails criterion 1. Criterion 1 tests that drift is one commitment; criterion 2 tests contradiction against the named prerequisites and that each clause names the prerequisite its soundness actually uses. Both endpoints are prose, so nothing runs: a reviewer applies both criteria to the recorded nodes.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "owyntkvw",
+    "vkkwusty",
+    "xkolyytz",
+    "znskspqs",
+    "lmwpuqlx",
+    "vwlrqoxk"
+  ],
+  "evaluates": [
+    "vuopwuyo"
+  ],
+  "kind": "evaluation"
+}
