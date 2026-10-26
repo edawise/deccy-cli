@@ -1,0 +1,21 @@
+{
+  "content": {
+    "content": "1. Single commitment. The dependent records one commitment: registry writes are outside the operation vocabulary, and a landing's record update is part of the recording rather than a second operation. Read the dependent's clauses and fail on any clause that could be decided, changed, or dropped independently of the others without the remaining clauses changing — name the clause and the separate commitment it settles. A clause that rests on a prerequisite the dependent does not name in depends_on also fails this criterion: name the clause and the unnamed prerequisite. In particular, a separate landing operation, a separately bracketed record update, a repair or undo rule for registry writes, or a cap, barrier, or command surface stated as part of the commitment fails this criterion: name the clause and the commitment it settles.\n\n2. Licence and named prerequisites. No element of the dependent contradicts a prerequisite the dependent names in depends_on; fail on every contradicting element, naming the element and the prerequisite it departs from. For each clause, identify the prerequisite whose decision the clause actually uses, and fail if that prerequisite is not named in depends_on — name the clause and the missing prerequisite. The prerequisites recorded here decide, among them: a draft's record is a registry-local object keyed by its own handle and is not a node, a node document, or a change (owyntkvw); the open and landed states and a landed record's retention (vkkwusty); an operation is one whole creation, recording, or removal (lmwpuqlx); only creation, recording, and removal bracket, and non-mutating invocations are not operations and never bracket (vwlrqoxk); undo and redo are defined over whole deccy operations (prsoxsuo); recording places the named edits into the named node's change (rvyrosmp); landing is per draft (znskspqs). A clause that legitimately uses a prerequisite outside the set above is a finding for this criterion, not something to add to the gate's edges.",
+    "rationale": "A licence-only gate asks one question: does the dependent contradict a prerequisite it happened to name. That is too weak for this use, because a boundary commitment fails by dismemberment more readily than by contradiction. The dependent can restate every named prerequisite faithfully and still split its subject into clauses that are decided, changed, or dropped separately: a landing operation set beside the registry write, the record update bracketed on its own, registry writes given a repair or undo rule of their own, or the commitment widened into a cap, a barrier, or a command surface. Each of those settles a second decision while contradicting nothing. A licence check is also blind to an unnamed prerequisite: the record's non-node identity, the operation definition, the bracketing scope, the undo and redo unit, recording, per-draft landing and the landed state are all load-bearing for this boundary, so a clause that leans on one of them without drawing the edge passes licence while standing ungrounded. Criterion 1 therefore tests that the dependent is one commitment and rejects any clause decidable on its own; criterion 2 tests contradiction against the named prerequisites and that every clause names the prerequisite whose decision it actually uses. Both endpoints are prose, so nothing runs: a reviewer applies both criteria to the recorded nodes, and the check's output names the clause and the commitment or prerequisite at issue.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "owyntkvw",
+    "vkkwusty",
+    "lmwpuqlx",
+    "vwlrqoxk",
+    "prsoxsuo",
+    "rvyrosmp",
+    "znskspqs"
+  ],
+  "evaluates": [
+    "qvkuluyw"
+  ],
+  "kind": "evaluation"
+}
