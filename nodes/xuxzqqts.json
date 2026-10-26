@@ -1,0 +1,20 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "xrvrslzq"
+  ],
+  "depends_on": [
+    "syxllqoq",
+    "uuzuzrol",
+    "svusvrou",
+    "zypposnt",
+    "opqpptnr",
+    "tpkrztrq"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "Apply to the packaged-file-set decision's inline text, read against the package listing the decision governs (`cargo package --list` over the built crate). The decision passes only if all four criteria hold; fail on any missing element or contradiction, naming the element (and, for 3, the prerequisite).\n1. Shipped set named exactly. The text names the complete shipped set as: `Cargo.toml`; `Cargo.lock` (cargo-generated, carried with the build); every file under `src/`; every file under `schemas/`; `README.md`; `LICENSE-MIT`; `LICENSE-APACHE`. Fail if any one of these is unnamed, is listed among the exclusions, or if the set is presented as illustrative rather than exhaustive (\"such as\", \"for example\", \"etc.\", \"and similar\", \"mostly\").\n2. Exclusions named with their reason. The text names each excluded group and why it does not ship: `nodes/` (the graph's own repository state, not the product); `specs/` (models); `.github/` (workflow and CI machinery); `dist-workspace.toml` (release machinery); `tests/` (development-only black-box suites, neither runtime nor build input, and a nested crate under `tests/` is a sub-package, not a test file of this package). Fail if a group is unnamed, if its reason is missing, or if the reason misdescribes what the group is.\n3. Grounded in the six prerequisites, contradicting none: `syxllqoq` — one CLI usable in any repository, so the shipped set is the binary's own build inputs and not a repository's bookkeeping; `uuzuzrol` — Rust built with cargo as a single binary, so `Cargo.toml`, `Cargo.lock` and `src/` are build inputs; `svusvrou` — the schemas are compiled into the binary (embedded at build time, e.g. `include_str!`), so `schemas/` ships as a build input and no schema is read from a repository at runtime; `zypposnt` — MIT OR Apache-2.0 ships `LICENSE-MIT` and `LICENSE-APACHE` together, neither dropped; `opqpptnr` — the crates.io keywords and categories are declared in the manifest and `README.md` ships because the listing renders it; `tpkrztrq` — the acceptance suites are black-box subprocess runs, so `tests/` is development-only and ships nothing. Fail if an included or excluded element has no prerequisite grounding, if it cites a prerequisite that does not speak to it, or if the text asserts anything a prerequisite denies (a schema read from the repository at runtime; a build other than cargo; a missing licence text; listing metadata carried outside the manifest; acceptance suites run in-process).\n4. Closed set. No path outside the named set is permitted, and no named path's membership is conditional. Fail on \"may\", \"optional\", \"if present\", \"usually\" applied to membership, or on an unnamed allowance (\"other supporting files\", \"the rest of the tree\").",
+    "rationale": "The subject of this edge is a prose policy — which files the package ships — so no command can be red or green on it: the check is a review of the decision's text against the package listing, decided element by element, with failures reported as findings. Its realisation is not left to review alone: the packaged file set is checked mechanically by a package-listing gate over `cargo package --list` for the manifest decision (E-T), a separate evaluation on the build, so this node records criteria and neither duplicates that runnable check nor states its outcome. The criteria are grounded in the six prerequisites and add no rule they do not state or imply: syxllqoq (one CLI usable in any repository), uuzuzrol (Rust built with cargo as one static binary), svusvrou (the schemas compiled into the binary), zypposnt (MIT OR Apache-2.0 licence texts), opqpptnr (the crates.io listing), tpkrztrq (black-box acceptance suites) — each inclusion and exclusion traces to one of them, so a rewrite of the decision that still ships the same set leaves these criteria intact."
+  }
+}
