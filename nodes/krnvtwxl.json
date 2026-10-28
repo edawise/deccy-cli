@@ -1,0 +1,17 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "twpvqstu"
+  ],
+  "depends_on": [
+    "ulqqklzk",
+    "owyntkvw",
+    "vkkwusty"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element \u2014 name the element.",
+    "rationale": "Each of the three recorded prerequisites is prose and so is the dependent, so every edge takes the natural-to-natural gate cell's license check, applied once per prerequisite. The state parent fixes where draft state lives and that it is untracked; the record parent mints a record's own key and says which references a record may carry instead of the graph's identities; the lifecycle parent fixes what a record is at the landed end, retention included. The dependent's place, its per-record document identity and its discovery by reading the directory are each sound only if no element of them contradicts the parent that carries it, so the check reads the dependent against each prerequisite in turn and, on failure, names the contradicting element in its output. The criterion tracks no wording of the dependent and states no rule the prerequisites do not; naming which element fails is left to the check."
+  }
+}
