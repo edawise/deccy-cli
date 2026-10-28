@@ -1,0 +1,20 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "nzrnrlky"
+  ],
+  "depends_on": [
+    "twpvqstu",
+    "vuopwuyo",
+    "owyntkvw",
+    "vkkwusty",
+    "wzmmmmsw",
+    "znkxvuyv"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The dependent is a written surface commitment — a verb that lists the registry's records and reports the drift between an open record and jj's workspaces, reading only — and all six recorded prerequisites are inline prose decisions, so every one of the six edges falls in the matrix's natural→natural cell and takes its licence check as the criterion, applied to each recorded prerequisite in turn at check time. The uses are these: from twpvqstu the dependent takes the set of records to list — one handle-named JSON document in the registry directory, found by scanning it, with landed records still present — so a listing that is sound against it can neither invent records outside that scan nor drop a record for having landed; from vuopwuyo it takes what the report is — an absence of a workspace for a record whose state still asserts a draft is there — together with the read-only stance that changes and repairs nothing, and the fact that the verb name and the surface carrying the report were expressly left to this node, so nothing in the dependent may repair, rewrite or drop a record to make the two sides agree; from owyntkvw it takes the record's identity and references — the handle is the key, the workspace is named by name and path, and a record is not a node document — so the dependent may compare a record's workspace reference against jj's workspaces and may list handles, but may not treat a node or an edit as a record's key or a record as a node the listing omits; from vkkwusty it takes the two-state lifetime and retention at the landed end, so the open/landed split it uses to decide which absences are drift has to read each value as the landing fact and must keep a landed record in the listing; from wzmmmmsw it takes the invocation shape — one verb per invocation, a single lowercase word, arguments after it — so the surface it adds is one such verb and its arguments follow it; from znkxvuyv it takes one verb per purpose with no aliases, so the listing-and-report purpose is served by exactly one verb name and by no alias of it. Nothing here is runnable: the unit claims no repository path, and a written surface commitment is not a behaviour this cell may probe — a behaviour probe belongs to a cell whose child is code — so the check is decided by reading the dependent against each recorded prerequisite in turn, and which element is at issue is what the check discovers and names in its output, never what the criterion pre-names."
+  }
+}
