@@ -1,0 +1,19 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "votqoovw"
+  ],
+  "depends_on": [
+    "xqzstoyo",
+    "owyntkvw",
+    "znskspqs",
+    "kywrtyoq",
+    "rnolplyu"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "Every endpoint of four of the five recorded edges is inline prose: the dependent states a written review arrangement, and xqzstoyo (where a draft's workspace lives), owyntkvw (the record's identity and what it references), znskspqs (the draft model) and kywrtyoq (what show reads) are prose decisions, so those edges fall in the natural→natural cell and take the licence gate as their criterion, applied to each recorded prerequisite in turn at check time. rnolplyu is an EARS requirement sentence — a constrained notation rather than readable prose — so that edge is a structured parent to a prose child and lands in the matrix's default cell: the same gate form applies and the cell is flagged for a matrix entry, since no structured-to-natural guidance file exists. Nothing here is runnable: the unit claims no repository path, and a written review arrangement is not behaviour to probe — the criterion is decided by reading the recorded decision against each prerequisite in turn, and which element is at issue is what the check discovers, never what the criterion pre-names."
+  }
+}
