@@ -1,0 +1,22 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "szvotxpq"
+  ],
+  "depends_on": [
+    "xqzstoyo",
+    "twpvqstu",
+    "owyntkvw",
+    "vkkwusty",
+    "znskspqs",
+    "wzmmmmsw",
+    "znkxvuyv",
+    "qtqnuqxo"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element — name the element.",
+    "rationale": "Each of the eight recorded prerequisites is prose and so is the dependent, so every one of the eight edges falls in the natural-to-natural cell and takes that cell's licence check as its criterion, applied once per recorded prerequisite in turn at check time. A verb that opens drafts writes into all eight answers at once. The two decisions recorded beside this one fix the two places it writes: where a draft's workspace is created and how its path is derived (xqzstoyo), and how a record is stored and found (twpvqstu). The earlier prerequisites fix what is written and how it is asked for: the record's identity and the references it may carry (owyntkvw); the two states and the one-way transition that make `open` the state of a draft that has not landed (vkkwusty); the draft model — one draft per node, several drafts per node, one workspace per draft (znskspqs); the invocation shape of one verb followed by its arguments (wzmmmmsw); one verb per purpose with no aliases (znkxvuyv); and the argument surface, answered before any workspace is reached (qtqnuqxo). The dependent's use of each is sound only if no element of it contradicts the parent that carries it, so the check reads the dependent against each prerequisite in turn and, on failure, names the contradicting element in its output. The criterion states no rule the prerequisites do not and pre-names no element, and it survives rewording of the dependent. This cell has no runnable command: a prose-to-prose check is applied by reading the recorded documents at check time, and no test path is claimed."
+  }
+}
