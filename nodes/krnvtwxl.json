@@ -1,0 +1,17 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "twpvqstu"
+  ],
+  "depends_on": [
+    "ulqqklzk",
+    "owyntkvw",
+    "vkkwusty"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts the prerequisite. Fail on any\n   contradicting element \u2014 name the element.\n2. Removal: the dependent's account of what happens to a record's document as its life\n   ends is checked against the prerequisite that states the record's states and its\n   retention \u2014 a document may leave the store only where the record never landed, absence\n   is not a state and not a return from the landed end, and nothing is taken away at\n   landing or after it. Fail naming the element that contradicts.",
+    "rationale": "Each of the three recorded prerequisites is prose and so is the dependent, so every edge takes the natural-to-natural gate cell's license check, applied once per prerequisite; the amendment keeps the same endpoints \u2014 no prerequisite and no edge is added. The state parent fixes where draft state lives and that it is untracked; the record parent mints a record's own key and says which references a record may carry instead of the graph's identities; the lifecycle parent fixes what a record is at the landed end, retention included, and says that absence is not one of its states. The dependent's place, its per-record document identity, its discovery by reading the directory and its account of what becomes of a document as a record's life ends are each sound only if no element of them contradicts the parent that carries them, so the check reads the dependent against each prerequisite in turn and, on failure, names the contradicting element in its output.\n\nThe earlier criterion carried only the first three uses: it read retention as one of the store clauses and named no use by which a document leaves the store, so a reviewer applying it to a dependent that removes a document could either miss that element or take retention as a rule over every draft's end rather than the landed one. The amended criterion states the removal use explicitly. Retention is stated at the landed end, so a removal confined to a record that never landed leaves every clause of the prerequisite intact, while a removal at landing or afterwards contradicts retention; absence is neither a third state nor a return from the landed end. The criterion tracks no wording of the dependent, states no rule the prerequisites do not, and leaves the naming of the failing element to the check."
+  }
+}
