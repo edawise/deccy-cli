@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["ptlmptoy"],
+  "depends_on": ["qrqsxyzz", "rvyrosmp", "vkkwusty", "owyntkvw"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: read the dependent clause by clause against each prerequisite; no element of the elaboration may contradict the parent it is read against. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence and each of its four prerequisites carries prose, so every edge takes the natural-to-structured gate cell: the requirement elaborates its parents, and the whole applicable check is that no element of the elaboration contradicts a parent. The uses are the refusal's point and shape — the comparison at the recording and the differing paths come from qrqsxyzz; the placement-only recording that makes a refusal land nothing comes from rvyrosmp; the open/landed lifecycle that bounds which records are guarded comes from vkkwusty; the handle that names each stale record comes from owyntkvw. One licence pass applied once per prerequisite reads the whole requirement against all four, and a finding names the contradicting element and the parent it departs from. A requirement sentence is still words, so its gate is non-violation and not a demand for observable behaviour; nothing runs at this layer, and a reviewer applies the criterion to the recorded nodes."
+  }
+}
