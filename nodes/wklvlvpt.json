@@ -1,0 +1,17 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "vnwmpwrx"
+  ],
+  "depends_on": [
+    "szvotxpq",
+    "kwqnrzoz",
+    "lpkssxpp"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts that prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence — it says what one call of the opening verb does — and none of its three prerequisites carries an artifact. szvotxpq is prose: the surface commitment for that verb, one draft per named node, each at its own workspace path, each record written in its first state and reported by handle together with the path, with nothing of the graph written. kwqnrzoz and lpkssxpp are requirement sentences in the dependent's own layer, recorded in this layer's plan as fixing the record (a handle key, one node, one edit and one workspace carried by reference) and the workspace place (under the per-user root outside the repository, at the path the handle derives). The edge from szvotxpq is therefore the natural-to-structured cell, and the two from kwqnrzoz and lpkssxpp are the structured-to-structured cell, the matrix default, which takes the same gate form and is flagged for a matrix entry.\n\nThe check is licence in every cell: the dependent is a commitment in words, so its gate is non-violation and never a demand for behavior — no workspace to create, no record to inspect, no observable to probe; behavior probes belong to a cell whose child is code, and a requirement sentence buys no licence to demand them. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite in turn and reports any contradicting element as the finding, naming the element and the prerequisite it departs from.\n\nOne evaluation covers all three edges because the dependent's answer is a single answer whose parts lean on more than one prerequisite at once — what the call leaves behind leans on the surface and on the record together, and where each draft is written leans on the surface and on the workspace placement together — so a single licence pass, applied once per prerequisite, reads the whole requirement, and splitting by edge would check the same clauses three times.\n\nThe criterion names no element of either side and no wording of the dependent; which element is at issue is what the check discovers at check time. It survives rewording of the dependent, invents no rule the prerequisites do not state, and reads each prerequisite as whatever that node settles — it pre-supposes no clause their final text must contain and tracks none of their phrasing."
+  }
+}
