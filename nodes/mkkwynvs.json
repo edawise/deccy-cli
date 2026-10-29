@@ -1,0 +1,16 @@
+{
+  "content": {
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts either prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence, and both prerequisites carry prose, not artifacts: qvkuluyw fixes the operation boundary — an operation is one whole creation, one whole recording, or one whole removal, only those three bracket, undo and redo step whole operations, and a registry write is none of the three — and it fixes that the record update a landing performs rides inside the recording that landing already is, as partial work rather than a second operation; owyntkvw fixes that a record is a registry-local object keyed by its own generated handle and names its target node, edit and workspace by reference, that it is not the node document nodes/<id>.json, is not listed with the nodes and their edges, is not validated as a node, and is not attributed to a change. Each edge therefore takes the natural-to-structured cell, whose check is licence: a requirement sentence is still words, so its gate is non-violation and never a demand for behavior. One evaluation covers both edges because the requirement draws on both at once — writing a record only makes no operation, no bracket and no undoable unit if the thing written is a registry object rather than a node or a change, and the record's exclusion from the node space is what leaves the operation vocabulary with nothing of its own to bracket — so a single licence pass reads the whole requirement against both prerequisites, applied once per prerequisite so an element that departs from only one of them is named against that one, and splitting would check the same clauses twice. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite and reports any contradicting element as the finding. The criterion tracks no wording of the dependent, pre-names no element of either side, and states no rule the prerequisites do not.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "qvkuluyw",
+    "owyntkvw"
+  ],
+  "evaluates": [
+    "ooquotol"
+  ],
+  "kind": "evaluation"
+}
