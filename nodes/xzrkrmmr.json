@@ -1,0 +1,13 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "szvotxpq",
+    "qtqnuqxo"
+  ],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked as `deccy draft` with no node id — none named, whether or not `--edit` is given — the deccy CLI shall refuse the invocation at the argument surface, before any workspace or record exists.",
+    "rationale": "The trigger is the form's own list read from the argument side: `draft` names one or more node ids, and `--edit` is optional in that form and names an edit rather than a node, so it cannot supply the id the list requires; a call that names no node is exactly the case the list's lower bound rules out, and nothing else about the call's shape is fixed here (szvotxpq). The refusal is placed at the argument surface because that is where a verb answers its arguments, ahead of any reach for a workspace; this sentence takes that placement instead of choosing a second, later point at which a malformed draft is turned away (qtqnuqxo). The closing clause is the same placement read from the effect side: if the argument surface is answered before anything is reached, then no workspace has been created and no record written at the moment of refusal, so the sentence states the absence rather than adding an ordering of its own (qtqnuqxo, szvotxpq). Deliberately outside: the refusal's wording, stream and exit status; whether it names the missing list, which the prerequisites do not require of a positional list; and any behaviour of the operation the verb performs, including its root-less refusal, which a call the surface has already refused does not reach (qtqnuqxo)."
+  }
+}
