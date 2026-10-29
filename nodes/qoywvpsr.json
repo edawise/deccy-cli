@@ -1,0 +1,16 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "lpkssxpp"
+  ],
+  "depends_on": [
+    "xqzstoyo",
+    "ulqqklzk"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts the parent. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The draft's working-copy place is where a requirement sentence meets the prose that fixes the place and the prose that fixes the registry's place; the gate keeps the requirement from contradicting either without re-deciding either. The dependent is a requirement sentence and both prerequisites are prose, so both edges fall in the natural→structured cell and take the licence criterion as one check, applied to each recorded prerequisite in turn at check time. This cell has no runnable command: the criterion is applied by reading the recorded documents, and which element is at issue is what the check discovers at check time, never what the criterion pre-names. The structured form buys no license to demand observables here — a behaviour probe belongs to a cell whose child is code — and the criterion must hold under rewording of the requirement, so it names nothing the requirement's wording supplies."
+  }
+}
