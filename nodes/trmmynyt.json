@@ -1,0 +1,17 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zsvukpls"
+  ],
+  "depends_on": [
+    "qrqsxyzz",
+    "owyntkvw",
+    "xzxtxymq"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts that prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence — it says what the opening of a draft records — and none of its three prerequisites carries an artifact: each is prose held inline, so the prerequisite row is natural. The dependent is a requirement sentence in the repository's constrained notation (EARS), so the dependent column is structured: every edge takes the natural-to-structured cell, whose check is licence — a requirement sentence is still words, so its gate is non-violation and never a demand for behavior — and the natural-to-natural default prescribes the same licence check. One evaluation covers all three edges because the dependent's answer is a single answer whose clauses lean on them at once. The moment the base is taken and the one place it is written lean on qrqsxyzz: the opening is the moment the base is fixed, the base lives in the draft's record and nowhere else, and it is a value per path of the owned set determined by that path's content. What the base is as a field of the record leans on owyntkvw as qrqsxyzz already reads it: the record's identity stays the handle alone, the node, the edit and the workspace stay its three references, and the base is a carried value of the same kind as the state the opening writes — neither the key nor a reference to any part of a draft — which is the deferral owyntkvw leaves open and qrqsxyzz settles, so the dependent adds no rule that node does not state. Which paths the base has an entry for leans on xzxtxymq: a change owns its node document plus the repo-relative paths its content.ref lists when ref is an array, and the node document alone when it is inline. A single licence pass, applied once per prerequisite, reads the whole requirement against all three at once; splitting by edge would check the same clauses three times.\n\nNothing runs at this layer: there is no artifact to execute and no observable to probe — behaviour probes belong to a cell whose child is code, and a requirement sentence buys no licence to demand them. A reviewer reads the recorded dependent against each recorded prerequisite in turn and reports any contradicting element as the finding, naming the element and the prerequisite it departs from.\n\nThe criterion names no element of either side and no wording of the dependent; which element is at issue is what the check discovers at check time. It survives rewording of the dependent without changing what it settles, invents no rule the prerequisites do not state, and pre-supposes no clause their final text must contain."
+  }
+}
