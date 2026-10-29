@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:deccy:schema:work",
+  "title": "Deccy draft record",
+  "description": "One draft's record: the single JSON document at `.deccy/work/<handle>.json` (rqtowtqn). The object is the record's whole form and nothing else - not a node document, not a marker, not a change - and it is closed, fielded for exactly the handle the record was minted under, its state, the three references it names and its content-identity base (kwqnrzoz, yuomrusm, qrqsxyzz). How a handle is generated, how the state moves, how a content identity is encoded and which paths the base covers are cross-field and lifecycle rules, and live with the model.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["handle", "state", "node", "edit", "workspace", "base"],
+  "properties": {
+    "handle": {
+      "description": "The generated draft handle the record was minted under; the same string names the document's file, so it is non-empty. It is neither a node id nor a change id, and how it is generated is the opening's rule and lives with the model (kwqnrzoz).",
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "description": "The record's state: `open` while the draft it names has not landed, `landed` from that landing onward. The one-way transition and the retention of a landed record are cross-field and lifecycle rules and live with the model (yuomrusm).",
+      "enum": ["open", "landed"]
+    },
+    "node": {
+      "description": "The one target node the draft changes - the node whose content it will change - by id. The record names exactly one, so the field is a single string and not a list. Whether the id resolves to a node document is a graph rule and lives with the model (kwqnrzoz).",
+      "type": "string",
+      "minLength": 1
+    },
+    "edit": {
+      "description": "The one edit the draft belongs to, by id. The record names exactly one, so the field is a single string and not a list. How many drafts an edit or a node carries is a draft-model rule and lives with the model (kwqnrzoz).",
+      "type": "string",
+      "minLength": 1
+    },
+    "workspace": {
+      "description": "The workspace that holds the draft, by name and path. Both are required because a draft is written in its own workspace and the name alone does not say where it is written. What the path is relative to, and what lives under it, are workspace rules and live with the model (kwqnrzoz).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "path"],
+      "properties": {
+        "name": {
+          "description": "The workspace's name.",
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "description": "The path the workspace is written at.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "base": {
+      "description": "The record's content-identity base: a value per path of the target node's owned set, keyed by repo-relative path, each value the identity of that path's content (qrqsxyzz). The value space is deliberately unfixed - the encoding of a content identity is a model rule and lives with the model - while the map itself is a field of this one document and of no other. Which paths the owned set holds, and when the base is compared, are model rules and live with the model.",
+      "type": "object",
+      "propertyNames": { "type": "string", "minLength": 1 },
+      "additionalProperties": true
+    }
+  }
+}
