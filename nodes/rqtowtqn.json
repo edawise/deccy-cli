@@ -1,0 +1,13 @@
+{
+  "depends_on": [
+    "twpvqstu",
+    "ulqqklzk"
+  ],
+  "kind": "decision",
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When a draft's record is written, the deccy CLI shall store it as exactly one JSON document at `.deccy/work/<handle>.json`, naming the file by the record's handle, and shall enumerate stored records only by scanning that directory.",
+    "rationale": "Each clause is a prerequisite carried into normative voice, so this sentence adds no behaviour of its own: the storage form and the handle-derived name are twpvqstu's, and the place the path points into is ulqqklzk's. The document clause is twpvqstu read as an obligation — one JSON document holding the whole record — and the requirement takes its path from that node instead of choosing a layout, which is why it names a path in the state directory and no commit, change or node document: the tracking boundary that rules those out is ulqqklzk's, and this sentence neither repeats that argument nor reopens it. The filename clause stops at naming the file by the record's handle because the handle and the derivation from it belong to twpvqstu; defining or minting a handle here would be a second answer to a question already answered. The scan clause is where the two prerequisites meet: if the documents are the record's whole storage (twpvqstu) and sit where nothing the graph is read through can reach them (ulqqklzk), then the directory's contents are the only list, and 'only' forecloses the index or second layout twpvqstu already excludes rather than inventing a lookup. That 'only' is scoped to the set of records — resolving one handle to its path stays the derived-path route twpvqstu settles, so no clause here departs from it. Holding the three in one sentence keeps them one storage rule: the document is what the name names, the name is the handle, the directory is what lists them, so the sentence cannot be satisfied by splitting a record, renaming it or indexing it. Deliberately outside: the field set and version, how a handle is minted, retention after landing, when the directory is created, durability and atomicity, concurrency, and what a listing verb reports. Each is a separate commitment, and changing any of them leaves the document, its name and its discovery exactly as stated here."
+  }
+}
