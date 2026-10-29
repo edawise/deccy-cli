@@ -1,0 +1,16 @@
+{
+  "content": {
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts either prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence and both prerequisites carry prose, not artifacts: szvotxpq fixes the `draft` argument surface — one verb, one draft per named node, a node list of one or more, a call naming none refused at the same point before a workspace or a record exists, while the operation the verb performs still refuses on a root-less context; qtqnuqxo fixes that every verb answers its argument surface before it reaches for the workspace, refusing by name an argument the form does not name and a missing required flag at that same point. Each edge therefore takes the natural-to-structured cell, whose check is licence: a requirement sentence is still words, so its gate is non-violation and never a demand for behaviour. One evaluation covers both edges because the dependent's claim is answered by the two prerequisites together — the surface answers before the workspace, so a surface refusal is necessarily pre-workspace and pre-record — and a licence pass applied once per prerequisite reads that whole claim while still naming, against the one prerequisite it departs from, any element that departs from only that one; splitting would check the same clauses twice. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite and reports any contradicting element as the finding. The criterion tracks no wording of the dependent, pre-names no element of either side, and states no rule the prerequisites do not, so rewording the requirement without changing what it settles leaves the check intact.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "szvotxpq",
+    "qtqnuqxo"
+  ],
+  "evaluates": [
+    "xzrkrmmr"
+  ],
+  "kind": "evaluation"
+}
