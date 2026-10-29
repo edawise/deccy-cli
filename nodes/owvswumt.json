@@ -1,0 +1,15 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "yuomrusm"
+  ],
+  "depends_on": [
+    "vkkwusty"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts the parent. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The dependent is a requirement sentence — constrained notation — that elaborates a prose prerequisite, so this edge sits in the natural-to-structured cell and takes the gate form. The check reads the dependent and the prerequisite as recorded and fails on any element of the elaboration that contradicts the prerequisite; it demands no behaviour, because a requirement sentence is still words and whether it is met is decided further down where the child is code. Which element is at issue is found at check time and named only in the finding, so the criterion holds under a rewording of either node and needs no test."
+  }
+}
