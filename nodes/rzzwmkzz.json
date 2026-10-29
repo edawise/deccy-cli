@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["nolspvpw"],
+  "depends_on": ["ulqqklzk", "xxwtnpzz"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts either prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The requirement decides where a draft's durable state lives and how the repository stands to it, so its two recorded prerequisites are the state place (ulqqklzk) and the untracked boundary that init fixes (xxwtnpzz). Both prerequisites carry words, not artifacts, and the dependent is a requirement sentence: the matrix gives the gate form, and the whole check is licence — every element of the requirement must be permitted by each prerequisite, with any contradicting element named as a finding at check time rather than predicted here. The natural-to-structured cell supplies the form directly for the prose prerequisite; the structured-to-structured cell is the matrix default and is flagged for a matrix entry. Nothing runs: a reviewer applies both facts to the recorded nodes."
+  }
+}
