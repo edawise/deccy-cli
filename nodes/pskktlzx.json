@@ -1,0 +1,18 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "rllzykwz"
+  ],
+  "depends_on": [
+    "votqoovw",
+    "xqzstoyo",
+    "kywrtyoq",
+    "znskspqs"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the elaboration contradicts that prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence and all four prerequisites carry prose, not artifacts: votqoovw fixes the review arrangement (a draft is read as jj state in the workspace where it is written, the review writes nothing, and there is no review verb because show's contract cannot carry draft content); xqzstoyo fixes where a draft's workspace lives (under one per-user root outside the repository, at the path the record's handle derives); kywrtyoq fixes what show reads and writes (it reads the named nodes, writes one output per valid node, and changes and records nothing); znskspqs fixes the draft model (each draft is written in its own workspace, a draft is not a graph node, and landing is per draft). Every edge therefore takes the natural-to-structured cell, whose check is licence: a requirement sentence is still words, so its gate is non-violation and never a demand for observable behaviour — no workspace to open, no draft to render, no jj call to make. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite in turn and reports any contradicting element as the finding.\n\nOne evaluation covers all four edges because the requirement's claim is answered by them together: a draft is reviewed in the workspace its handle derives (xqzstoyo) because that is where the draft is written (znskspqs), and show renders no draft because its output is the valid node's stored document (kywrtyoq) while a draft is not a node (znskspqs) and the review surface is jj's (votqoovw). A licence pass applied once per prerequisite reads that whole claim and still names, against the one prerequisite it departs from, any element that departs from only that one; splitting by edge would check the same clauses four times.\n\nThe criterion names no element of either side and no wording of the dependent; which element is at issue is what the check discovers at check time. It survives rewording of the requirement without changing what it settles, pre-supposes no clause the prerequisites' final text must contain, and states no rule they do not."
+  }
+}
