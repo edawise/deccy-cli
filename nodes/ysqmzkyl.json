@@ -1,0 +1,16 @@
+{
+  "content": {
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the dependent contradicts either prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is a requirement sentence, and both prerequisites carry prose, not artifacts: owyntkvw fixes a record's identity as a generated handle minted for the draft, and fixes that everything else the record carries is a reference rather than identity — the target node, the edit, and the workspace by name and path — with the record outside the node document; znskspqs fixes the draft model those references lean on, one node and one edit named per draft, each draft written in its own workspace, and several drafts per node within one edit and across edits. Each edge therefore takes the natural-to-structured cell, whose check is licence: a requirement sentence is still words, so its gate is non-violation and never a demand for behavior. One evaluation covers both edges because the dependent's identity and reference clauses rest on them at once — the identity clause draws on the handle key owyntkvw fixes, and the reference clauses draw on both the three references owyntkvw fixes and the draft model znskspqs fixes — so a single licence pass reads the whole requirement against both prerequisites, and splitting would check the same clauses twice. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite and reports any contradicting element as the finding. The criterion tracks no wording of the dependent, pre-names no element of either side, and states no rule the prerequisites do not.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "owyntkvw",
+    "znskspqs"
+  ],
+  "evaluates": [
+    "kwqnrzoz"
+  ],
+  "kind": "evaluation"
+}
