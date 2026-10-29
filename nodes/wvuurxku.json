@@ -1,0 +1,18 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "mvxkmrqv"
+  ],
+  "depends_on": [
+    "tzlumxvt",
+    "vkkwusty",
+    "owyntkvw",
+    "stnqmzuw"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts the parent. Fail on any\n   contradicting element — name the element.",
+    "rationale": "The dependent is an EARS requirement sentence — constrained notation with a fixed grammar — that elaborates four recorded prerequisites, and each of them is inline prose: tzlumxvt (removal refuses while an open draft names the node), vkkwusty (the draft record's two states and their one-way transition), owyntkvw (the record's identity by handle and its references) and stnqmzuw (removal refuses with dependants named). So all four edges are a prose parent with a constrained-notation child: the natural→structured cell, whose licence criterion is copied here verbatim and applied to each recorded prerequisite in turn at check time. The unit licenses no repository artifact and the requirement sentence buys no license to demand observables — a requirement is still words — so the check is non-violation and nothing is runnable: a reviewer reads the recorded dependent against each recorded prerequisite and names the contradicting element only in the finding, never in the criterion. Which element is at issue is discovered at check time, so the criterion survives rewording or rescoping of the dependent."
+  }
+}
