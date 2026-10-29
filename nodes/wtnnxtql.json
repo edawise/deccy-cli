@@ -1,0 +1,18 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "qspsyqlp"
+  ],
+  "depends_on": [
+    "nzrnrlky",
+    "vuopwuyo",
+    "twpvqstu",
+    "wzmmmmsw"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License, applied once per prerequisite in depends_on: no element of the elaboration contradicts any prerequisite. Fail on any contradicting element — name the element and the prerequisite it departs from.",
+    "rationale": "The dependent is one EARS requirement sentence — constrained notation — elaborated over four recorded prose commitments, so this edge sits in the natural-to-structured cell and takes the gate form rather than a test: a requirement sentence is still words, and its gate is non-violation, never a demand for observable behavior. All four prerequisites carry prose, not artifacts: nzrnrlky fixes the verb `drafts` as one verb whose bare invocation lists the registry's records and reports drift, reading only and keeping landed records in the list; vuopwuyo fixes what that report means — drift is the open record whose workspace jj does not have, a landed record's missing workspace is not drift, and the report repairs and rewrites nothing; twpvqstu fixes where the list comes from — one JSON document per handle under `.deccy/work/`, the handle being the filename, the records found by scanning the directory and landed records retained; and wzmmmmsw fixes the invocation shape the sentence is written in — `deccy <verb> [args]`, one lowercase verb with everything after it that verb's arguments. One evaluation covers the four edges because the sentence is one answer leaning on them at once: the verb and its report on nzrnrlky, the drift reported on vuopwuyo, the records listed on twpvqstu, and the invocation form the sentence uses on wzmmmmsw. Splitting would read the same clauses of one sentence several times, so a single licence pass is applied once per prerequisite against the whole sentence. Nothing runs at this layer: a reviewer reads the recorded dependent against each recorded prerequisite and reports any contradicting element as the finding. No artifact path is licensed for this unit and the child is words rather than a runnable artifact, so the criterion lives inline. The criterion tracks no wording of the dependent, pre-names no element of either side, and states no rule the prerequisites do not."
+  }
+}
