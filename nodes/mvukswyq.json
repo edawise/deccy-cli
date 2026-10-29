@@ -1,0 +1,18 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "vmwvnnzv"
+  ],
+  "depends_on": [
+    "uvrltuvo",
+    "rvyrosmp",
+    "qvkuluyw",
+    "vkkwusty"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the elaboration contradicts any of its parents. Fail on any contradicting element — name the element.",
+    "rationale": "The subject is a requirement sentence — constrained notation — and every element such a sentence can state falls back on one of the prose parents it lists: the `record --from <handle> --to <node>` surface and the changed owned paths it records into the change `--to` names, the record turning `landed` inside that same recording, and only an open draft landing with the landed record retained (uvrltuvo, rvyrosmp, qvkuluyw, vkkwusty). A structured child over prose parents is the matrix's natural-to-structured cell, and that cell's check is license applied parent by parent: the elaboration may narrow its parents but may contradict none of them; whether the behavior exists is not asked here. The check reads node documents and has no artifact to execute, so the criterion lives inline, and it names no surface, field or wording of the subject, so a rewrite that decides the same thing leaves it unchanged."
+  }
+}
