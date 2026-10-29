@@ -1,0 +1,15 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When invoked bare, the deccy CLI shall list every record in the draft registry by handle with its state and the workspace it names, and shall report for each record whether that workspace is missing while the record still asserts a draft.",
+    "rationale": "Every clause is one a prerequisite already fixes, stated as a requirement and nothing more. The trigger is a bare invocation because nzrnrlky settles the surface: `deccy drafts` is one verb, and invoked bare it lists the registry's records and reports drift per record. The shape of the invocation is wzmmmmsw's: `deccy <verb> [args]`, one verb per invocation, so a bare call is the verb with no arguments and the listing is what that call does. This node names no verb of its own and declares no arguments; nzrnrlky owns the verb and wzmmmmsw owns the invocation shape.\n\nThe listing set is the registry scan, not a node listing and not a filtered subset. nzrnrlky fixes that what the verb lists is exactly the registry's records, found by scanning, with each row reporting the handle, the state and the workspace; twpvqstu fixes where those records are: one JSON document per record under `.deccy/work/`, the filename the handle, the records found by reading the directory, and landed records retained. `Every record` is therefore the whole scan, landed ones included, and `by handle` is the key the filename gives; nothing outside the scan enters the list and no record the scan finds is dropped. `With its state and the workspace it names` is the row nzrnrlky fixes: the record's state and the workspace reference it carries are reported, and neither is used as a key.\n\nThe drift clause is vuopwuyo read as a report rather than a repair. An open record, one that still asserts a draft, whose workspace jj does not have is drift, and the verb reports it without changing the record; a landed record does not assert a draft, so the same absence is not drift and is not reported as one. The requirement asks `whether that workspace is missing while the record still asserts a draft`, so the question is asked per record and only a record that still asserts a draft can answer yes. nzrnrlky adds that the drift is reported per record, which is why the sentence is per record rather than a summary. No repair, rewrite or drop is stated because vuopwuyo makes the report the whole effect: a drifted record stays open and still names the missing workspace.\n\nDeliberately not here: the output's line form and exit status, which nzrnrlky leaves open; how existence is asked of jj and how a record's workspace name and path are matched to one, which nzrnrlky and vuopwuyo leave open; and arguments or per-state filtering, which twpvqstu leaves open. The sentence names no verb and fixes no formatting, because neither is this node's to settle: nzrnrlky names the verb and leaves the output form open, and this requirement adds nothing to either."
+  },
+  "depends_on": [
+    "nzrnrlky",
+    "vuopwuyo",
+    "twpvqstu",
+    "wzmmmmsw"
+  ]
+}
