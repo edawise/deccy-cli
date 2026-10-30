@@ -1,0 +1,18 @@
+{
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/work/Cargo.toml",
+      "tests/work/Cargo.lock",
+      "tests/work/src/lib.rs"
+    ],
+    "rationale": "The record's form is checked both ways: a conforming record validates in either state it may carry, and an unknown field at either level, a third state, a missing field, an empty string and a base that is not a path-keyed map are each rejected, while a base entry of any JSON shape is left alone because the encoding of a content identity is not the record's form. The crate embeds the schema the binary carries and compiles it in-process with the `jsonschema` crate the validator decision fixes (zmmyomyp), the same one the binary compiles every other carried schema with, so the checked shape is the shipped shape and no hand-rolled rule stands in for the validator."
+  },
+  "depends_on": [
+    "zmmyomyp"
+  ],
+  "kind": "evaluation",
+  "evaluates": [
+    "wrvsxwmq"
+  ]
+}
