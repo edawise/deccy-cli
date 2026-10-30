@@ -1,0 +1,33 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "tvtnokzu",
+    "rnwlstks",
+    "tvsqxrmo",
+    "svmuxsmq",
+    "kzltplnz"
+  ],
+  "depends_on": [
+    "nolspvpw",
+    "rqtowtqn",
+    "kwqnrzoz",
+    "yuomrusm",
+    "wrvsxwmq",
+    "lpkssxpp",
+    "vnwmpwrx",
+    "xzrkrmmr",
+    "zsvukpls",
+    "ptlmptoy",
+    "vmwvnnzv",
+    "yozqornv",
+    "qspsyqlp",
+    "mvxkmrqv"
+  ],
+  "content": {
+    "type": "model-check",
+    "ref": [
+      "specs/drafts/check.qnt"
+    ],
+    "rationale": "`specs/drafts/check.qnt` is the model-check gate for the composition of the five draft legs. It imports `draft_state` (tvtnokzu), the opening (rnwlstks), the landing and its two refusals (tvsqxrmo), the reconcile reading and the listing (svmuxsmq), and remove's guard (kzltplnz); it declares no type, field or variable of its own, and its `action step` is `any` over the legs' own actions, so the composition adds no operation and no storage fact. `quint typecheck specs/drafts/check.qnt` checks that the assembly is well-typed and that no leg's names, fields or transitions are restated. `quint verify specs/drafts/check.qnt --main=draft_check --backend=tlc --invariant=RegistryShaped,OneDraftPerPlace,RecordsAsFiled,ReadingIsComplete,DriftIsByState,OnlyOpenBlocks,BoundedByHandles,LandedRecordsAreFresh,NoStaleSiblingLands --max-steps=6` runs the explicit-state checker over the reachable state graph to the bound. `quint test specs/drafts/check.qnt --main=draft_check` runs the reachability witness `landingTurnsLandedTest`: one fresh `open` followed by one `land`, then assertions that the addressed handle's record is `Landed` and still carries the handle, node, edit, workspace and base it was filed with, and that no other record exists. The witness is a test over one trace, not an invariant: the nine invariants range over reachable states and state what must hold of a landed record, while the run states that a landing reaches one. A `landed` that left the record `Open` would satisfy `LandedRecordsAreFresh` and `NoStaleSiblingLands` vacuously and leave all nine invariants green, but `landingTurnsLandedTest` fails on `records.get(\"h1\").state == Landed`; the run is the discriminating check for the landing's effect. TLC is the backend because the identity carrier is the state module's `str` and the finite composed machine is checked directly, without the SMT encoding of the string-keyed record and report maps.\n\nThe harness supplies only the values the legs take as inputs: two node ids, two handles, one edit, two workspace places, and two content bases - one equal to the owned set every landing reads and one differing at the shared path - so a record's staleness is determined by its base and readable from the state. Existence is jj's answer, supplied as one of three predicates: no workspace, every workspace, and every workspace but the first. `step` therefore reaches opening one name, opening two names at once, the refused empty call, `land` on a node whose open records are all fresh, `refuseStale` on a fresh record whose node holds a stale sibling and on the stale record itself, `refuseUnknown` on an absent handle, both readings on all three answers including the absent-workspace answer, and remove's guarded refusal. The harness files a node's drafts before that node's first landing and not after it; that removes an order, not a case, so a landed record beside a stale open sibling on one node can only arise from a landing taken while the sibling was stale, while the state in which a fresh record sits beside a stale sibling remains reachable.\n\nThe nine invariants are the legs' recorded claims read off the composed states, each pinned where it is fixed: `RegistryShaped` - every key is the record's handle and every record is `Open` or `Landed` (kwqnrzoz, yuomrusm through tvtnokzu); `OneDraftPerPlace` - no two records name one workspace path, so a place holds at most one draft (vnwmpwrx, lpkssxpp through rnwlstks); `RecordsAsFiled` - every record names a node from the call's list, the call's one edit, a workspace the call supplied and the base filed for its handle (vnwmpwrx, yuomrusm, qrqsxyzz through rnwlstks); `ReadingIsComplete` - the listing reports exactly the registry's keys and reconcile exactly the open records, with no workspace present each open record drifts, with every workspace none does, and with every workspace but the first exactly the open records naming the first place drift (yozqornv, qspsyqlp through svmuxsmq); `DriftIsByState` - the drift flag is asked per record and the record's state alone decides whether an absent workspace counts (yozqornv, vkkwusty through svmuxsmq); `OnlyOpenBlocks` - every open record's node is under the guard and a landed record is not among the drafts the guard names for the node it names (mvxkmrqv, yuomrusm through kzltplnz); `BoundedByHandles` - the registry never holds more records than the harness's handle pool, because opening files only at fresh handles (kwqnrzoz through tvtnokzu, rnwlstks); `LandedRecordsAreFresh` - a landed record's base matches the owned set, so the addressed record's own freshness is necessary (zsvukpls, ptlmptoy through tvsqxrmo); `NoStaleSiblingLands` - a node holding a landed record holds no stale open sibling, so a fresh record is refused on behalf of a stale one, not only for its own base (ptlmptoy, uvrltuvo through tvsqxrmo).\n\nWhat a `val` cannot see is a transition: that opening is the only action that adds a record and only at fresh handles, that landing is the only action that rewrites a record and only an open one, that every refusal and every reading leaves the registry exactly as it stood, and that no action removes a record are carried by which leg actions `step` names and by the legs' own guards, not by an invariant. The landing's effect is the one transition claim a state predicate would make vacuous, so it is witnessed directly by the `quint test` run above rather than by an invariant; the nine invariants remain the safety facts of the reachable states. Outside the legs and this composition the check does not reach the refusal's wording, order, stream or exit status, the placement of changed paths into the node's change, the scan of the record directory, the listing's formatting and how jj is asked, and it does not choose the identity's encoding (the state module carries `Identity`; this module supplies only its values). The harness's pools bound what a state can show, so the invariants range over the composed registry's reachable shapes within those pools rather than over an unbounded registry."
+  }
+}
