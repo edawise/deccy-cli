@@ -1,0 +1,21 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "upuuwzmr"
+  ],
+  "depends_on": [
+    "wvmtrxlv",
+    "rqtowtqn",
+    "szmuyqrq",
+    "knqkxzns"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/draft_handle/Cargo.toml",
+      "tests/draft_handle/Cargo.lock",
+      "tests/draft_handle/src/lib.rs"
+    ],
+    "rationale": "`tests/draft_handle` is a self-contained crate (M-tests, `[workspace]` of its own) that pulls the flat module `src/draft_handle.rs` in through a `#[path]` shim and runs it as a leaf — `std` only, nothing of the CLI's own, no jj — so the check is the mint's observable contract, not a restatement of the record document or the store. It pins three things the handle rule fixes. The form: every handle is exactly sixteen characters, each in `a-z0-9`, with no prefix, separator, other case or other character — the shape `wvmtrxlv` settles for the token and `wrvsxwmq` deliberately leaves out of the schema. The draw: the same entropy always yields the same handle and entropy that differs modulo the alphabet yields a different one, so the token is a function of the bytes alone; and two calls in a row on one fixed input return one handle, so no counter or other stored state can sit behind the mint. The freshness: `rqtowtqn` makes a record exactly one `<handle>.json` file under `.deccy/work/`, so the test lays out that directory with `<held>.json` written into it and requires a candidate a record already holds to be rejected and the next free draw returned, in exactly two draws. Because OS entropy cannot be driven, the crate fixes the module's public API so the draw and the redraw are separable and each is checked on its own: `pub fn from_bytes(bytes: &[u8]) -> String` takes the first sixteen bytes and produces sixteen characters, character `i` being `ALPHABET[bytes[i] % 36]` with `ALPHABET = \"0123456789abcdefghijklmnopqrstuvwxyz\"` (`0`-`9` then `a`-`z`; at least sixteen bytes are required); `pub fn first_free(sample: impl FnMut() -> String, taken: impl Fn(&str) -> bool) -> String` is the redraw loop — sample, return the candidate `taken` refuses, otherwise sample again, consulting nothing else and remembering nothing across calls; `pub fn mint(taken: impl Fn(&str) -> bool) -> String` draws sixteen bytes from the OS (`/dev/urandom`), builds the candidate with `from_bytes`, and takes `first_free` over fresh draws. `mint` takes no draft and no graph entry, so no field of the record can reach the draw — the independence `wvmtrxlv` and `kwqnrzoz` require, which no assertion over the output can prove directly. What the check can show, it now shows directly: since `taken` is the caller's closure, the tests drive it themselves with closures that record every candidate they are asked about, and require the mint to consult `taken` rather than return a free-looking draw on its own — rejecting the first draw must make the mint ask again and return a different candidate, rejecting the first three must make it ask at least four times and return none of them, and with one rejection the handle must be exactly the first candidate `taken` accepted, which is `first_free`'s contract. Together with the form and byte-determination tests, the check shows the token is form-correct, byte-determined, state-free, observed to consult `taken` and redraw past the candidates it rejects, and returned free of any record already held. The randomness of the OS source is likewise a property of the draw that this check does not certify."
+  }
+}
