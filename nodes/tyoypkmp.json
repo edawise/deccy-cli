@@ -1,0 +1,18 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/jj_workspace.rs"
+    ],
+    "rationale": "src/jj_workspace.rs creates, forgets and enumerates the draft workspaces under the one per-user draft-workspace root outside the repository, at the path that is the repository's own namespace under that root plus the record's handle, starting each working copy at the revision its caller names. The commitment is the derivation, the start revision and the three crossings over it, and each clause is licensed by the prerequisites it implements.\n\nThe path is the derivation xqzstoyo fixes and lpkssxpp's creation clause lands at: path_for(root, namespace, handle) is exactly root/namespace/handle, with the per-user root outside the repository, the repository's own namespace under it, and the record's handle last, and nothing appended (xqzstoyo). Two handles and two namespaces therefore never collide, and the path borrows nothing from the jj workspace's name, which xqzstoyo leaves free of the derivation and this module takes from its caller. add takes the destination path_for yields, makes the destination's parent — the namespace directory — because jj requires it before it will land a working copy, and then creates the working copy at that path through the seam, so the creation lands where lpkssxpp says it lands (lpkssxpp).\n\nadd also takes the start revision and passes it through to jj workspace add as --revision, so the working copy's parent is the change the caller names rather than whatever @ holds. That is pvnszwum's clause: a draft's workspace is created at the change that owns the draft's node, because the record's content-identity base describes the owned set at that change and nothing else (pvnszwum). The revision is not derived here — this module has no node and no record — so the caller supplies it, which is exactly what pvnszwum leaves to the implementation that supplies it.\n\nEvery crossing goes through the caller-supplied Jj and its binary and root; nothing searches PATH here and no other route reaches jj (zruxtxrv). add runs jj workspace add at the destination under the caller's name and at the caller's revision; forget runs jj workspace forget; list reads the names jj reports through the name template, keeping jj's default line with its path and change id out of the result. A crossing that cannot spawn jj surfaces as Spawn carrying the reason, and a jj refusal surfaces as Refused carrying the status and both streams, so no failure is collapsed into a silent success (zruxtxrv, S3-err). forget checks membership against list first because jj 0.46 exits zero with only a warning for a name it does not know; an absent name is carried as Unknown(name) with nothing removed, which is the S3-err rule applied where jj itself would otherwise report success (zruxtxrv).\n\nThe module is one flat file directly under src/, src/jj_workspace.rs, with no nested directory and no mod.rs, so the module tree is declared once at the crate root and this module stands alone (szmuyqrq). The gate that drives it is a self-contained test crate that pulls the module and the jj seam in through #[path] shims and defines its own scratch repositories and helpers, so it is independently runnable with no shared support module (knqkxzns). Nothing here writes graph state, names a verb, or decides what a missing workspace means; the record keeps the reference and the verb above this layer owns opening a draft."
+  },
+  "depends_on": [
+    "xqzstoyo",
+    "lpkssxpp",
+    "zruxtxrv",
+    "szmuyqrq",
+    "knqkxzns",
+    "pvnszwum"
+  ]
+}
