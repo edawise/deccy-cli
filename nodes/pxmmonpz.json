@@ -1,0 +1,25 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "ttkuyvxp"
+  ],
+  "depends_on": [
+    "skooqvul",
+    "qrqsxyzz",
+    "zsvukpls",
+    "zutqsqtu",
+    "lwnnssuo",
+    "osplmlvq",
+    "szmuyqrq",
+    "knqkxzns"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/draft_identity/Cargo.toml",
+      "tests/draft_identity/Cargo.lock",
+      "tests/draft_identity/src/lib.rs"
+    ],
+    "rationale": "A code-to-code test (eval-matrix: code parent, code child): ttkuyvxp's artifact is the module `src/draft_identity.rs` and every prerequisite is a code artifact or a code-enforced rule, so the gate runs rather than reads. The crate mirrors the binary's module tree: `tests/draft_identity/src/lib.rs` declares `#[path = \"../../../src/store.rs\"] mod store;` and `#[path = \"../../../src/journal.rs\"] mod journal;` before `#[path = \"../../../src/draft_identity.rs\"] mod draft_identity;`, the shape `tests/journal` already uses. `src/store.rs` is std-only, and `src/journal.rs` needs only `std` + `serde` + `serde_json` + `crate::store` and embeds `schemas/journal.json`. A correct module may therefore either be a std-only leaf or reuse `crate::journal::sha256_hex` \u2014 the journal's FIPS 180-4 SHA-256 implementation \u2014 and both must compile and pass. The gate forces no duplicated digest and rewards none. The fixed public API is `pub fn identity(bytes: &[u8]) -> String` \u2014 the SHA-256 of exactly `bytes`, rendered as 64 lowercase hex characters \u2014 and `pub fn base<'a>(contents: impl IntoIterator<Item = (&'a str, &'a [u8])>) -> std::collections::BTreeMap<String, String>`, mapping each repo-relative path to the identity of the bytes given for it. `base` takes the owned set's paths and their content as values; it makes no jj call and reads no working copy, because reading each owned path at the change that owns it is osplmlvq's and lwnnssuo's layer above this module. The checks pin the decision's observables, not the module's internals. The digest is pinned to published SHA-256 vectors (empty input, `abc`, `abc\\n`, the 448-bit NIST message, the 256-byte sequence 0x00..=0xff), so an implementation reusing `crate::journal::sha256_hex` and one computing independently are held to the same function (zutqsqtu, skooqvul). The no-normalisation clause is now held in every direction — leading and trailing whitespace, a trailing newline, and CRLF: `identity(b\"abc\\n\")` is pinned to its exact SHA-256 hex and must differ from `identity(b\"abc\")`, `identity(b\"abc \")` must differ from `identity(b\"abc\")`, `identity(b\"abc\\r\\n\")` must differ from `identity(b\"abc\\n\")`, `identity(b\" abc\\n\")` is pinned to its exact SHA-256 hex and must differ from `identity(b\"abc\\n\")`, `identity(b\"\\tabc\")` is pinned to its exact SHA-256 hex and must differ from `identity(b\"abc\")`, and `identity(b\"  abc\")` must differ from `identity(b\"abc\")`, so an implementation that trims at either end, re-encodes, frames or newline-normalises its input fails (skooqvul). Equal bytes must give equal identities and a one-byte change a different one (qrqsxyzz, skooqvul). A base over a named owned set has exactly one entry per supplied path and no other entry, each entry equal to `identity` of that path's bytes, and an empty owned set has an empty base (zsvukpls, qrqsxyzz, lwnnssuo). Two paths carrying the same bytes must produce the same identity value, so no path name is folded into the digest (skooqvul, qrqsxyzz). Every identity is checked to be exactly 64 characters of `[0-9a-f]`, lowercase, rather than assumed (skooqvul). The empty-file case ties empty content to the empty-input vector. The gate does not check the base's JSON encoding, the record field, or the owned-set traversal: those belong to the record model and the ownership read that this decision's prerequisites already settle."
+  }
+}
