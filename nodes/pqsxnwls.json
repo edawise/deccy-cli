@@ -1,0 +1,17 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "xymxqnvz"
+  ],
+  "depends_on": [
+    "lssslxwo",
+    "wxsynqwm"
+  ],
+  "content": {
+    "type": "test",
+    "ref": [
+      "tests/state_root.rs"
+    ],
+    "rationale": "State-root resolution is where the EARS requirement that the store is rooted at the trunk and the Quint model of that resolution meet the module that realizes them. The check drives `state_root::trunk_root` over scratch workspace roots and fixes the surface the module implements: `pub fn trunk_root(workspace_root: &Path) -> Result<PathBuf, StateRootError>` with a public `StateRootError` (variants `MissingEntry`, `EmptyEntry`, `UnreadableEntry`, `DanglingEntry`, `NotARepoEntry`) whose `Display` names the cause. Every listed variant is exercised by a distinct fixture: in particular a `.jj/repo` file whose bytes are not valid UTF-8 is a present but undecodable entry, and the check requires `UnreadableEntry` for it rather than folding it into `EmptyEntry`. The entry `.jj/repo` is either a directory or a file, and a file entry names its target by either an absolute path or a relative path. A relative entry resolves against the directory that contains the entry - the workspace's `.jj` directory, as `jj workspace add` writes it - not the workspace root and not the process working directory; a linked workspace at `<linked>` whose `.jj/repo` holds `../../main-ws/.jj/repo` therefore resolves to `<main-ws>`, never to `<linked>`, and the returned root is normalized so no `..` component survives. That normalization is checked on the own-entry return as well: an invocation root spelled through a `..` component drives the same lookup, and the returned root is the canonical root with no `..` component left. Fixtures: a workspace whose `.jj/repo` is a directory resolves to that workspace; the same workspace addressed through a `..` component resolves to that canonical root with no `..` component surviving; a workspace whose `.jj/repo` is a file naming another workspace's `.jj/repo` by an absolute path resolves to `<other>` and never to the invocation root; a linked workspace whose `.jj/repo` is a file naming another workspace's `.jj/repo` by a relative path resolves to `<other>` and never to the invocation root; a missing `.jj/repo`, a zero-byte `.jj/repo` file, a `.jj/repo` file whose bytes are not valid UTF-8, a file naming `<ghost>/.jj/repo` where `<ghost>` does not exist, a file naming an existing path that is not a `.jj/repo`, a relative entry naming `<ghost>/.jj/repo` where `<ghost>` does not exist, and a relative entry naming an existing path that is not a `.jj/repo` each refuse with the matching error and yield no root. The module is std-only (no `crate::` imports) so the `#[path]` shim compiles it standalone. Run from the repo root: `rustc --edition 2021 --test tests/state_root.rs -o /tmp/state_root-gate && /tmp/state_root-gate`."
+  }
+}
