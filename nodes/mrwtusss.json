@@ -1,0 +1,14 @@
+{
+  "content": {
+    "content": "When an invocation that writes graph state runs in a working copy other than the trunk working copy \u2014 the working copy whose root holds the store root \u2014 the deccy CLI shall refuse it, naming the workspace the invocation ran in, and shall write nothing; `draft` and draft-listing invocations keep working outside the trunk, the jj runner stays anchored on the invocation workspace, and the refusal's wording, stream, exit status and detection mechanism are not fixed here.",
+    "rationale": "The requirement is swuvzpvr's refusal read back as one obligation, with every element traceable to that node and none of them widened, narrowed or re-decided. `Invocation that writes graph state` is swuvzpvr's set as it stands: creation, recording and removal on the existing bracketing rule, together with undo, redo and any other verb that writes graph state. The sentence enumerates no verb, so it moves none into or out of that set, and it does not restate the marker ownership (zmvxksws) as a rule of its own. The trigger `runs in a working copy other than the trunk working copy \u2014 the working copy whose root holds the store root` is the node's definition of the trunk by place rather than by change id or workspace name; carrying the place-definition into the requirement keeps a rename or a different checkout from becoming a different boundary. `shall refuse it, naming the workspace the invocation ran in, and shall write nothing` is the node's refusal, its naming of the caller's own working copy, and its empty write; the wording, stream, exit status, and the mechanism by which the invocation establishes that it is not in the trunk are left exactly as open as swuvzpvr leaves them. The clauses after the semicolon preserve distinctions the node draws and that a bare refusal sentence would lose: `draft` and draft-listing invocations are outside the writing set and keep working from any workspace, so the requirement does not harden into a general trunk-only rule; and the jj runner stays anchored on the invocation workspace, so the confinement is over admission to graph writes and not over the working copy the invocation edits. Nothing in the sentence names a marker stack, a store root of its own, or a second refusal condition, so it cannot be read as re-deciding where the stack lives or as turning the refusal into a failure to resolve the trunk. Read against the frozen criterion, no element of the requirement contradicts the prerequisite: the trigger is swuvzpvr's trigger, the response is its response, the two clauses are its two exclusions, and the deferral is its deferral.",
+    "ref": "inline",
+    "type": "ears"
+  },
+  "depends_on": [
+    "swuvzpvr",
+    "uqqswnsy",
+    "zmvxksws"
+  ],
+  "kind": "decision"
+}
