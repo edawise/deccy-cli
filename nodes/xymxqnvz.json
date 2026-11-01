@@ -1,0 +1,14 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "lssslxwo",
+    "wxsynqwm"
+  ],
+  "content": {
+    "type": "rust",
+    "ref": [
+      "src/state_root.rs"
+    ],
+    "rationale": "`src/state_root.rs` is the resolution C-TWO-ROOTS (lotlstzr) leaves to the implementation and the EARS requirement (lssslxwo) states in one sentence: `trunk_root(workspace_root)` reads the invocation workspace's repository entry at `.jj/repo` and answers with the root of the working copy that entry belongs to. The entry has two forms. A directory is the workspace's own repository, so the invocation's own root is the trunk root \u2014 the `Own` case of T-TWO-ROOTS (wxsynqwm). A file names another working copy's repository entry, and the answer is that working copy's root: an absolute name is used as written, and a relative name is anchored at the directory containing the entry \u2014 the workspace's `.jj` directory, the base `jj workspace add` writes against \u2014 never at the workspace root and never at the process working directory. That anchor is the whole of the `Leads` case: a linked workspace's `../../<trunk>/.jj/repo` resolves to `<trunk>`, and the resolved machine path makes the answer normalized, so no `..` component survives and the invocation root is never returned for another working copy's entry. The named path must itself be a `.jj/repo` directory; an existing path of any other shape is a refusal, not a root.\n\nThe refusal is typed rather than a fallback, because the requirement forbids opening the store on the invocation root when the trunk cannot be reached. `StateRootError` has one variant per unresolved case \u2014 `MissingEntry`, `EmptyEntry`, `UnreadableEntry`, `DanglingEntry`, `NotARepoEntry` \u2014 each carrying the path it is about (`UnreadableEntry` also the io cause) and each `Display` naming that cause, so the caller can refuse without parsing a message. `trunk_root` answers only the store's root: it neither moves nor reports the jj runner's anchor, which stays the invocation workspace (the model's frame condition, owned by the runner's own module). The module is std-only so the gate compiles it standalone through the `#[path]` shim, and it fixes the entry's representation alone: opening the store on the resolved root and rendering the refusal to a caller belong to their own decisions."
+  }
+}
