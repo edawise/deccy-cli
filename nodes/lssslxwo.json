@@ -1,0 +1,12 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "lotlstzr"
+  ],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When an invocation made in a workspace opens the deccy store, the deccy CLI shall root the store at the repository's trunk state root, resolved from the invocation workspace, keeping the jj runner anchored on the invocation workspace; and when the trunk root cannot be resolved, the deccy CLI shall refuse, naming the cause, and shall not fall back to the invocation workspace root.",
+    "rationale": "The prerequisite settles one arrangement in prose: the store's root is the trunk's, that root is reached from the invocation workspace, the jj runner stays where the invocation is, and an unreachable trunk refuses rather than substituting the invocation's root. This requirement states that same arrangement as one sentence, so each obligation has a checkable form without any element changing hands. The two roots are named in the same clause because each is the other's limit: root the store at the invocation and a draft invocation's markers, journal and node writes land in a working copy that holds no state directory; let the jj runner follow the store to the trunk and a draft's jj edits land in the trunk. The refusal is stated inside the same requirement rather than beside it, because an unresolvable trunk leaves only roots the first clause excludes, and naming the cause is what makes that refusal usable. Nothing new is committed: the file the invocation's repository entry is spelled as, the cases in which following it leaves the trunk unresolved, the shape of a path it names, how far it is followed, and the refusal's wording, stream and exit status are all left where the prerequisite left them."
+  }
+}
