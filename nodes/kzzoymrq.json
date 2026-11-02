@@ -1,0 +1,16 @@
+{
+  "content": {
+    "rationale": "M-main's refine adds one edge to the recorded module map: the crate root names the state-root resolver once, in the same flat declaration that names every other module, so the resolver is reachable as the public path `deccy_cli::state_root` (with `trunk_root` and `StateRootError`) rather than only as a module nested inside `context.rs`. The check is an integration test over the library target: it imports `trunk_root` and `StateRootError` from `deccy_cli::state_root` with no `#[path]` shim and drives that path as a consumer would — one resolution of a workspace's own repository entry and one typed refusal — so the observation holds only once the crate root's declaration makes the module public at the root. The resolver's own contract is gated by its own evaluation (xymxqnvz); this check asserts only that the public path exists and reaches that same resolver.",
+    "ref": [
+      "tests/state_root_module/main.rs"
+    ],
+    "type": "test"
+  },
+  "depends_on": [
+    "xymxqnvz"
+  ],
+  "evaluates": [
+    "rklnxlmy"
+  ],
+  "kind": "evaluation"
+}
