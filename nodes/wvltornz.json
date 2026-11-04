@@ -1,0 +1,13 @@
+{
+  "kind": "decision",
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "When `deccy discard` successfully ends the open drafts it names, the deccy CLI shall write nothing to stdout.",
+    "rationale": "The discard surface fixes which invocations are answered with a discard and defers the success output (kxyznwxu); the output rule fixes stdout as the channel a verb's normal output takes, as newline-terminated lines, so a success that renders nothing is a success with no lines there (svxynnwk). This requirement states that one fact and stops: the refusal's wording, stream and exit status, what becomes of the record, of the draft's workspace and directory and of the change the workspace holds, the help text, whether the call writes a node or a change or is one of the operations, and the line discipline of rendered normal output all belong to the nodes that own them and can change without touching this sentence."
+  },
+  "depends_on": [
+    "kxyznwxu",
+    "svxynnwk"
+  ]
+}
