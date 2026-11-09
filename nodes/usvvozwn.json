@@ -1,0 +1,12 @@
+{
+  "kind": "decision",
+  "depends_on": [
+    "mmrklvqs"
+  ],
+  "content": {
+    "type": "ears",
+    "ref": "inline",
+    "content": "If `deccy new --evaluates` names any id resolving to no node document, then the deccy CLI shall refuse the invocation before creating anything \u2014 the refusal being the invocation's and not the unknown ids', so the ids that resolved are created no more than the ids that named no document: no change is opened for the invocation, no node document is written under `nodes/`, no `evaluates` or `depends_on` edge lands, no marker in `.deccy/markers.json` and no entry under `.deccy/journal/` is recorded, and the repository's change count and heads are as they were \u2014 and opening a change, writing a document, landing an edge or recording a marker and then removing it is not a refusal before creating anything, the refusal preceding every such step rather than reversing one.",
+    "rationale": "Atomicity is all this clause adds. The parent (mmrklvqs) already places the refusal and fixes its predicate \u2014 document presence \u2014 and ulusuxtv owns the naming of the unknown ids, so restating either would make one commitment into two. What the parent leaves open is what \u201cbefore creating anything\u201d is read against, and a birth in this codebase takes steps: it opens a change (S3-new, xmlwqpyr), writes a node document through the store write (mxwoktuw), lands the edges the invocation names, and records its bracket in the marker file and the journal (M-markers-capture, okkvnnvm). Naming each step, and holding the refusal to precede all of them rather than to leave the repository as it finally stands, is what keeps a create-then-clean-up \u2014 a change opened and then abandoned (urtkpxwv), a document written and then deleted, a marker recorded and then removed \u2014 from passing a check that reads only the end state; scoping the refusal to the invocation rather than to the ids that named no document keeps a mixed `--evaluates` set from landing the resolved ids' nodes or edges while the refusal answers for the others. The refusal's wording, stream and exit status stay with M-refusal, its order against the other refusals with the invocation-level decisions, and the linkage, kind split, form and skeleton with their own nodes; this node decides none of them."
+  }
+}
