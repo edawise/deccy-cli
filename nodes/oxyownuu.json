@@ -1,0 +1,16 @@
+{
+  "kind": "evaluation",
+  "evaluates": [
+    "zrkzppqo"
+  ],
+  "depends_on": [
+    "mqqwzvwz",
+    "volxoyyy"
+  ],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. License: no element of the dependent contradicts a prerequisite named in depends_on. Fail on any contradicting element — name the element and the prerequisite it contradicts.\n2. No re-decision: fail on any element of the dependent that decides again something a prerequisite named in depends_on already decides. Name the element and the prerequisite it re-decides.",
+    "rationale": "Ordering is where the relation vocabulary meets the version control the graph lives in, so the check keeps the ordering rule a use of the recorded relations and of jj's recorded role instead of a second rule about either. Both prerequisites and the dependent are prose, which is the matrix's prose-to-prose cell: the gate, not a behavioral test. There is nothing to execute — a reviewer reads the recorded dependent against each recorded prerequisite and names any element that contradicts or re-decides one. The criteria name no element of either side in advance, so the gate survives rewording of the dependent or of a prerequisite's clauses."
+  }
+}
