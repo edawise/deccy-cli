@@ -1,0 +1,16 @@
+{
+  "content": {
+    "content": "1. License, per prerequisite: apply this once against each id in depends_on \u2014 no element of the dependent (its own text, or a file its ref names) contradicts or re-decides that prerequisite. Fail on any contradicting or re-decided element \u2014 name the element and the prerequisite it contradicts.\n2. The added commitment, stated and complete: wherever the dependent gives a reader the checks validation runs or reports \u2014 a clause, a table cell, a comment, or any other place a reader would take as the whole of it \u2014 that presentation names every check the prerequisite decides. Fail if a presentation reads as validation's own while naming fewer checks than the prerequisite decides, and name both the presenting element and the omitted check. The checks are read by what they do, not by the label given them: a presentation in the dependent's own words that names the same checks satisfies this item, and no label, order, or sentence shape is required of the dependent. A presentation naming a check the prerequisite does not decide is a contradiction, caught by item 1.\n3. Nothing unrecorded decided: fail if applying items 1\u20132 needs a rule the dependent and its prerequisites do not record \u2014 the label a check must carry, how a report line is worded, or the content of the rule behind a named check \u2014 and name the missing rule instead of deciding it. The dependent is not required to restate a prerequisite's rule where that prerequisite takes it from elsewhere as given; naming the check is complete without it.",
+    "rationale": "Both endpoints are prose: the dependent is a README plus its own rationale text, and the prerequisites are inline requirement and Where-clause sentences, so the cell is natural-to-natural and the form is the gate as inline review criteria \u2014 there is nothing to run. Item 1 is that cell's license, applied once per prerequisite because the dependent leans on D9 for what validation does and on the help-convention requirement where it points a reader at a verb's --help. License alone does not cover this use: a presentation that names only part of validation's set contradicts nothing outright, it narrows what the caller is told to expect, so item 2 asks the presentation to be complete against the set the prerequisite decides, and to be complete by meaning rather than by label so that rewording the README leaves the check unchanged. Item 3 keeps the check inside what is recorded: it may not demand a particular label, a report line's wording, or the content of the rule behind a check, which D9 explicitly takes from S-topology as given rather than stating. The criteria name no clause of the dependent, so a rewrite that still presents the same checks leaves the gate intact.",
+    "ref": "inline",
+    "type": "review-criteria"
+  },
+  "depends_on": [
+    "orwrynyn",
+    "rwlywqrk"
+  ],
+  "evaluates": [
+    "kqnvwwzu"
+  ],
+  "kind": "evaluation"
+}
