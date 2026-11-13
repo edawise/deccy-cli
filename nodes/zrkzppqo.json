@@ -1,0 +1,13 @@
+{
+  "content": {
+    "content": "Every depends_on and every evaluates edge runs from a newer change to an older one, positions taken from the order jj reports for the changes: the dependent is newer than the prerequisite or the subject it names. depends_on edges naming zzzzzzzz are exempt, the root being no change and so having no position. The order is a check on recorded edges, not a source of them: no edge is derived from it. A disagreement is reported, never repaired: no edge is added, dropped or redirected, and no change is moved, to make the two agree.",
+    "rationale": "An edge points from what was added to what it takes as given, so the version control history is where a reader can see whether the record and the work agree: reading downward from a prerequisite reaches its dependents, and `jj rebase -A` insertion starts from the right place. Taking positions from the order jj reports keeps the check on the ordering the tool actually gives, rather than a second topological recomputation that could disagree with it, and comparing endpoints alone keeps the rule indifferent to where in history unrelated changes sit. Reporting rather than repairing keeps the order a check on the graph instead of a second author of it: redirecting an edge to satisfy history would move a decision on the strength of a VCS accident, and moving changes to satisfy an edge would let the record reorder work; the disagreement stays visible for a person to judge. The root is exempt because it is no change and has no position \u2014 an exemption about the root, not a softening of the rule.",
+    "ref": "inline",
+    "type": "text"
+  },
+  "depends_on": [
+    "mqqwzvwz",
+    "volxoyyy"
+  ],
+  "kind": "decision"
+}
