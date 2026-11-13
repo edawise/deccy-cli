@@ -1,0 +1,11 @@
+{
+  "kind": "evaluation",
+  "evaluates": ["kywmkqlm"],
+  "depends_on": ["xmxpvqzs", "rkoktpwt", "vkowzusm"],
+  "content": {
+    "type": "review-criteria",
+    "ref": "inline",
+    "content": "1. Licence: no element of the evaluated decision contradicts or re-decides any one of its recorded prerequisites. Fail on any contradicting or re-decided element, naming the element and the prerequisite it answers to.\n2. Re-decision: fail where an element sets aside or overrides a choice a prerequisite has already settled instead of elaborating inside it. An element a prerequisite leaves open is the dependent's to settle.\n3. Application: the check is decided by reading the evaluation's recorded subject against each recorded prerequisite, one prerequisite at a time. Nothing is fixed here in advance — no element, path, command or wording; which element is at issue is the check's finding at check time, not part of this criterion.",
+    "rationale": "Both endpoints are prose carried inline: the subject states a shape for a read in words, and each prerequisite is a sentence of requirement or of layer scope. The matrix cell is therefore natural to natural, the base gate, and the whole check is licence — that the addition leaves every prerequisite's decision intact and settles only what they leave open. The prerequisites divide the work the addition must respect: the process boundary, the bound on crossings, and what this particular read may carry and for which use; a subject clause that answered any of those by itself would be re-deciding it, while a subject clause that fixes how the set and its touched paths arrive in one read is the addition these prerequisites do not state. The gate stays at that cell: it does not ask for the addition to be present, does not name any part of the seam, and does not measure crossings — prose children are checked for non-violation, never for behaviour, and naming elements in the criterion would tie the gate to the subject's wording instead of its meaning."
+  }
+}
